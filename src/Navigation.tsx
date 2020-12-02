@@ -1,14 +1,16 @@
 import * as React from 'react'
-import { Image, ImageBackground, StyleSheet } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MainComponent } from './Main';
 import { Home } from './Home/Home';
+import { observer } from "mobx-react";
+
 
 
 const Tab = createBottomTabNavigator();
 
-export const Navigation = () => {
+export const Navigation = observer(() => {
     return (
         <NavigationContainer >
             <Tab.Navigator 
@@ -38,7 +40,7 @@ export const Navigation = () => {
             </Tab.Navigator>
         </NavigationContainer>
     )
-};
+})
 
 
 

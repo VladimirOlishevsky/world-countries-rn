@@ -3,32 +3,25 @@ import {
     Text,
     Button
 } from 'react-native';
-import {Observer, observer } from "mobx-react";
+import { observer } from "mobx-react";
 
 import storeInstance from './store/store';
 
 
 export const MainComponent = observer((): JSX.Element => {
 
+    console.log(storeInstance.countriesInfo)
     return (
         <>
             <Text>5555555555ff55555</Text>
             <Button
                 title="Press me"
 
-                onPress={() => {
-                    storeInstance.fetchCountries('niger')
-                    console.log(storeInstance.countriesInfo)
-                    // return (
-                    //     //storeInstance.clearItem(),
-                    //     storeInstance.fetchCountries('egypt')
-                        
-                    // )
-                }}
+                onPress={() => storeInstance.fetchCountries('south africa')}
             />
-             <Text>52255445</Text>
-            <Text>{storeInstance.commentsCount}</Text>
-             <Text>77777777777</Text>
+             <Text>557788871</Text>
+            <Text>{storeInstance.countriesInfo}</Text>
+             <Text>773338837</Text>
         </>
 
     )

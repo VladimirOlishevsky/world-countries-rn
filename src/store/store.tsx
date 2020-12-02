@@ -1,24 +1,23 @@
-import { observable, action, computed, runInAction } from 'mobx'
+import { observable, action, computed, runInAction, makeAutoObservable } from 'mobx'
 
 class Store {
 
     @observable countriesInfo = ''
 
-    @action async fetchCountries(props) {
+    constructor() {
+        // Don't need decorators now, just this call
+        makeAutoObservable(this);
+      }
+
+    async fetchCountries(props: string) {
         const response = await fetch(`https://restcountries.eu/rest/v2/name/${props}?fullText=true`)
         const data = await response.json()
-        //console.log(data)
 
         runInAction(() => {
             this.countriesInfo = data[0].name
         })
     }
 
-    @action clearItem() {
-        runInAction(() => {
-            this.countriesInfo = ''
-        })
-    }
     @computed get commentsCount(){
         return this.countriesInfo;
     }
