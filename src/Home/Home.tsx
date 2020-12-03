@@ -8,7 +8,7 @@ import { Divider } from 'react-native-elements';
 import React from 'react';
 import { styles } from './rawStyles';
 import { title } from './config';
-import {Slider} from '../Slider/Slider'
+import { Slider } from '../Slider/Slider'
 
 declare function require(path: string): any;
 const themePic = require('../../assets/images/theme.jpg');
@@ -19,7 +19,7 @@ export const Home = () => {
     return (
         <ScrollView>
             <View
-            style={styles.imageContainer}
+                style={styles.imageContainer}
             >
                 <Image source={themePic}
                     style={styles.image}
@@ -59,7 +59,7 @@ export const Home = () => {
                     </View>
                 </View>
 
-<Slider />
+                <Slider />
             </View>
         </ScrollView>
     )

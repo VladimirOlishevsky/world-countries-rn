@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Image, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MainComponent } from './Main';
+import { MainComponent } from './MainPage/Main';
 import { Home } from './Home/Home';
 import { observer } from "mobx-react";
 
