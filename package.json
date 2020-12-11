@@ -64,7 +64,7 @@
         "redux-logger": "^3.0.6",
         "redux-thunk": "^2.3.0",
         "rn-infinite-carousel": "^0.0.18",
-        "typescript": "^4.0.5"
+        "typescript": "3.5.3"
     },
     "devDependencies": {
         "@babel/core": "~7.9.0"
