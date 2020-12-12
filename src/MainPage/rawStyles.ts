@@ -16,11 +16,12 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         paddingTop: '10%'
     },
-    // input: {
-    //     paddingTop: '10%',
-    //     height: 40,
-    //     borderStyle: 'solid'
-    // }
+    inputStyle: {
+        height: 40,
+        borderStyle: 'solid',
+        borderColor: 'pink',
+        borderWidth: 1
+    },
     input: {
         height: 40,
         width: 300,

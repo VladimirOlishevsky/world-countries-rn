@@ -11,7 +11,7 @@ class Store {
 
     async fetchCountries(props: string) {
         const response = await fetch(`https://restcountries.eu/rest/v2/name/${props}?fullText=true`)
-        const data = await response.json()
+        const data = await response.json();
 
         runInAction(() => {
             this.countriesInfo = data[0].name

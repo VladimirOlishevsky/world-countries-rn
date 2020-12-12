@@ -15,8 +15,8 @@ export const Navigation = observer(() => {
         <NavigationContainer >
             <Tab.Navigator 
             //initialRouteName={Home}
-                screenOptions={({ route }) => ({
-                    tabBarIcon: ({ focused, color, size }) => {
+                screenOptions={({ route }: any) => ({
+                    tabBarIcon: ({ focused, color, size }: any) => {
                         let iconName;
                         if (route.name === 'Home') {
                             focused ? iconName = require('../assets/images/homeFocused.png')

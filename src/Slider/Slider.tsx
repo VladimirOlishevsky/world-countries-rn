@@ -1,8 +1,8 @@
-import { Text, View, Image } from 'react-native';
+import {Text, View, Image} from 'react-native';
 import React from 'react'
 import Swiper from 'react-native-swiper'
-import { styles } from './rawStyles';
-import { slides } from './config';
+import {styles} from './rawStyles';
+import {slides} from './config';
 
 export const Slider = () => {
     return (
@@ -42,13 +42,13 @@ export const Slider = () => {
             }
             loop
         >
-            {slides.map((image, key) => {
+            {slides.map((image: {img: any, title: string}, key: number) => {
                 return <View
                     key={key}
                     style={styles.slide}
-                    title={
-                        <Text numberOfLines={1}>{image.title}</Text>
-                    }
+                    // title={
+                    //     <Text numberOfLines={1}>{image.title}</Text>
+                    // }
                 >
                     <Image
                         resizeMode="stretch"
