@@ -1,12 +1,14 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
+
+const { height } = Dimensions.get('screen')
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: "column",
-        //justifyContent: 'center',
         padding: 30,
-        backgroundColor: 'rgba(255, 216, 125, 0.4)'
+        backgroundColor: 'rgba(255, 216, 125, 0.4)',
+        height: height
     },
     containerTitle: {
         color: 'rgb(57, 101, 139)',

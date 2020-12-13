@@ -7,7 +7,7 @@ interface Props {
     title: string
 }
 
-export const ChipsTitle = observer((title: Props): JSX.Element => {
+export const ChipsTitle = observer(({title}: Props): JSX.Element => {
     return (
         <Text
             style={rawStyles.title}>

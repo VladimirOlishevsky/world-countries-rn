@@ -13,13 +13,10 @@ interface Props {
 }
 
 export const ChipsBlockLayout = observer(({title, chips}: Props): JSX.Element => {
-    console.log(title)
     return (
         <View>
             {title}
             {chips}
-            {/*<ChipsTitle title='Most Popular'/>*/}
-            {/*<ChipsContent/>*/}
         </View>
     )
 })

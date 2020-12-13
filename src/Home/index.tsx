@@ -8,7 +8,7 @@ import { Divider } from 'react-native-elements';
 import React from 'react';
 import { styles } from './rawStyles';
 import { title } from './config';
-import { Slider } from '../Slider/Slider'
+import { Slider } from '../Slider'
 
 declare function require(path: string): any;
 const themePic = require('../../assets/images/theme.jpg');

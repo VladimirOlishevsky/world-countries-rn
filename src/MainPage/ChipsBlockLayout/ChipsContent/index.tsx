@@ -13,8 +13,8 @@ interface Props {
 export const ChipsContent = observer((): JSX.Element => {
     return (
         <View style={rawStyles.chipsBlock}>
-            {mostPopularCountries.map((el: string) =>
-                <Chip style={rawStyles.chipsElement} focusable
+            {mostPopularCountries.map((el: string, index: number) =>
+                <Chip key={index} style={rawStyles.chipsElement} focusable
                       onPress={() => storeInstance.fetchCountries(el)}>{el}</Chip>)}
         </View>
 

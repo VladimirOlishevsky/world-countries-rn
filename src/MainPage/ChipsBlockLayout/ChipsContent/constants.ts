@@ -1,4 +1,3 @@
-
 export const mostPopularCountries = [
     'Nigeria',
     'Senegal',
