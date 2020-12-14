@@ -12,48 +12,52 @@ import { TextInput, Button } from 'react-native-paper';
 import { ChipsBlockLayout } from "./ChipsBlockLayout";
 import { ChipsTitle } from "./ChipsBlockLayout/ChipsTitle";
 import { ChipsContent } from "./ChipsBlockLayout/ChipsContent";
-import { Icon } from 'react-native-paper/lib/typescript/src/components/List/List';
 
 
-export const MainComponent = observer((): JSX.Element => {
+export const MainComponent = observer(({ navigation }: any): JSX.Element => {
 
     const [value, setValue] = useState('')
     return (
         <ScrollView>
             <View style={styles.container}>
-                <Text style={styles.containerTitle}>Find African Countries!</Text>
-
-                <View>
+                <View style={styles.inputContainer}>
                     <TextInput
                         left={
                             <TextInput.Icon
+                                style={styles.inputIconStyle}
+                                size={25}
                                 color='#b3b2b2'
                                 name="magnify"
                             />}
-
-                        style={{ backgroundColor: 'transparent', fontSize: 20, }}
+                        style={styles.inputStyle}
                         label="Find countries"
-                        theme={{colors: {primary: '#0f4c81'}}}
+                        theme={{ colors: { primary: '#0f4c81' } }}
                         value={value}
                         onChangeText={text => setValue(text)}
                     />
                 </View>
                 <Button
-                style={{marginTop: 20}}
+                    style={{ marginTop: 20 }}
                     color='#0f4c81'
                     icon='magnify'
                     mode="contained"
                     onPress={() => storeInstance.fetchCountries(value)}>
                     Search
                  </Button>
-
+                <View style={{ marginTop: 30 }}>
+                    <ChipsBlockLayout
+                        title={<ChipsTitle title='Most Popular' />}
+                        chips={<ChipsContent />}
+                    />
+                </View>
                 <Text>557788871🍕</Text>
                 <Text>{storeInstance.countriesInfo}</Text>
 
-                <ChipsBlockLayout
-                    title={<ChipsTitle title='Most Popular' />}
-                    chips={<ChipsContent />}
-                />
+
+                <Text>This is the home screen</Text>
+                <Button
+                    onPress={() => navigation.navigate("Test", { names: value })}
+                >Go to About Screen</Button>
             </View>
         </ScrollView>
 

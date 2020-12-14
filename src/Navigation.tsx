@@ -1,20 +1,15 @@
 import * as React from 'react'
 import { Image, StyleSheet } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MainComponent } from './MainPage';
 import { Home } from './Home';
 import { observer } from "mobx-react";
 
-
-
 const Tab = createBottomTabNavigator();
 
 export const Navigation = observer(() => {
     return (
-        <NavigationContainer >
-            <Tab.Navigator 
-            //initialRouteName={Home}
+            <Tab.Navigator
                 screenOptions={({ route }: any) => ({
                     tabBarIcon: ({ focused, color, size }: any) => {
                         let iconName;
@@ -29,8 +24,8 @@ export const Navigation = observer(() => {
                                 : iconName = require('../assets/images/katha.png');
                         }
                         return <Image source={iconName}
-                         style={styles.image} 
-                         />;
+                            style={styles.image}
+                        />;
                     },
                 })}
             >
@@ -38,11 +33,8 @@ export const Navigation = observer(() => {
                 <Tab.Screen name="Vicharan" component={MainComponent} />
                 <Tab.Screen name="Katha" component={Home} />
             </Tab.Navigator>
-        </NavigationContainer>
     )
 })
-
-
 
 const styles = StyleSheet.create({
     image: {

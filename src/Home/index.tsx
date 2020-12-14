@@ -12,6 +12,7 @@ import { Slider } from '../Slider'
 
 declare function require(path: string): any;
 const themePic = require('../../assets/images/theme.jpg');
+const theme2Pic = require('../../assets/images/theme2.jpg')
 
 
 export const Home = () => {
@@ -21,7 +22,7 @@ export const Home = () => {
             <View
                 style={styles.imageContainer}
             >
-                <Image source={themePic}
+                <Image source={theme2Pic}
                     style={styles.image}
                 />
             </View>
