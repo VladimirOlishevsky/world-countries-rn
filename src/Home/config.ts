@@ -1,1 +1,1 @@
-export const title = 'Africa'
+export const title = 'World'

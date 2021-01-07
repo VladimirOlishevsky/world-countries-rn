@@ -14,7 +14,7 @@ interface Props {
 
 export const ChipsBlockLayout = observer(({title, chips}: Props): JSX.Element => {
     return (
-        <View>
+        <View  style={{ marginTop: 30 }}>
             {title}
             {chips}
         </View>

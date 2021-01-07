@@ -7,7 +7,7 @@ import { observer } from "mobx-react";
 
 const Tab = createBottomTabNavigator();
 
-export const Navigation = observer(() => {
+export const BottomNavigation = observer(() => {
     return (
             <Tab.Navigator
                 screenOptions={({ route }: any) => ({

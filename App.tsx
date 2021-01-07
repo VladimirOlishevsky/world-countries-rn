@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { Navigation } from './src/Navigation';
+import { BottomNavigation } from './src/Navigation';
 import storeInstance from './src/store/store';
 import { Provider } from "mobx-react";
 import { Provider as PaperProvider } from 'react-native-paper';
@@ -17,9 +17,15 @@ export default class App extends React.Component {
             <Provider value={storeInstance}>
                 <PaperProvider>
                     <NavigationContainer>
-                        <Stack.Navigator initialRouteName="Tabs">
+                        <Stack.Navigator
+                            headerMode="screen"
+                            screenOptions={{
+                                headerShown: false
+                            }}
+                        initialRouteName="Tabs"
+                        >
                             <Stack.Screen name="Test" component={SeparatePage} />
-                            <Stack.Screen name="Tabs" component={Navigation} />
+                            <Stack.Screen name="Tabs" component={BottomNavigation} />
                         </Stack.Navigator>
                     </NavigationContainer>
                 </PaperProvider>

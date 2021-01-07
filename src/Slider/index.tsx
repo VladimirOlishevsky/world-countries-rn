@@ -1,4 +1,4 @@
-import {Text, View, Image} from 'react-native';
+import {Text, View, Image, TouchableHighlight} from 'react-native';
 import React from 'react'
 import Swiper from 'react-native-swiper'
 import {styles} from './rawStyles';
@@ -50,11 +50,14 @@ export const Slider = () => {
                     //     <Text numberOfLines={1}>{image.title}</Text>
                     // }
                 >
-                    <Image
+                    <TouchableHighlight onPress={() => console.log('111111222')}>
+                        <Image
                         resizeMode="stretch"
                         style={styles.image}
                         source={image.img}
                     />
+                    </TouchableHighlight>
+                    
                 </View>
             })}
 
