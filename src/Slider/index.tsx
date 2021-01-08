@@ -1,17 +1,12 @@
-import {Text, View, Image, TouchableHighlight} from 'react-native';
+import { View, Image, TouchableHighlight } from 'react-native';
 import React from 'react'
 import Swiper from 'react-native-swiper'
-import {styles} from './rawStyles';
-import {slides} from './config';
+import { styles } from './rawStyles';
 
-export const Slider = () => {
+export const Slider = ({ slides }: any) => {
     return (
         <Swiper
-            //style={styles.wrapper}
-            height={240}
-            onMomentumScrollEnd={(e, dataImage, context) =>
-                console.log('index:', dataImage.index)
-            }
+           height={170}
             dot={
                 <View
                     style={{
@@ -40,27 +35,23 @@ export const Slider = () => {
                     }}
                 />
             }
-            loop
+           loop
         >
-            {slides.map((image: {img: any, title: string}, key: number) => {
-                return <View
-                    key={key}
-                    style={styles.slide}
-                    // title={
-                    //     <Text numberOfLines={1}>{image.title}</Text>
-                    // }
-                >
-                    <TouchableHighlight onPress={() => console.log('111111222')}>
-                        <Image
-                        resizeMode="stretch"
-                        style={styles.image}
-                        source={image.img}
-                    />
-                    </TouchableHighlight>
-                    
-                </View>
+            {slides.map((elem: any, key: number) => {
+                return (
+                    <View
+                        key={key}
+                        style={styles.slide}>
+                        <TouchableHighlight onPress={() => console.log('111111222')}>
+                            <Image
+                                resizeMode="stretch"
+                                style={styles.image}
+                                source={elem.img}
+                            />
+                        </TouchableHighlight>
+                    </View>
+                )
             })}
-
         </Swiper>
     )
 }

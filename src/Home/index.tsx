@@ -9,6 +9,7 @@ import React from 'react';
 import { styles } from './rawStyles';
 import { title } from './config';
 import { Slider } from '../Slider'
+import { slides } from '../config';
 
 declare function require(path: string): any;
 const themePic = require('../../assets/images/theme.jpg');
@@ -60,7 +61,7 @@ export const Home = () => {
                     </View>
                 </View>
 
-                <Slider />
+                <Slider slides={slides}/>
             </View>
         </ScrollView>
     )
