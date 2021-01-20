@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import {
     Text,
     View,
     ScrollView,
     StyleSheet,
-    Image
+    Image,
+    TouchableOpacity
 } from 'react-native';
 import { observer } from "mobx-react";
 import storeInstance from '../store/store';
@@ -18,6 +19,8 @@ import { flags } from '../config';
 
 import { SliderFlags } from './SliderFlags';
 import { sliderFlagsTitle } from './strings';
+import { regions } from './../config';
+import { Regions } from './Regions';
 
 
 export const MainComponent = observer(({ navigation }: any): JSX.Element => {
@@ -41,6 +44,10 @@ export const MainComponent = observer(({ navigation }: any): JSX.Element => {
 
 
                 <Text>This is the home screen</Text>
+
+                <Regions regionsArr={regions} />
+
+               
                 <Button
                     onPress={() => navigation.navigate("Test", { names: value })}
                 >Go to About Screen</Button>

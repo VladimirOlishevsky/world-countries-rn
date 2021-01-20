@@ -5,6 +5,40 @@ const rwandaFlag = require('../assets/images/flags/rwanda.jpg');
 const portugalFlag = require('../assets/images/flags/portugal.jpg');
 const colombiaFlag = require('../assets/images/flags/colombia.jpg');
 
+const arabRegion = require('../assets/images/regions/arab_league.jpg');
+const caribbeanRegion = require('../assets/images/regions/caribbean_community.jpg');
+const europeRegion = require('../assets/images/regions/european_union.jpg');
+const northAmericaRegion = require('../assets/images/regions/north_american_free_trade_agreement.jpg');
+const southAmericaRegion = require('../assets/images/regions/union_of_south_american_nations.jpg');
+
+export const regions = [
+    {
+        title: 'Europe',
+        img: europeRegion,
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/eu'
+    },
+    {
+        title: 'North America',
+        img: northAmericaRegion,
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/nafta'
+    },
+    {
+        title: 'South America',
+        img: southAmericaRegion,
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/usan'
+    },
+    {
+        title: 'Arab Countries',
+        img: arabRegion,
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/al'
+    },
+    {
+        title: 'Caribbean Region',
+        img: caribbeanRegion,
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/caricom'
+    },
+]
+
 export const flags = [
     {
         title: 'Spain',
