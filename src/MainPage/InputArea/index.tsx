@@ -37,7 +37,7 @@ export const InputArea = observer((): JSX.Element => {
                 mode="contained"
                 onPress={() => storeInstance.fetchCountries(value)}>
                 Search
-        </Button>
+             </Button>
         </View>)
 })
 

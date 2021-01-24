@@ -10,28 +10,63 @@ import { styles } from './rawStyles';
 import { title } from './config';
 import { Slider } from '../Slider'
 import { slides } from '../config';
+import { TextInput, Button } from 'react-native-paper';
+
 
 declare function require(path: string): any;
 const themePic = require('../../assets/images/theme.jpg');
-const theme2Pic = require('../../assets/images/theme2.jpg')
+const theme2Pic = require('../../assets/images/theme2.png')
 
 
 export const Home = () => {
 
     return (
         <ScrollView>
-            <View
+            {/* <View
                 style={styles.imageContainer}
             >
                 <Image source={theme2Pic}
                     style={styles.image}
                 />
-            </View>
-            <View style={styles.titleBlock}>
+            </View> */}
+            {/* <View style={styles.titleBlock}>
                 <Text style={styles.title}> {title.toUpperCase()}</Text>
-            </View>
+            </View> */}
             <View style={styles.container}>
-                <View>
+                <View
+                    style={{ display: 'flex', flexDirection: 'row' }}
+                >
+                    <Button
+                        style={styles.buttonCountries}
+                        labelStyle={styles.buttonCountriesLabel}
+                        color='#ff9f0a'
+                        mode="contained"
+                    // onPress={() => storeInstance.fetchCountries(value)}
+                    >
+                        Countries
+                     </Button>
+                    <Button
+                        style={styles.buttonCapitals}
+                        labelStyle={styles.buttonCapitalsLabel}
+                        color='#fff'
+                        mode="contained"
+                    //onPress={() => storeInstance.fetchCountries(value)}
+                    >
+                        Capitals
+                    </Button>
+                </View>
+                <Button
+                    style={styles.buttonSearch}
+                    labelStyle={styles.buttonSearchLabel}
+                    color='#313133'
+                    icon='magnify'
+                    mode="contained"
+                // onPress={() => storeInstance.fetchCountries(value)}
+                >
+                    Search
+                 </Button>
+
+                {/* <View>
                     <View >
                         <Text style={styles.contentTitle}>
                             Some Facts about Africa
@@ -61,7 +96,7 @@ export const Home = () => {
                     </View>
                 </View>
 
-                <Slider slides={slides}/>
+                <Slider slides={slides}/> */}
             </View>
         </ScrollView>
     )

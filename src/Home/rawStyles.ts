@@ -9,11 +9,38 @@ export const styles = StyleSheet.create({
         height: height,
     },
     container: {
-        flex: 1,
+        //flex: 1,
+        height: height,
         flexDirection: "column",
-        justifyContent: 'center',
+        paddingTop: 60,
+        // marginBottom: 50,
+        //justifyContent: 'center',
         padding: 30,
-        backgroundColor: 'rgba(236, 161, 29, 0.4)'
+        backgroundColor: '#1c1c1e'
+        //backgroundColor: 'rgba(236, 161, 29, 0.4)'
+    },
+    buttonCountries: {
+        flex: 0.5, 
+        borderRadius: 16,
+        marginRight: 5,
+        color: 'red'
+    },
+    buttonCapitals: {
+        flex: 0.5, 
+        borderRadius: 16,
+        marginLeft: 5
+    },
+    buttonCountriesLabel: {
+        color: '#fff'
+    },
+    buttonCapitalsLabel: {
+        color: '#000'
+    },
+    buttonSearchLabel: {
+        color: '#ff9f0a'
+    },
+    buttonSearch: {
+        marginTop: 30
     },
     root: {
         flexGrow: 1,
