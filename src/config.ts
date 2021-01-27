@@ -1,3 +1,5 @@
+import { Image, ImageURISource, ImageSourcePropType  } from "react-native"
+
 const spainFlag = require('../assets/images/flags/spain.jpg');
 const argentinaFlag = require('../assets/images/flags/argentina.jpg');
 const algeriaFlag = require('../assets/images/flags/algeria.jpg');
@@ -10,6 +12,29 @@ const caribbeanRegion = require('../assets/images/regions/caribbean_community.jp
 const europeRegion = require('../assets/images/regions/european_union.jpg');
 const northAmericaRegion = require('../assets/images/regions/north_american_free_trade_agreement.jpg');
 const southAmericaRegion = require('../assets/images/regions/union_of_south_american_nations.jpg');
+
+const eurore = require('../assets/images/regions/europe.png');
+const imageSrc = Image.resolveAssetSource(eurore).uri; // need change all img to this type
+const asia = require('../assets/images/regions/asia.png')
+const africa = require('../assets/images/regions/africa.png')
+
+
+
+
+export const regionCards = [
+    {
+        title: 'Europe',
+        img: imageSrc,
+    },
+    {
+        title: 'Asia',
+        img: imageSrc,
+    },
+    {
+        title: 'Africa',
+        img: imageSrc,
+    },
+]
 
 export const regions = [
     {

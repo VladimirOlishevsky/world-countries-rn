@@ -10,18 +10,21 @@ import { styles } from './rawStyles';
 import { title } from './config';
 import { Slider } from '../Slider'
 import { slides } from '../config';
-import { TextInput, Button } from 'react-native-paper';
+import { TextInput, Button, Card, Title } from 'react-native-paper';
+import { regionCards } from './../config';
+import { RegionCards } from './RegionCards/index';
 
 
-declare function require(path: string): any;
-const themePic = require('../../assets/images/theme.jpg');
-const theme2Pic = require('../../assets/images/theme2.png')
+// declare function require(path: string): any;
+// const eurore = require('../../assets/images/regions/europe.png');
+// const asia = require('../../assets/images/regions/asia.png')
+// const africa = require('../../assets/images/africa.png')
 
 
 export const Home = () => {
 
     return (
-        <ScrollView>
+        <ScrollView style={{backgroundColor: '#1c1c1e'}}>
             {/* <View
                 style={styles.imageContainer}
             >
@@ -66,6 +69,33 @@ export const Home = () => {
                     Search
                  </Button>
 
+                 <RegionCards regionCards={regionCards} />
+
+                {/* <View>
+                    {regionCards.map((el, index) => {
+                     return ( 
+                          <Card key={index}>
+                            <Card.Cover source={el.img} />
+                            <Title
+                            style={{
+                            position: 'absolute',
+                            bottom: 0,
+                            fontSize: 24,
+                            width: '100%',
+                            height: 60,
+                            backgroundColor: 'rgba(0, 0, 0, 0.63)',
+                            color: '#fff',
+                            textTransform: 'uppercase',
+                            textAlignVertical:'center',
+                            textAlign: 'center'
+
+                        }}
+                            >{el.title}</Title>
+                        </Card>
+                        )
+                    })}
+                </View> */}
+             
                 {/* <View>
                     <View >
                         <Text style={styles.contentTitle}>
