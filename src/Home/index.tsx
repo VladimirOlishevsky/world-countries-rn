@@ -13,15 +13,11 @@ import { slides } from '../config';
 import { TextInput, Button, Card, Title } from 'react-native-paper';
 import { regionCards } from './../config';
 import { RegionCards } from './RegionCards/index';
+import { observer } from 'mobx-react';
 
 
-// declare function require(path: string): any;
-// const eurore = require('../../assets/images/regions/europe.png');
-// const asia = require('../../assets/images/regions/asia.png')
-// const africa = require('../../assets/images/africa.png')
 
-
-export const Home = () => {
+export const Home = observer(({ navigation }: any): JSX.Element => {
 
     return (
         <ScrollView style={{backgroundColor: '#1c1c1e'}}>
@@ -64,7 +60,7 @@ export const Home = () => {
                     color='#313133'
                     icon='magnify'
                     mode="contained"
-                // onPress={() => storeInstance.fetchCountries(value)}
+                    onPress={() => navigation.navigate("SearchPage")}
                 >
                     Search
                  </Button>
@@ -130,5 +126,5 @@ export const Home = () => {
             </View>
         </ScrollView>
     )
-}
+})
 

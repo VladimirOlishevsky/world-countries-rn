@@ -2,7 +2,7 @@
 // import { Button, View, Text } from 'react-native';
 // import { NavigationContainer } from '@react-navigation/native';
 // import { createStackNavigator } from '@react-navigation/stack';
-// import { MainComponent } from './MainPage/index';
+// import { SearchScreen } from './MainPage/index';
 // import { Home } from './Home/index';
 // import { SeparatePage } from './sepa';
 
@@ -33,7 +33,7 @@
 //     <NavigationContainer independent={true}>
 //       <Stack.Navigator initialRouteName="Home">
 //         <Stack.Screen name="About" component={SeparatePage} />
-//         <Stack.Screen name="Details" component={MainComponent} />
+//         <Stack.Screen name="Details" component={SearchScreen} />
 //       </Stack.Navigator>
 //     </NavigationContainer>
 //   );

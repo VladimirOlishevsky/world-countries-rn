@@ -13,8 +13,8 @@ const europeRegion = require('../assets/images/regions/european_union.jpg');
 const northAmericaRegion = require('../assets/images/regions/north_american_free_trade_agreement.jpg');
 const southAmericaRegion = require('../assets/images/regions/union_of_south_american_nations.jpg');
 
-const eurore = require('../assets/images/regions/europe.png');
-const imageSrc = Image.resolveAssetSource(eurore).uri; // need change all img to this type
+const europe = require('../assets/images/regions/europe.png');
+const imageSrc = Image.resolveAssetSource(europe).uri; // need change all img to this type
 const asia = require('../assets/images/regions/asia.png')
 const africa = require('../assets/images/regions/africa.png')
 
@@ -24,15 +24,15 @@ const africa = require('../assets/images/regions/africa.png')
 export const regionCards = [
     {
         title: 'Europe',
-        img: imageSrc,
+        img: Image.resolveAssetSource(europe).uri,
     },
     {
         title: 'Asia',
-        img: imageSrc,
+        img: Image.resolveAssetSource(asia).uri,
     },
     {
         title: 'Africa',
-        img: imageSrc,
+        img: Image.resolveAssetSource(africa).uri,
     },
 ]
 

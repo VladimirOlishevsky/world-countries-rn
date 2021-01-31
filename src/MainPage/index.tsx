@@ -23,7 +23,7 @@ import { regions } from './../config';
 import { Regions } from './Regions';
 
 
-export const MainComponent = observer(({ navigation }: any): JSX.Element => {
+export const SearchScreen = observer(({ navigation }: any): JSX.Element => {
 
     const [value, setValue] = useState('');
 

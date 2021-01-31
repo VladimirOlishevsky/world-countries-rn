@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Image, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MainComponent } from './MainPage';
+import { SearchScreen } from './MainPage';
 import { Home } from './Home';
 import { observer } from "mobx-react";
 
@@ -13,10 +13,10 @@ export const BottomNavigation = observer(() => {
                 screenOptions={({ route }: any) => ({
                     tabBarIcon: ({ focused, color, size }: any) => {
                         let iconName;
-                        if (route.name === 'Home') {
+                        if (route.name === 'HomePage') {
                             focused ? iconName = require('../assets/images/homeFocused.png')
                                 : iconName = require('../assets/images/home.png');
-                        } else if (route.name === 'Vicharan') {
+                        } else if (route.name === 'SearchPage') {
                             focused ? iconName = require('../assets/images/vicharanFocused.png')
                                 : iconName = require('../assets/images/vicharan.png');
                         } else {
@@ -29,9 +29,9 @@ export const BottomNavigation = observer(() => {
                     },
                 })}
             >
-                <Tab.Screen name="Home" component={Home} />
-                <Tab.Screen name="Vicharan" component={MainComponent} />
-                <Tab.Screen name="Katha" component={Home} />
+                <Tab.Screen name="HomePage" component={Home} />
+                <Tab.Screen name="SearchPage" component={SearchScreen} />
+                <Tab.Screen name="SettingsPage" component={Home} />
             </Tab.Navigator>
     )
 })
