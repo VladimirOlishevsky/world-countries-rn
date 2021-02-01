@@ -3,10 +3,13 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   inputStyle: {
     justifyContent: "center",
-    backgroundColor: '#f2f2f2',
+    backgroundColor: '#313133',
     fontSize: 20,
-    borderTopStartRadius: 12,
-    borderTopEndRadius: 12,
+    borderTopStartRadius: 30,
+    borderTopEndRadius: 30,
+    borderBottomStartRadius: 30,
+    borderBottomEndRadius: 30,
+    //overflow: 'hidden',
   },
   inputIconStyle: {
     marginTop: 10,
@@ -19,5 +22,6 @@ export const styles = StyleSheet.create({
   button: {
      marginTop: 20 
   }
+  
 
 })

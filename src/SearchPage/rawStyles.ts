@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     padding: 30,
-    backgroundColor: 'rgba(255, 216, 125, 0.4)',
+    backgroundColor: '#1c1c1e',
     height: height
   },
 })

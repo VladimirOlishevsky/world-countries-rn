@@ -19,7 +19,7 @@ import { flags } from '../config';
 
 import { SliderFlags } from './SliderFlags';
 import { sliderFlagsTitle } from './strings';
-import { regions } from './../config';
+import { regions } from '../config';
 import { Regions } from './Regions';
 
 

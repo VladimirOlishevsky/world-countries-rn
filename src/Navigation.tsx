@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Image, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { SearchScreen } from './MainPage';
+import { SearchScreen } from './SearchPage';
 import { Home } from './Home';
 import { observer } from "mobx-react";
 
@@ -16,12 +16,14 @@ export const BottomNavigation = observer(() => {
                         if (route.name === 'HomePage') {
                             focused ? iconName = require('../assets/images/homeFocused.png')
                                 : iconName = require('../assets/images/home.png');
-                        } else if (route.name === 'SearchPage') {
+                        } else if (route.name === 'InfoPage') {
                             focused ? iconName = require('../assets/images/vicharanFocused.png')
                                 : iconName = require('../assets/images/vicharan.png');
-                        } else {
+                        } else if(route.name === 'SettingsPage') {
                             focused ? iconName = require('../assets/images/kathaFocused.png')
                                 : iconName = require('../assets/images/katha.png');
+                        } else {
+                            iconName = require('../assets/images/search.png')
                         }
                         return <Image source={iconName}
                             style={styles.image}
@@ -31,6 +33,7 @@ export const BottomNavigation = observer(() => {
             >
                 <Tab.Screen name="HomePage" component={Home} />
                 <Tab.Screen name="SearchPage" component={SearchScreen} />
+                <Tab.Screen name="InfoPage" component={SearchScreen} />
                 <Tab.Screen name="SettingsPage" component={Home} />
             </Tab.Navigator>
     )

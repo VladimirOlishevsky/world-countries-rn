@@ -7,7 +7,7 @@ import { Provider as PaperProvider } from 'react-native-paper';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { SeparatePage } from './src/sepa';
-import { SearchScreen } from './src/MainPage';
+import { SearchScreen } from './src/SearchPage';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from './src/Home/index';
 //import { HomePage } from './src/Navigation/HomePage/index';
