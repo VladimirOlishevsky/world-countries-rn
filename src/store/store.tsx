@@ -18,6 +18,12 @@ class Store {
         })
     }
 
+    async fetchRegions(props: string) {
+        const response = await fetch(props)
+        const data = await response.json();
+        console.log(data)
+    }
+
     @computed get commentsCount(){
         return this.countriesInfo;
     }

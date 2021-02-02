@@ -25,14 +25,17 @@ export const regionCards = [
     {
         title: 'Europe',
         img: Image.resolveAssetSource(europe).uri,
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/eu'
     },
     {
         title: 'Asia',
         img: Image.resolveAssetSource(asia).uri,
+        link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=asia&pSubRegion=eastern%20asia'
     },
     {
         title: 'Africa',
         img: Image.resolveAssetSource(africa).uri,
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/au'
     },
 ]
 
