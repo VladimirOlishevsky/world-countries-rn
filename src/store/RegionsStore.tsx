@@ -1,4 +1,4 @@
-import { observable, makeObservable, action, computed, runInAction, makeAutoObservable } from 'mobx';
+import { observable, makeObservable, action, runInAction } from 'mobx';
 
 
 interface IRegionName {
@@ -12,43 +12,32 @@ class RegionsStore {
     constructor() {
         makeObservable(this, {
             countries: observable,
+            countryName: action
         })
     }
-    workerAfterFetch(data: []) {
-        data.forEach(item => this.setItem(item))
-    }
-
-    setItem = (item: IRegionName) => {
-        const some = new RegionName();
-        some.fromApi(item);
-    }
-
     async fetchRegions(props: string) {
-        const response = await fetch(props)
-        const data = await response.json();
+        this.countries = [];
+
+        try {
+            const response = await fetch(props)
+            const data = await response.json();
+            const countriesNameArr = data.map((el: IRegionName) => this.countryName(el));
+            runInAction(() => {
+                this.countries = countriesNameArr;
+                console.log(this.countries)
+            });
+        } catch (error) {
+            runInAction(() => {
+                console.log(error)
+            })
+        }
     }
 
-    // @computed get commentsCount(){
-    //     return this.countriesInfo;
-    // }
+    countryName (data: IRegionName) {
+        return data.name
+    };
 }
 
+const regionCardsStore = new RegionsStore()
 
-export class RegionName {
-
-    name = ''
-
-    constructor() {
-        makeObservable(this, {
-            name: observable,
-        });
-    }
-    fromApi(data: IRegionName) {
-        this.name = data.name;
-    }
-
-}
-
-const storeInstance = new RegionsStore()
-
-export default storeInstance 
+export default regionCardsStore 

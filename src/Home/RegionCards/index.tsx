@@ -4,6 +4,7 @@ import { Card, Title } from 'react-native-paper';
 import { styles } from './rawStyles';
 import { TouchableOpacity } from "react-native-gesture-handler";
 import storeInstance from '../../store/store';
+import regionCardsStore from '../../store/RegionsStore';
 
 interface Props {
     regionCards: Record<string, string>[] // add correct type
@@ -18,7 +19,7 @@ export const RegionCards = ({
             {regionCards.map((el, index) => {
                 return (
                     <TouchableOpacity key={index}
-                        onPress={() => storeInstance.fetchRegions(el.link)}>
+                        onPress={() => regionCardsStore.fetchRegions(el.link)}>
                         <Card
                             style={{ marginTop: 30 }}
                         >
