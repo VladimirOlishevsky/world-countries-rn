@@ -4,7 +4,7 @@ import {
     View,
     ScrollView,
     StyleSheet,
-    Image,
+    //Image,
     TouchableOpacity
 } from 'react-native';
 import { observer } from "mobx-react";
@@ -21,7 +21,8 @@ import { SliderFlags } from './SliderFlags';
 import { sliderFlagsTitle } from './strings';
 import { regions } from '../config';
 import { Regions } from './Regions';
-
+import regionCardsStore from '../store/RegionsStore';
+import Image from 'react-native-remote-svg'
 
 export const SearchScreen = observer(({ navigation }: any): JSX.Element => {
 
@@ -33,6 +34,7 @@ export const SearchScreen = observer(({ navigation }: any): JSX.Element => {
             <InputArea />
 
             <ScrollView>
+               <Image />
                 <ChipsTitle title={sliderFlagsTitle} />
                 <SliderFlags slides={flags} />
                 <ChipsBlockLayout

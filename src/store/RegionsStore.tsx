@@ -2,17 +2,41 @@ import { observable, makeObservable, action, runInAction } from 'mobx';
 
 
 interface IRegionName {
-    name: string
+    name: string,
+    flag: string
+}
+
+class RegionName {
+
+    name = ''
+    flag = ''
+
+    constructor() {
+        makeObservable(this, {
+            name: observable,
+            flag: observable,
+            setCountry: action,
+        });
+    }
+
+    setCountry(data: IRegionName) {
+        this.name = data.name;
+        this.flag = data.flag
+    }
+
 }
 
 class RegionsStore {
 
-    countries = [];
+    countries: IRegionName[] = [];
 
     constructor() {
         makeObservable(this, {
             countries: observable,
-            countryName: action
+            countryName: action,
+            setItem: action,
+            workerAfter: action,
+            fetchRegions: action
         })
     }
     async fetchRegions(props: string) {
@@ -21,9 +45,9 @@ class RegionsStore {
         try {
             const response = await fetch(props)
             const data = await response.json();
-            const countriesNameArr = data.map((el: IRegionName) => this.countryName(el));
+            const filteredData = this.workerAfter(data)
             runInAction(() => {
-                this.countries = countriesNameArr;
+                this.countries = filteredData;
                 console.log(this.countries)
             });
         } catch (error) {
@@ -31,6 +55,16 @@ class RegionsStore {
                 console.log(error)
             })
         }
+    }
+
+    workerAfter(data: IRegionName[]) {
+      return data.map(el => this.setItem(el))
+    }
+
+    setItem(data: IRegionName) {
+        const name = new RegionName();
+        name.setCountry(data) 
+        return name
     }
 
     countryName (data: IRegionName) {

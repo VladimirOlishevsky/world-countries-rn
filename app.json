@@ -1,7 +1,7 @@
 {
     "expo": {
-        "name": "africa-rn",
-        "slug": "africa-rn",
+        "name": "world-countries-rn",
+        "slug": "world-countries-rn",
         "version": "1.0.0",
         "orientation": "portrait",
         "icon": "./assets/icon.png",
