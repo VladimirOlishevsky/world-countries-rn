@@ -1,29 +1,10 @@
 import { observable, makeObservable, action, runInAction } from 'mobx';
+import { RegionName } from './RegionItem/index';
 
 
-interface IRegionName {
-    name: string,
-    flag: string
-}
-
-class RegionName {
-
-    name = ''
-    flag = ''
-
-    constructor() {
-        makeObservable(this, {
-            name: observable,
-            flag: observable,
-            setCountry: action,
-        });
-    }
-
-    setCountry(data: IRegionName) {
-        this.name = data.name;
-        this.flag = data.flag
-    }
-
+export interface IRegionName {
+    Name: string,
+    FlagPng: string
 }
 
 class RegionsStore {
@@ -33,7 +14,6 @@ class RegionsStore {
     constructor() {
         makeObservable(this, {
             countries: observable,
-            countryName: action,
             setItem: action,
             workerAfter: action,
             fetchRegions: action
@@ -45,10 +25,9 @@ class RegionsStore {
         try {
             const response = await fetch(props)
             const data = await response.json();
-            const filteredData = this.workerAfter(data)
+            const filteredData = this.workerAfter(data.Response)
             runInAction(() => {
                 this.countries = filteredData;
-                console.log(this.countries)
             });
         } catch (error) {
             runInAction(() => {
@@ -66,10 +45,6 @@ class RegionsStore {
         name.setCountry(data) 
         return name
     }
-
-    countryName (data: IRegionName) {
-        return data.name
-    };
 }
 
 const regionCardsStore = new RegionsStore()

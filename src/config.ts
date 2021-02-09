@@ -25,7 +25,7 @@ export const regionCards = [
     {
         title: 'Europe',
         img: Image.resolveAssetSource(europe).uri,
-        link: 'https://restcountries.eu/rest/v2/regionalbloc/eu'
+        link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=europe&pSubRegion=western%20europe'
     },
     {
         title: 'Asia',
@@ -35,7 +35,7 @@ export const regionCards = [
     {
         title: 'Africa',
         img: Image.resolveAssetSource(africa).uri,
-        link: 'https://restcountries.eu/rest/v2/regionalbloc/au'
+        link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=africa&pSubRegion=middle%20africa'
     },
 ]
 

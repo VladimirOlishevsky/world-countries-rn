@@ -4,7 +4,7 @@ import { Card, Title } from 'react-native-paper';
 import { styles } from './rawStyles';
 import { TouchableOpacity } from "react-native-gesture-handler";
 import storeInstance from '../../store/store';
-import regionCardsStore from '../../store/RegionsStore';
+import regionCardsStore from '../../store/Regions';
 
 interface Props {
     regionCards: Record<string, string>[] // add correct type
