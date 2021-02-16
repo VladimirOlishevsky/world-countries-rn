@@ -14,10 +14,13 @@ import { TextInput, Button, Card, Title } from 'react-native-paper';
 import { regionCards } from './../config';
 import { RegionCards } from './RegionCards/index';
 import { observer } from 'mobx-react';
+import { useNavigation } from '@react-navigation/native';
 
 
 
-export const Home = observer(({ navigation }: any): JSX.Element => {
+export const Home = observer((): JSX.Element => {
+
+    const navigation = useNavigation();
 
     return (
         <ScrollView style={{backgroundColor: '#1c1c1e'}}>

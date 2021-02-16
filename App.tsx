@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Image } from 'react-native';
-import { BottomNavigation } from './src/Navigation';
+// import { BottomNavigation } from './src/Navigation';
 import storeInstance from './src/store/store';
 import { Provider } from "mobx-react";
 import { Provider as PaperProvider } from 'react-native-paper';
@@ -11,6 +11,7 @@ import { SearchScreen } from './src/SearchPage';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from './src/Home/index';
 //import { HomePage } from './src/Navigation/HomePage/index';
+import { MainNavigation } from './src/Navigation/index';
 
 export const Stack = createStackNavigator();
 export const Tab = createBottomTabNavigator();
@@ -22,7 +23,8 @@ export default class App extends React.Component {
             <Provider value={storeInstance}>
                 <PaperProvider>
                     <NavigationContainer>
-                        <BottomNavigation />
+                        <MainNavigation />
+
                         {/* <Tab.Navigator
                             initialRouteName="Feed"
                             tabBarOptions={{

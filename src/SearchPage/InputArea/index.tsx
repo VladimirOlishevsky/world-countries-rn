@@ -11,6 +11,11 @@ import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 export const InputArea = observer((): JSX.Element => {
     const [value, setValue] = useState('');
+
+    const setToStore = (val: string) => {
+        setValue(val);
+        storeInstance.setValueToStore(value)
+    }
     return (
         <View style={styles.inputContainer}>
 
@@ -24,6 +29,8 @@ export const InputArea = observer((): JSX.Element => {
                 inputStyle={{color: '#fff'}}
                 //iconWidth={40}
                 inputPadding={16}
+                onChangeText={(text) => setToStore(text)}
+                // onChange={(el: string) => setToStore(el)}
             />
 
             {/* <TextInput
@@ -52,7 +59,7 @@ export const InputArea = observer((): JSX.Element => {
                 color='#0f4c81'
                 icon='magnify'
                 mode="contained"
-                onPress={() => storeInstance.fetchCountries(value)}>
+                onPress={() => value ? storeInstance.fetchCountries(value) : console.log('33333')}>
                 Search
              </Button>
         </View>)

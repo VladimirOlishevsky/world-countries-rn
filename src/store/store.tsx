@@ -3,6 +3,7 @@ import { observable, action, computed, runInAction, makeAutoObservable } from 'm
 class Store {
 
     @observable countriesInfo = ''
+    @observable value = ''
 
     constructor() {
         // Don't need decorators now, just this call
@@ -22,6 +23,11 @@ class Store {
         const response = await fetch(props)
         const data = await response.json();
         console.log(data)
+    }
+
+    setValueToStore(val: string) {
+        this.value = val
+        console.log(this.value)
     }
 
     @computed get commentsCount(){

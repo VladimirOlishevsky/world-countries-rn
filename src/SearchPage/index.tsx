@@ -67,12 +67,12 @@ export const SearchScreen = observer(({ navigation }: any): JSX.Element => {
 
 
                 <Button
-                    onPress={() => navigation.navigate("Test", { names: value })}
+                    onPress={() => navigation.navigate("Test", { names:  storeInstance.value })}
                 >Go to About Screen</Button>
 
                 <Text>This is the home screen</Text>
                 <Button
-                    onPress={() => navigation.navigate("Test", { names: value })}
+                    onPress={() => navigation.navigate("Test", { names:  storeInstance.value })}
                 >Go to About Screen</Button>
             </ScrollView>
 

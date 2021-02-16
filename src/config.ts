@@ -25,17 +25,20 @@ export const regionCards = [
     {
         title: 'Europe',
         img: Image.resolveAssetSource(europe).uri,
-        link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=europe&pSubRegion=western%20europe'
+        link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=europe&pSubRegion=western%20europe',
+        description: 'Popular European Countries'
     },
     {
         title: 'Asia',
         img: Image.resolveAssetSource(asia).uri,
-        link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=asia&pSubRegion=eastern%20asia'
+        link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=asia&pSubRegion=eastern%20asia',
+        description: 'Popular Asian Countries'
     },
     {
         title: 'Africa',
         img: Image.resolveAssetSource(africa).uri,
-        link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=africa&pSubRegion=middle%20africa'
+        link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=africa&pSubRegion=middle%20africa',
+        description: 'Popular African Countries'
     },
 ]
 
