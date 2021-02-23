@@ -5,6 +5,7 @@ import { RegionName } from './RegionItem/index';
 export interface IRegionName {
     Name: string,
     FlagPng: string
+    Alpha2Code: string
 }
 
 class RegionsStore {

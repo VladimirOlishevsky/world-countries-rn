@@ -5,14 +5,24 @@ import regionCardsStore from '../../store/Regions';
 import { observer } from 'mobx-react';
 import { BackButton } from './../../Navigation/BackButton/index';
 import { styles } from './rawStyles';
+import storeInstance from '../../store/store';
+import countryStore from '../../store/Country';
+import { useNavigation } from '@react-navigation/native';
 
 
 export const RegionCountries = observer(({ route }: any): JSX.Element => {
 
+    const navigation = useNavigation();
+
+    const actionByClick = (code: string) => {
+        countryStore.fetchCountry(code);
+        navigation.navigate("Country")
+    }
+
     return (
         <ScrollView style={styles.scrollView}>
             <View style={styles.view}>
-                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 20 }}>
                     <BackButton />
                     <Text style={styles.mainTitle}>
                         {route.params.name}
@@ -23,7 +33,7 @@ export const RegionCountries = observer(({ route }: any): JSX.Element => {
                     return (
                         <TouchableOpacity
                             key={index}
-                            onPress={() => console.log('region')}
+                            onPress={() => actionByClick(el.Alpha2Code)}
                             style={styles.imageWrapper}>
                             <Image
                                 style={styles.image}
