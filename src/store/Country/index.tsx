@@ -57,23 +57,14 @@ class CountryStore {
     }
     async fetchCountry(alphaCode: string) {
 
-
-       this.param = false
+        this.param = false
 
         try {
             const response = await fetch(`https://restcountries.eu/rest/v2/alpha/${alphaCode}`)
             const data = await response.json();
-            // this.fromApi(data)
-            // this.param = true
-
-            // console.log('222222',this.currencies)
-            //this.param = true
             runInAction(() => {
                 this.fromApi(data)
                 this.param = true
-                //this.cout = filteredData
-               // console.log(this.cout)
-                //return filteredData
             });
         } catch (error) {
             runInAction(() => {
@@ -84,8 +75,7 @@ class CountryStore {
 
     workerAfter(data: ICountry) {
         return this.fromApi(data)
-      }
-  
+    }
 
     private setCountryCurrencies(data: ICurrencies[]) {
         return data.map((item) => {
@@ -93,28 +83,14 @@ class CountryStore {
             currency.setCurrencies(item);
             return currency;
         });
-        // return runInAction(() => {
-        //     return data.map((item) => {
-        //         const currency = new Currencies();
-        //         currency.setCurrencies(item);
-        //         return currency;
-        //     });
-        // });
-
     }
+
     private setCountryLanguages(data: ILanguages[]) {
         return data.map((item) => {
             const language = new Languages();
             language.setLanguages(item);
             return language;
         });
-        // return runInAction(() => {
-        //     return data.map((item) => {
-        //         const language = new Languages();
-        //         language.setLanguages(item);
-        //         return language;
-        //     });
-        // });
     }
 
     fromApi(data: ICountry) {
@@ -128,7 +104,6 @@ class CountryStore {
         this.languages = this.setCountryLanguages(data.languages);
         this.flag = data.flag;
     }
-
 }
 
 const countryStore = new CountryStore()

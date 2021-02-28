@@ -9,6 +9,11 @@ export const styles = StyleSheet.create({
         marginTop: 30, 
         marginBottom: 50,
     },
+    headerBlock: {
+        flexDirection: 'row', 
+        alignItems: 'center', 
+        marginBottom: 20
+    },
     imageWrapper: {
         flexDirection: 'row', 
         marginTop: 10, 

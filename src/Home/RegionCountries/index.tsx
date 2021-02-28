@@ -5,7 +5,6 @@ import regionCardsStore from '../../store/Regions';
 import { observer } from 'mobx-react';
 import { BackButton } from './../../Navigation/BackButton/index';
 import { styles } from './rawStyles';
-import storeInstance from '../../store/store';
 import countryStore from '../../store/Country';
 import { useNavigation } from '@react-navigation/native';
 
@@ -16,13 +15,13 @@ export const RegionCountries = observer(({ route }: any): JSX.Element => {
 
     const actionByClick = (code: string) => {
         countryStore.fetchCountry(code);
-        navigation.navigate("Country")
+        navigation.navigate("Country", { name: code });
     }
 
     return (
         <ScrollView style={styles.scrollView}>
             <View style={styles.view}>
-                <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 20 }}>
+                <View style={styles.headerBlock}>
                     <BackButton />
                     <Text style={styles.mainTitle}>
                         {route.params.name}
