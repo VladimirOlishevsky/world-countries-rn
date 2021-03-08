@@ -15,19 +15,27 @@ export const Country = observer(({ route }: any): JSX.Element => {
     return (
         <ScrollView style={styles.scrollView}>
             <View >
-                <View style={styles.view}>
+                <View style={styles.header}>
                     <BackButton />
                 </View>
 
-                <View style={{display: 'flex', justifyContent: 'center'}}>
+                <View style={styles.content}>
                     <Image
-                        style={{ width: 200, height: 150}}
+                        style={styles.image}
                         source={{
                             uri: `https://flagcdn.com/w640/${route.params.name.toLowerCase()}.png`
                         }}
                     />
-                    <Text >
+                    <Text style={styles.countryName}>
                         {countryStore.name}
+                    </Text>
+                </View>
+                <View style={{marginTop: 50, flexDirection: 'row', }}>
+                    <Text style={{fontSize: 20, color: '#ff9f0a'}} >
+                        Capital: 
+                    </Text>
+                    <Text style={{fontSize: 20, color: '#fff'}}>
+                        {countryStore.capital}
                     </Text>
                 </View>
             </View>
