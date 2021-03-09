@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
     scrollView: {
         backgroundColor: '#1c1c1e',
         padding: 30,
+        paddingBottom: 150
     },
     header: {
         marginTop: 30,
@@ -21,5 +22,18 @@ export const styles = StyleSheet.create({
         marginTop: 30,
         fontSize: 20,
         color: '#fff'
+    },
+    keys: {
+        fontSize: 20, 
+        color: '#ff9f0a',
+        marginRight: 10
+    },
+    values: {
+        fontSize: 20, 
+        color: '#fff',
+    },
+    strings: {
+        marginTop: 30, 
+        flexDirection: 'row',
     }
 });
