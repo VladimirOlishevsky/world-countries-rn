@@ -35,5 +35,9 @@ export const styles = StyleSheet.create({
     strings: {
         marginTop: 30, 
         flexDirection: 'row',
+    },
+    column: {
+        display: 'flex', 
+        flexDirection: 'column'
     }
 });

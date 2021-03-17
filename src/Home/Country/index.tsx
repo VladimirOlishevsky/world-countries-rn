@@ -4,14 +4,14 @@ import { observer } from 'mobx-react';
 import { BackButton } from './../../Navigation/BackButton/index';
 import { styles } from './rawStyles';
 import countryStore from '../../store/Country';
-import { COUNTRY_TITLES } from './constants';
+import { COUNTRY_ARRAYS, COUNTRY_TITLES, COUNTRY_TITLES_All } from './constants';
 
+
+const arrFrom = Array.from(Object.keys(COUNTRY_TITLES))
 
 export const Country = observer(({ route }: any): JSX.Element => {
 
-
     return (
-
         <View style={styles.scrollView}>
             <View style={styles.header}>
                 <BackButton />
@@ -28,63 +28,58 @@ export const Country = observer(({ route }: any): JSX.Element => {
                         {countryStore.name}
                     </Text>
                 </View>
-                <View style={styles.strings}>
-                    <Text style={styles.keys} >
-                        {COUNTRY_TITLES.capital}:
-                    </Text>
-                    <Text style={styles.values}>
-                        {countryStore.capital}
-                    </Text>
-                </View>
-                <View style={styles.strings}>
-                    <Text style={styles.keys} >
-                        {COUNTRY_TITLES.region}:
-                    </Text>
-                    <Text style={styles.values}>
-                        {countryStore.region}
-                    </Text>
-                </View>
-                <View style={styles.strings}>
-                    <Text style={styles.keys} >
-                        {COUNTRY_TITLES.subregion}:
-                    </Text>
-                    <Text style={styles.values}>
-                        {countryStore.subregion}
-                    </Text>
-                </View>
-                <View style={styles.strings}>
-                    <Text style={styles.keys} >
-                        {COUNTRY_TITLES.population}:
-                    </Text>
-                    <Text style={styles.values}>
-                        {countryStore.population}
-                    </Text>
-                </View>
-                <View style={styles.strings}>
-                    <Text style={styles.keys} >
-                        {COUNTRY_TITLES.languages}:
-                    </Text>
-                    {countryStore.languages.map(el => (
-                        <Text key={el.name} style={styles.values}>
-                            {el.name}
-                        </Text>
-                    ))}
 
-                </View>
-                <View style={styles.strings}>
-                    <Text style={styles.keys} >
-                        {COUNTRY_TITLES.currencies}:
-                    </Text>
-                    {countryStore.currencies.map(el => (
-                        <Text key={el.name} style={styles.values}>
-                            {el.name}
+                {Object.values(COUNTRY_TITLES_All).map(el => (
+                    <View key={el} style={styles.strings}>
+                        <Text style={styles.keys} >
+                            {el}:
                         </Text>
-                    ))}
 
+                        {typeof countryStore.store2Obj[el] === 'object'
+                            ? (
+                                <View style={styles.column}>
+                                    {countryStore.store2Obj[el].map((el: any) => (
+                                        <Text key={el.name} style={styles.values}>
+                                            {el.name}
+                                        </Text>
+                                    ))}
+                                </View>
+                            )
+                            :
+                            <Text key={el} style={styles.values}>
+                                {countryStore.store2Obj[el]}
+                            </Text>
+                        }
+                    </View>
+                )
+                )}
+                {/* <Text style={styles.keys} >
+                    {COUNTRY_ARRAYS.currencies}:
+                </Text>
+                <View style={styles.column}>
+                    <Text style={styles.values}>
+                        {countryStore.currencies.map((el: any) => (
+                            <Text key={el.name} style={styles.values}>
+                                {el.name}
+                            </Text>
+                        ))}
+                    </Text>
                 </View>
+
+                <Text style={styles.keys} >
+                    {COUNTRY_ARRAYS.languages}:
+                </Text>
+                <View style={styles.column}>
+                    <Text style={styles.values}>
+                        {countryStore.languages.map((el: any) => (
+                            <Text key={el.name} style={styles.values}>
+                                {el.name}
+                            </Text>
+                        ))}
+                    </Text>
+                </View> */}
             </ScrollView>
         </View>
-
     )
 })
 

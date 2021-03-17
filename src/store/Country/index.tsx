@@ -1,6 +1,12 @@
-import { observable, makeObservable, action, runInAction } from 'mobx';
+import { observable, makeObservable, action, runInAction, computed } from 'mobx';
+import { COUNTRY_TITLES } from '../../Home/Country/constants';
 import { Currencies } from './Currencies/index';
 import { Languages } from './Languages/index';
+
+export type CountryCard = {
+    [key in COUNTRY_TITLES]: string | number;
+};
+
 
 export interface ICountry {
     name: string,
@@ -23,6 +29,7 @@ export interface ILanguages {
     name: string,
     nativeName: string
 }
+
 
 
 class CountryStore {
@@ -52,7 +59,11 @@ class CountryStore {
             flag: observable,
             param: observable,
             fromApi: action,
-            fetchCountry: action
+            fetchCountry: action,
+
+            store2Obj: computed,
+            arrow: computed,
+            bbarrow: computed
         })
     }
     async fetchCountry(alphaCode: string) {
@@ -75,6 +86,25 @@ class CountryStore {
 
     workerAfter(data: ICountry) {
         return this.fromApi(data)
+    }
+
+    get store2Obj() {
+        return {
+            Capital: this.capital,
+            Region: this.region,
+            Subregion: this.subregion,
+            Population: this.population,
+            Currencies: this.arrow,
+            Languages: this.bbarrow
+        }
+    }
+
+    get arrow() {
+        return Array.from(this.currencies)
+    }
+
+    get bbarrow() {
+        return Array.from(this.languages)
     }
 
     private setCountryCurrencies(data: ICurrencies[]) {
@@ -108,4 +138,4 @@ class CountryStore {
 
 const countryStore = new CountryStore()
 
-export default countryStore 
+export default countryStore
