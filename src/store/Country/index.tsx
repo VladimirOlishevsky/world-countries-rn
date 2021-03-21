@@ -1,11 +1,6 @@
 import { observable, makeObservable, action, runInAction, computed } from 'mobx';
-import { COUNTRY_TITLES } from '../../Home/Country/constants';
 import { Currencies } from './Currencies/index';
 import { Languages } from './Languages/index';
-
-export type CountryCard = {
-    [key in COUNTRY_TITLES]: string | number;
-};
 
 
 export interface ICountry {
@@ -14,11 +9,14 @@ export interface ICountry {
     region: string,
     subregion: string,
     population: number,
-    latlng: number[]
-    currencies: ICurrencies[]
-    languages: ILanguages[]
-    flag: string
+    latlng: number[],
+    currencies: ICurrencies[],
+    languages: ILanguages[],
+    flag: string,
+    alpha2Code: string
 }
+
+type CountryCard = Omit<ICountry, "latlng" | "flag">;
 
 export interface ICurrencies {
     name: string,
@@ -43,8 +41,10 @@ class CountryStore {
     currencies: Currencies[] = []
     languages: Languages[] = []
     flag = ''
+    alpha2Code = ''
 
-    param = false;
+    param = false
+    errorMessage = ''
 
     constructor() {
         makeObservable(this, {
@@ -58,24 +58,61 @@ class CountryStore {
             languages: observable,
             flag: observable,
             param: observable,
+
+            errorMessage: observable,
+            alpha2Code: observable,
+
             fromApi: action,
-            fetchCountry: action,
+            fetchCountryByCode: action,
+            fetchCountryByName: action,
+            getKeyByValue: action,
 
             store2Obj: computed,
-            arrow: computed,
-            bbarrow: computed
         })
     }
-    async fetchCountry(alphaCode: string) {
+    async fetchCountryByCode(alphaCode: string) {
 
-        this.param = false
+        this.param = true
 
         try {
             const response = await fetch(`https://restcountries.eu/rest/v2/alpha/${alphaCode}`)
             const data = await response.json();
             runInAction(() => {
                 this.fromApi(data)
-                this.param = true
+                this.param = false
+            });
+        } catch (error) {
+            runInAction(() => {
+                console.log(error)
+            })
+        }
+    }
+
+    async fetchCountryByName(props: string) {
+
+        this.errorMessage = ''
+
+        try {
+            const response =await fetch(`https://restcountries.eu/rest/v2/name/${props}?fullText=true`)
+            const data = await response.json();
+
+//             if(data.message) {
+//                 runInAction(() => {
+//                     this.errorMessage = data.message
+//                     return
+//                 });
+                
+//             }
+// console.log(data)
+            runInAction(() => {
+                if(data.message) {
+                        this.errorMessage = data.message
+                        return
+                }
+
+
+                this.fromApi(data[0])
+                this.param = false
             });
         } catch (error) {
             runInAction(() => {
@@ -88,23 +125,19 @@ class CountryStore {
         return this.fromApi(data)
     }
 
+    getKeyByValue(object: any , value: any) {
+        return Object.keys(object).find(key => object[key] === value);
+    }
+
     get store2Obj() {
-        return {
+       return {
             Capital: this.capital,
             Region: this.region,
             Subregion: this.subregion,
             Population: this.population,
-            Currencies: this.arrow,
-            Languages: this.bbarrow
+            Currencies: this.currencies,
+            Languages: this.languages
         }
-    }
-
-    get arrow() {
-        return Array.from(this.currencies)
-    }
-
-    get bbarrow() {
-        return Array.from(this.languages)
     }
 
     private setCountryCurrencies(data: ICurrencies[]) {
@@ -133,6 +166,7 @@ class CountryStore {
         this.currencies = this.setCountryCurrencies(data.currencies);
         this.languages = this.setCountryLanguages(data.languages);
         this.flag = data.flag;
+        this.alpha2Code = data.alpha2Code
     }
 }
 

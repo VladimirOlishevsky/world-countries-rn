@@ -14,20 +14,20 @@ export const RegionCountries = observer(({ route }: any): JSX.Element => {
     const navigation = useNavigation();
 
     const actionByClick = (code: string) => {
-        countryStore.fetchCountry(code);
+        countryStore.fetchCountryByCode(code);
         navigation.navigate("Country", { name: code });
     }
 
     return (
-        <ScrollView style={styles.scrollView}>
-            <View style={styles.view}>
-                <View style={styles.headerBlock}>
-                    <BackButton />
-                    <Text style={styles.mainTitle}>
-                        {route.params.name}
-                    </Text>
-                </View>
 
+        <View style={styles.scrollView}>
+            <View style={styles.header}>
+                <BackButton />
+                <Text style={styles.mainTitle}>
+                    {route.params.name}
+                </Text>
+            </View>
+            <ScrollView>
                 {regionCardsStore.countries.map((el, index: number) => {
                     return (
                         <TouchableOpacity
@@ -46,8 +46,8 @@ export const RegionCountries = observer(({ route }: any): JSX.Element => {
                         </TouchableOpacity>
                     )
                 })}
-            </View>
-        </ScrollView>
+            </ScrollView>
+        </View>
     )
 })
 

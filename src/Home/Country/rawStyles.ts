@@ -1,10 +1,12 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+const { height } = Dimensions.get('screen')
 
 export const styles = StyleSheet.create({
     scrollView: {
         backgroundColor: '#1c1c1e',
         padding: 30,
-        paddingBottom: 150
+        paddingBottom: 150,
+        height: height
     },
     header: {
         marginTop: 30,

@@ -8,12 +8,14 @@ class Store {
     constructor() {
         // Don't need decorators now, just this call
         makeAutoObservable(this);
-      }
+    }
 
     async fetchCountries(props: string) {
         const response = await fetch(`https://restcountries.eu/rest/v2/name/${props}?fullText=true`)
-        const data = await response.json();
 
+
+        const data = await response.json();
+        console.log(data)
         runInAction(() => {
             this.countriesInfo = data[0].name
         })
@@ -30,7 +32,7 @@ class Store {
         console.log(this.value)
     }
 
-    @computed get commentsCount(){
+    @computed get commentsCount() {
         return this.countriesInfo;
     }
 }
@@ -38,4 +40,4 @@ class Store {
 
 const storeInstance = new Store()
 
-export default storeInstance 
+export default storeInstance

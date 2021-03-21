@@ -1,16 +1,15 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import {
     Text,
     View,
     ScrollView,
-    StyleSheet,
     Image,
     TouchableOpacity
 } from 'react-native';
 import { observer } from "mobx-react";
 import storeInstance from '../store/store';
 import { styles } from './rawStyles';
-import { TextInput, Button } from 'react-native-paper';
+import { Button } from 'react-native-paper';
 import { ChipsBlockLayout } from "./ChipsBlockLayout";
 import { ChipsTitle } from "./ChipsBlockLayout/ChipsTitle";
 import { ChipsContent } from "./ChipsBlockLayout/ChipsContent";

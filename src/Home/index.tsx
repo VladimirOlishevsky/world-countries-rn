@@ -7,7 +7,7 @@ import {
 import { Divider } from 'react-native-elements';
 import React from 'react';
 import { styles } from './rawStyles';
-import { title } from './config';
+import { HOME_TITLES, title } from './config';
 import { Slider } from '../Slider'
 import { slides } from '../config';
 import { TextInput, Button, Card, Title } from 'react-native-paper';
@@ -45,7 +45,7 @@ export const Home = observer((): JSX.Element => {
                         mode="contained"
                     // onPress={() => storeInstance.fetchCountries(value)}
                     >
-                        Countries
+                        {HOME_TITLES.countries}
                      </Button>
                     <Button
                         style={styles.buttonCapitals}
@@ -54,7 +54,7 @@ export const Home = observer((): JSX.Element => {
                         mode="contained"
                     //onPress={() => storeInstance.fetchCountries(value)}
                     >
-                        Capitals
+                        {HOME_TITLES.capitals}
                     </Button>
                 </View>
                 <Button
@@ -65,7 +65,7 @@ export const Home = observer((): JSX.Element => {
                     mode="contained"
                     onPress={() => navigation.navigate("SearchPage")}
                 >
-                    Search
+                    {HOME_TITLES.search}
                  </Button>
 
                  <RegionCards regionCards={regionCards} />

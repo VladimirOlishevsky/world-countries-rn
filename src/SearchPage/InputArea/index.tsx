@@ -7,15 +7,24 @@ import storeInstance from "../../store/store";
 import { Fumi } from 'react-native-textinput-effects';
 import MaterialsIcon from 'react-native-vector-icons/MaterialIcons';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import countryStore from "../../store/Country";
+import { useNavigation } from "@react-navigation/native";
 
 
 export const InputArea = observer((): JSX.Element => {
     const [value, setValue] = useState('');
+    const navigation = useNavigation();
 
     const setToStore = (val: string) => {
         setValue(val);
         storeInstance.setValueToStore(value)
     }
+
+    const actionByClick = (value: string) => {
+        countryStore.fetchCountryByName(value);
+        navigation.navigate("Country", { name: value });
+    }
+
     return (
         <View style={styles.inputContainer}>
 
@@ -59,7 +68,7 @@ export const InputArea = observer((): JSX.Element => {
                 color='#0f4c81'
                 icon='magnify'
                 mode="contained"
-                onPress={() => value ? storeInstance.fetchCountries(value) : console.log('33333')}>
+                onPress={() => value ? actionByClick(value) : console.log('33333')}>
                 Search
              </Button>
         </View>)
