@@ -44,28 +44,33 @@ export const regionCards = [
 
 export const regions = [
     {
+        id: 1,
         title: 'Europe',
-        img: europeRegion,
+        img: 'https://flagcdn.com/w640/eu.png',
         link: 'https://restcountries.eu/rest/v2/regionalbloc/eu'
     },
     {
+        id: 2,
         title: 'North America',
-        img: northAmericaRegion,
+        img: 'https://flagpedia.net/organization/au.png',
         link: 'https://restcountries.eu/rest/v2/regionalbloc/nafta'
     },
     {
+        id: 3,
         title: 'South America',
-        img: southAmericaRegion,
+        img: Image.resolveAssetSource(southAmericaRegion).uri,
         link: 'https://restcountries.eu/rest/v2/regionalbloc/usan'
     },
     {
+        id: 4,
         title: 'Arab Countries',
-        img: arabRegion,
+        img: Image.resolveAssetSource(arabRegion).uri,
         link: 'https://restcountries.eu/rest/v2/regionalbloc/al'
     },
     {
+        id: 5,
         title: 'Caribbean Region',
-        img: caribbeanRegion,
+        img: Image.resolveAssetSource(caribbeanRegion).uri,
         link: 'https://restcountries.eu/rest/v2/regionalbloc/caricom'
     },
 ]

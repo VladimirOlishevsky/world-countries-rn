@@ -18,12 +18,9 @@ import { flags } from '../config';
 
 import { SliderFlags } from './SliderFlags';
 import { sliderFlagsTitle } from './strings';
-import { regions } from '../config';
-import { Regions } from './Regions';
-//import Image from 'react-native-remote-svg'
+import { SearchRegions } from './Regions';
 import { SvgCssUri } from 'react-native-svg';
 import regionCardsStore from '../store/Regions';
-//import FastImage from 'react-native-fast-image'
 
 export const SearchScreen = observer(({ navigation }: any): JSX.Element => {
 
@@ -35,7 +32,7 @@ export const SearchScreen = observer(({ navigation }: any): JSX.Element => {
             <InputArea />
 
             <ScrollView>
-                {regionCardsStore.countries.map((el, index: number) => {
+                {/* {regionCardsStore.countries.map((el, index: number) => {
                     return (
                         <TouchableOpacity key={index} onPress={() => console.log('region')} style={{ flexDirection: 'row', marginTop: 10, marginBottom: 10 }}>
                             <Image
@@ -49,20 +46,20 @@ export const SearchScreen = observer(({ navigation }: any): JSX.Element => {
                             </Text>
                         </TouchableOpacity>
                     )
-                })}
-                <ChipsTitle title={sliderFlagsTitle} />
-                <SliderFlags slides={flags} />
-                <ChipsBlockLayout
+                })} */}
+                {/* <ChipsTitle title={sliderFlagsTitle} /> */}
+                {/* <SliderFlags slides={flags} /> */}
+                {/* <ChipsBlockLayout
                     title={<ChipsTitle title='Most Popular' />}
                     chips={<ChipsContent />}
                 />
                 <Text>557788871🍕</Text>
-                <Text>{storeInstance.countriesInfo}</Text>
+                <Text>{storeInstance.countriesInfo}</Text> */}
 
 
-                <Text>This is the home screen</Text>
+                {/* <Text>This is the home screen</Text> */}
 
-                <Regions regionsArr={regions} />
+                <SearchRegions />
 
 
                 <Button

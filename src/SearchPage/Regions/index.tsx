@@ -1,29 +1,30 @@
 import React, { Fragment, useState } from "react";
-import { Image, View, Text, ImageURISource } from "react-native"
+import { Image, View, Text } from "react-native"
 import { styles } from './rawStyles';
 import { observer } from 'mobx-react';
-import Swiper from 'react-native-web-swiper';
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { regions } from "../../config";
+import { Card, Title } from "react-native-paper";
 
-type ImageSourcePropType = React.ComponentProps<typeof Image>['source'];
 
-export const Regions = observer(({ regionsArr }: any): JSX.Element => {
+export const SearchRegions = observer(() => {
+
     return (
-        <Fragment>
-            {regionsArr.map((el: Record<string, string | ImageSourcePropType>, index: number) => {
+        <View style={{ marginTop: 30 }}>
+            {regions.map((el) => {
                 return (
-                    <TouchableOpacity key={index} onPress={() => console.log('region')} style={{ flexDirection: 'row' }}>
-                        <Image
-                            resizeMode="stretch"
-                            source={el.img}
-                        />
-                        <Text >
-                            {el.title}
-                        </Text>
+                    <TouchableOpacity key={el.id} onPress={() => console.log('region')} style={{ flexDirection: 'column' }}>
+                        <Card
+                            style={{ marginTop: 30 }}
+                        >
+                            <Card.Cover source={{ uri: el.img }} />
+                            <Title >
+                                {el.title}
+                            </Title>
+                        </Card>
                     </TouchableOpacity>
                 )
             })}
-        </Fragment>
-    )
+</View>    )
 })
 
