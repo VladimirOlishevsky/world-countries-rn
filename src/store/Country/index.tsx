@@ -161,7 +161,7 @@ class CountryStore {
     }
 }
 
-class RegionalBlocks {
+class RegionalBlocks { // TODO - to another file
     countries: CountryStore[] = []
     errorMessage = ''
 
@@ -178,7 +178,7 @@ class RegionalBlocks {
 
         this.countries = []
         this.errorMessage = ''
-        
+
         try {
             const response = await fetch(props)
             const data = await response.json();
