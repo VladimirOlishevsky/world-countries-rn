@@ -42,35 +42,47 @@ export const regionCards = [
     },
 ]
 
-export const regions = [
+export const regionalBlocks = [
     {
         id: 1,
-        title: 'Europe',
-        img: 'https://flagcdn.com/w640/eu.png',
+        title: 'European Union',
+        img: 'https://flagpedia.net/data/org/w580/eu.png',
         link: 'https://restcountries.eu/rest/v2/regionalbloc/eu'
     },
     {
         id: 2,
-        title: 'North America',
-        img: 'https://flagpedia.net/organization/au.png',
+        title: 'Union of South American Nations',
+        img: 'https://flagpedia.net/data/org/w580/usan.png',
         link: 'https://restcountries.eu/rest/v2/regionalbloc/nafta'
     },
     {
         id: 3,
-        title: 'South America',
-        img: Image.resolveAssetSource(southAmericaRegion).uri,
+        title: 'African Union',
+        img: 'https://flagpedia.net/data/org/w580/au.png',
         link: 'https://restcountries.eu/rest/v2/regionalbloc/usan'
     },
     {
         id: 4,
-        title: 'Arab Countries',
-        img: Image.resolveAssetSource(arabRegion).uri,
+        title: 'Pacific Community',
+        img: 'https://flagpedia.net/data/org/w580/spc.png',
         link: 'https://restcountries.eu/rest/v2/regionalbloc/al'
     },
     {
         id: 5,
-        title: 'Caribbean Region',
-        img: Image.resolveAssetSource(caribbeanRegion).uri,
+        title: 'Arab League',
+        img: 'https://flagpedia.net/data/org/w580/al.png',
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/caricom'
+    },
+    {
+        id: 6,
+        title: 'Caribbean Community',
+        img: 'https://flagpedia.net/data/org/w580/caricom.png',
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/caricom'
+    },
+    {
+        id: 7,
+        title: 'Southeast Asian Nations',
+        img: 'https://flagpedia.net/data/org/w580/asean.png',
         link: 'https://restcountries.eu/rest/v2/regionalbloc/caricom'
     },
 ]

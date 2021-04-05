@@ -93,21 +93,12 @@ class CountryStore {
         this.errorMessage = ''
 
         try {
-            const response =await fetch(`https://restcountries.eu/rest/v2/name/${props}?fullText=true`)
+            const response = await fetch(`https://restcountries.eu/rest/v2/name/${props}?fullText=true`)
             const data = await response.json();
-
-//             if(data.message) {
-//                 runInAction(() => {
-//                     this.errorMessage = data.message
-//                     return
-//                 });
-                
-//             }
-// console.log(data)
             runInAction(() => {
-                if(data.message) {
-                        this.errorMessage = data.message
-                        return
+                if (data.message) {
+                    this.errorMessage = data.message
+                    return
                 }
 
 
@@ -125,12 +116,12 @@ class CountryStore {
         return this.fromApi(data)
     }
 
-    getKeyByValue(object: any , value: any) {
+    getKeyByValue(object: any, value: any) {
         return Object.keys(object).find(key => object[key] === value);
     }
 
     get store2Obj() {
-       return {
+        return {
             Capital: this.capital,
             Region: this.region,
             Subregion: this.subregion,
@@ -170,6 +161,53 @@ class CountryStore {
     }
 }
 
+class RegionalBlocks {
+    countries: CountryStore[] = []
+    errorMessage = ''
+
+    constructor() {
+        makeObservable(this, {
+            countries: observable,
+            fetchRegionalBlocks: action,
+            workerAfterFetch: action,
+            setItem: action
+        })
+    }
+
+    async fetchRegionalBlocks(props: string) {
+
+        this.countries = []
+        this.errorMessage = ''
+        
+        try {
+            const response = await fetch(props)
+            const data = await response.json();
+            const dataFromAdapter = this.workerAfterFetch(data)
+
+            runInAction(() => {
+                this.countries = dataFromAdapter;
+            });
+        } catch (error) {
+            runInAction(() => {
+                console.log(error)
+            })
+        }
+    }
+
+    workerAfterFetch(data: ICountry[]) {
+        return data.map(el => this.setItem(el))
+    }
+
+    setItem(data: ICountry) {
+        const country = new CountryStore();
+        country.fromApi(data)
+        return country
+    }
+}
+
 const countryStore = new CountryStore()
+
+const regionalBlocksStore = new RegionalBlocks();
+export { regionalBlocksStore }
 
 export default countryStore

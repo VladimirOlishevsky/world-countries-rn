@@ -5,7 +5,7 @@ import regionCardsStore from '../../store/Regions';
 import { observer } from 'mobx-react';
 import { BackButton } from './../../Navigation/BackButton/index';
 import { styles } from './rawStyles';
-import countryStore from '../../store/Country';
+import countryStore, { regionalBlocksStore } from '../../store/Country';
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -18,6 +18,8 @@ export const RegionCountries = observer(({ route }: any): JSX.Element => {
         navigation.navigate("Country", { name: code });
     }
 
+    console.log(regionalBlocksStore.countries)
+
     return (
 
         <View style={styles.scrollView}>
@@ -28,7 +30,7 @@ export const RegionCountries = observer(({ route }: any): JSX.Element => {
                 </Text>
             </View>
             <ScrollView>
-                {regionCardsStore.countries.map((el, index: number) => {
+                {/* {regionCardsStore.countries.map((el, index: number) => {
                     return (
                         <TouchableOpacity
                             key={index}
@@ -42,6 +44,24 @@ export const RegionCountries = observer(({ route }: any): JSX.Element => {
                             />
                             <Text style={styles.titles}>
                                 {el.Name}
+                            </Text>
+                        </TouchableOpacity>
+                    )
+                })} */}
+                {regionalBlocksStore.countries.map((el, index: number) => {
+                    return (
+                        <TouchableOpacity
+                            key={index}
+                            onPress={() => actionByClick(el.Alpha2Code)}
+                            style={styles.imageWrapper}>
+                            <Image
+                                style={styles.image}
+                                source={{
+                                    uri: el.FlagPng
+                                }}
+                            />
+                            <Text style={styles.titles}>
+                                {el.name}
                             </Text>
                         </TouchableOpacity>
                     )

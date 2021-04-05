@@ -3,28 +3,38 @@ import { Image, View, Text } from "react-native"
 import { styles } from './rawStyles';
 import { observer } from 'mobx-react';
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { regions } from "../../config";
+import { regionalBlocks } from "../../config";
 import { Card, Title } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
+import regionCardsStore from '../../store/Regions';
+import { regionalBlocksStore } from "../../store/Country";
 
 
 export const SearchRegions = observer(() => {
 
+    const navigation = useNavigation();
+
+    const actionByClick = (el: string, desc: string) => {
+        regionalBlocksStore.fetchRegionalBlocks(el);
+        navigation.navigate("RegionCountries", { name: desc })
+    }
+
     return (
-        <View style={{ marginTop: 30 }}>
-            {regions.map((el) => {
+        <View style={styles.container}>
+            {regionalBlocks.map((el) => {
                 return (
-                    <TouchableOpacity key={el.id} onPress={() => console.log('region')} style={{ flexDirection: 'column' }}>
-                        <Card
-                            style={{ marginTop: 30 }}
-                        >
+                    <TouchableOpacity key={el.id} onPress={() => actionByClick(el.link, el.title)}>
+                        <Card style={styles.card}>
                             <Card.Cover source={{ uri: el.img }} />
-                            <Title >
+                        </Card>
+                        <View style={styles.titleBlock}>
+                            <Title style={styles.title}>
                                 {el.title}
                             </Title>
-                        </Card>
+                        </View>
                     </TouchableOpacity>
                 )
             })}
-</View>    )
+        </View>)
 })
 

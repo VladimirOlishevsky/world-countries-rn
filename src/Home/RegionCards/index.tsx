@@ -5,6 +5,7 @@ import { styles } from './rawStyles';
 import { TouchableOpacity } from "react-native-gesture-handler";
 import regionCardsStore from '../../store/Regions';
 import { useNavigation } from '@react-navigation/native';
+import { regionalBlocksStore } from '../../store/Country';
 
 interface Props {
     regionCards: Record<string, string>[], // add correct type
