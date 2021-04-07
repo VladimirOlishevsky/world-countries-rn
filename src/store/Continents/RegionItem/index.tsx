@@ -1,5 +1,5 @@
 import { observable, makeObservable, action, runInAction } from 'mobx';
-import { IRegionName } from './../index';
+import { IRegionName } from '../index';
 
 export class RegionName {
 

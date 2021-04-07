@@ -8,7 +8,7 @@ export interface IRegionName {
     Alpha2Code: string
 }
 
-class RegionsStore {
+export class Continents {
 
     countries: IRegionName[] = [];
 
@@ -16,7 +16,7 @@ class RegionsStore {
         makeObservable(this, {
             countries: observable,
             setItem: action,
-            workerAfter: action,
+            workerAfterFetch: action,
             fetchRegions: action
         })
     }
@@ -26,7 +26,7 @@ class RegionsStore {
         try {
             const response = await fetch(props)
             const data = await response.json();
-            const filteredData = this.workerAfter(data.Response)
+            const filteredData = this.workerAfterFetch(data.Response)
             runInAction(() => {
                 this.countries = filteredData;
             });
@@ -37,17 +37,17 @@ class RegionsStore {
         }
     }
 
-    workerAfter(data: IRegionName[]) {
+    workerAfterFetch(data: IRegionName[]) {
       return data.map(el => this.setItem(el))
     }
 
     setItem(data: IRegionName) {
-        const name = new RegionName();
-        name.setCountry(data) 
-        return name
+        const region = new RegionName();
+        region.setCountry(data) 
+        return region
     }
 }
 
-const regionCardsStore = new RegionsStore()
+// const regionCardsStore = new RegionsStore()
 
-export default regionCardsStore 
+// export default regionCardsStore 

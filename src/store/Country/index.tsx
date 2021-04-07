@@ -28,9 +28,7 @@ export interface ILanguages {
     nativeName: string
 }
 
-
-
-class CountryStore {
+export class Country {
 
     name = ''
     capital = ''
@@ -160,54 +158,3 @@ class CountryStore {
         this.alpha2Code = data.alpha2Code
     }
 }
-
-class RegionalBlocks { // TODO - to another file
-    countries: CountryStore[] = []
-    errorMessage = ''
-
-    constructor() {
-        makeObservable(this, {
-            countries: observable,
-            fetchRegionalBlocks: action,
-            workerAfterFetch: action,
-            setItem: action
-        })
-    }
-
-    async fetchRegionalBlocks(props: string) {
-
-        this.countries = []
-        this.errorMessage = ''
-
-        try {
-            const response = await fetch(props)
-            const data = await response.json();
-            const dataFromAdapter = this.workerAfterFetch(data)
-
-            runInAction(() => {
-                this.countries = dataFromAdapter;
-            });
-        } catch (error) {
-            runInAction(() => {
-                console.log(error)
-            })
-        }
-    }
-
-    workerAfterFetch(data: ICountry[]) {
-        return data.map(el => this.setItem(el))
-    }
-
-    setItem(data: ICountry) {
-        const country = new CountryStore();
-        country.fromApi(data)
-        return country
-    }
-}
-
-const countryStore = new CountryStore()
-
-const regionalBlocksStore = new RegionalBlocks();
-export { regionalBlocksStore }
-
-export default countryStore

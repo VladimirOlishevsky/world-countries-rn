@@ -1,16 +1,18 @@
 import React from 'react';
 import { View, Image, Text, ScrollView } from "react-native"
 import { TouchableOpacity } from "react-native-gesture-handler";
-import regionCardsStore from '../../store/Regions';
+// import regionCardsStore from '../../store/Continents';
 import { observer } from 'mobx-react';
 import { BackButton } from './../../Navigation/BackButton/index';
 import { styles } from './rawStyles';
-import countryStore, { regionalBlocksStore } from '../../store/Country';
+// import countryStore, { regionalBlocksStore } from '../../store/Country';
 import { useNavigation } from '@react-navigation/native';
+import { getRootStore } from '../../store';
 
 
 export const RegionCountries = observer(({ route }: any): JSX.Element => {
 
+    const { countryStore,regionalBlocksStore,continentsStore } = getRootStore()
     const navigation = useNavigation();
 
     const actionByClick = (code: string) => {
@@ -18,7 +20,7 @@ export const RegionCountries = observer(({ route }: any): JSX.Element => {
         navigation.navigate("Country", { name: code });
     }
 
-    console.log(regionalBlocksStore.countries)
+    // console.log(regionalBlocksStore.countries)
 
     return (
 
@@ -30,7 +32,7 @@ export const RegionCountries = observer(({ route }: any): JSX.Element => {
                 </Text>
             </View>
             <ScrollView>
-                {/* {regionCardsStore.countries.map((el, index: number) => {
+                {continentsStore.countries.map((el, index: number) => {
                     return (
                         <TouchableOpacity
                             key={index}
@@ -47,8 +49,8 @@ export const RegionCountries = observer(({ route }: any): JSX.Element => {
                             </Text>
                         </TouchableOpacity>
                     )
-                })} */}
-                {regionalBlocksStore.countries.map((el, index: number) => {
+                })}
+                {/* {regionalBlocksStore.countries.map((el, index: number) => {
                     return (
                         <TouchableOpacity
                             key={index}
@@ -65,7 +67,7 @@ export const RegionCountries = observer(({ route }: any): JSX.Element => {
                             </Text>
                         </TouchableOpacity>
                     )
-                })}
+                })} */}
             </ScrollView>
         </View>
     )

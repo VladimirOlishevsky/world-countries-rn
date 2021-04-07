@@ -5,13 +5,13 @@ import { styles } from './rawStyles';
 import { observer } from 'mobx-react';
 import storeInstance from "../../store/store";
 import { Fumi } from 'react-native-textinput-effects';
-import MaterialsIcon from 'react-native-vector-icons/MaterialIcons';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-import countryStore from "../../store/Country";
 import { useNavigation } from "@react-navigation/native";
+import { getRootStore } from "../../store";
 
 
 export const InputArea = observer((): JSX.Element => {
+    const { countryStore } = getRootStore()
     const [value, setValue] = useState('');
     const navigation = useNavigation();
 

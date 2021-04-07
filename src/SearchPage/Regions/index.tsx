@@ -6,12 +6,15 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { regionalBlocks } from "../../config";
 import { Card, Title } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
-import regionCardsStore from '../../store/Regions';
-import { regionalBlocksStore } from "../../store/Country";
+// import regionCardsStore from '../../store/Continents';
+// import { regionalBlocksStore } from "../../store/Country";
+import { getRootStore } from "../../store";
 
 
 export const SearchRegions = observer(() => {
 
+
+    const { regionalBlocksStore } = getRootStore()
     const navigation = useNavigation();
 
     const actionByClick = (el: string, desc: string) => {

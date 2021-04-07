@@ -3,11 +3,12 @@ import { View, Image, Text, ScrollView } from "react-native";
 import { observer } from 'mobx-react';
 import { BackButton } from './../../Navigation/BackButton/index';
 import { styles } from './rawStyles';
-import countryStore from '../../store/Country';
+import { getRootStore } from '../../store';
 
 
 export const Country = observer(({ route }: any): JSX.Element => {
 
+    const { countryStore,regionalBlocksStore,continentsStore } = getRootStore()
     console.log(countryStore.alpha2Code)
 
     return (

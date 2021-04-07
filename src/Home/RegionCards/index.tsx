@@ -3,9 +3,10 @@ import { View } from "react-native"
 import { Card, Title } from 'react-native-paper';
 import { styles } from './rawStyles';
 import { TouchableOpacity } from "react-native-gesture-handler";
-import regionCardsStore from '../../store/Regions';
+// import regionCardsStore from '../../store/Continents';
 import { useNavigation } from '@react-navigation/native';
-import { regionalBlocksStore } from '../../store/Country';
+// import { regionalBlocksStore } from '../../store/Country';
+import { getRootStore } from '../../store';
 
 interface Props {
     regionCards: Record<string, string>[], // add correct type
@@ -13,10 +14,11 @@ interface Props {
 
 export const RegionCards = (({ regionCards }: Props) => {
 
+    const { continentsStore } = getRootStore()
     const navigation = useNavigation();
 
     const actionByClick = (el: string, desc: string) => {
-        regionCardsStore.fetchRegions(el);
+        continentsStore.fetchRegions(el);
         navigation.navigate("RegionCountries", { name: desc })
     }
     return (

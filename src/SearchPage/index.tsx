@@ -3,24 +3,24 @@ import {
     Text,
     View,
     ScrollView,
-    Image,
-    TouchableOpacity
+    // Image,
+    // TouchableOpacity
 } from 'react-native';
 import { observer } from "mobx-react";
 import storeInstance from '../store/store';
 import { styles } from './rawStyles';
 import { Button } from 'react-native-paper';
-import { ChipsBlockLayout } from "./ChipsBlockLayout";
-import { ChipsTitle } from "./ChipsBlockLayout/ChipsTitle";
-import { ChipsContent } from "./ChipsBlockLayout/ChipsContent";
+// import { ChipsBlockLayout } from "./ChipsBlockLayout";
+// import { ChipsTitle } from "./ChipsBlockLayout/ChipsTitle";
+// import { ChipsContent } from "./ChipsBlockLayout/ChipsContent";
 import { InputArea } from './InputArea';
-import { flags } from '../config';
+// import { flags } from '../config';
 
-import { SliderFlags } from './SliderFlags';
-import { sliderFlagsTitle } from './strings';
+// import { SliderFlags } from './SliderFlags';
+// import { sliderFlagsTitle } from './strings';
 import { SearchRegions } from './Regions';
-import { SvgCssUri } from 'react-native-svg';
-import regionCardsStore from '../store/Regions';
+// import { SvgCssUri } from 'react-native-svg';
+// import regionCardsStore from '../store/Continents';
 
 export const SearchScreen = observer(({ navigation }: any): JSX.Element => {
 
