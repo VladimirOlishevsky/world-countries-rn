@@ -8,11 +8,8 @@ import { Divider } from 'react-native-elements';
 import React from 'react';
 import { styles } from './rawStyles';
 import { HOME_TITLES, title } from './config';
-import { Slider } from '../Slider'
-import { slides } from '../config';
-import { TextInput, Button, Card, Title } from 'react-native-paper';
-import { regionCards } from './../config';
-import { RegionCards } from './RegionCards/index';
+import { Button } from 'react-native-paper';
+import { ContinentCards } from './ContinentCards/index';
 import { observer } from 'mobx-react';
 import { useNavigation } from '@react-navigation/native';
 
@@ -68,7 +65,7 @@ export const Home = observer((): JSX.Element => {
                     {HOME_TITLES.search}
                  </Button>
 
-                 <RegionCards regionCards={regionCards} />
+                 <ContinentCards />
 
                 {/* <View>
                     {regionCards.map((el, index) => {

@@ -7,7 +7,6 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export const BackButton = () => {
     const navigation = useNavigation();
-///fgf df kljl jfls jdjf sjdj
     return (
         <TouchableOpacity
             onPress={() => navigation.goBack()}

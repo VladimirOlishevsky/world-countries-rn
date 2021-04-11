@@ -13,7 +13,9 @@ export interface ICountry {
     currencies: ICurrencies[],
     languages: ILanguages[],
     flag: string,
-    alpha2Code: string
+    alpha2Code: string,
+    topLevelDomain: string[],
+    callingCodes: string[]
 }
 
 type CountryCard = Omit<ICountry, "latlng" | "flag">;
@@ -40,6 +42,8 @@ export class Country {
     languages: Languages[] = []
     flag = ''
     alpha2Code = ''
+    topLevelDomain: string[] = []
+    callingCodes: string[] = []
 
     param = false
     errorMessage = ''
@@ -56,6 +60,8 @@ export class Country {
             languages: observable,
             flag: observable,
             param: observable,
+            topLevelDomain: observable,
+            callingCodes: observable,
 
             errorMessage: observable,
             alpha2Code: observable,
@@ -125,7 +131,9 @@ export class Country {
             Subregion: this.subregion,
             Population: this.population,
             Currencies: this.currencies,
-            Languages: this.languages
+            Languages: this.languages,
+            Domain: this.topLevelDomain[0],
+            PhoneCode: this.callingCodes[0]
         }
     }
 
@@ -154,7 +162,9 @@ export class Country {
         this.latlng = data.latlng;
         this.currencies = this.setCountryCurrencies(data.currencies);
         this.languages = this.setCountryLanguages(data.languages);
-        this.flag = data.flag;
-        this.alpha2Code = data.alpha2Code
+        this.flag = `https://flagcdn.com/w640/${data.alpha2Code.toLowerCase()}.png`;
+        this.alpha2Code = data.alpha2Code;
+        this.topLevelDomain = data.topLevelDomain
+        this.callingCodes = data.callingCodes
     }
 }

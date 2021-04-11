@@ -8,8 +8,7 @@ import { getRootStore } from '../../store';
 
 export const Country = observer(({ route }: any): JSX.Element => {
 
-    const { countryStore,regionalBlocksStore,continentsStore } = getRootStore()
-    console.log(countryStore.alpha2Code)
+    const { countryStore } = getRootStore()
 
     return (
         <View style={styles.scrollView}>

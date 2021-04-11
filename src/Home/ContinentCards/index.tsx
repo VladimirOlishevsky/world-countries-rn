@@ -3,27 +3,22 @@ import { View } from "react-native"
 import { Card, Title } from 'react-native-paper';
 import { styles } from './rawStyles';
 import { TouchableOpacity } from "react-native-gesture-handler";
-// import regionCardsStore from '../../store/Continents';
 import { useNavigation } from '@react-navigation/native';
-// import { regionalBlocksStore } from '../../store/Country';
 import { getRootStore } from '../../store';
+import { continents } from '../../config';
 
-interface Props {
-    regionCards: Record<string, string>[], // add correct type
-}
-
-export const RegionCards = (({ regionCards }: Props) => {
+export const ContinentCards = (() => {
 
     const { continentsStore } = getRootStore()
     const navigation = useNavigation();
 
     const actionByClick = (el: string, desc: string) => {
         continentsStore.fetchRegions(el);
-        navigation.navigate("RegionCountries", { name: desc })
+        navigation.navigate("ContinentCountries", { name: desc })
     }
     return (
         <View style={{ marginTop: 30 }}>
-            {regionCards.map((el, index) => {
+            {continents.map((el, index) => {
                 return (
                     <TouchableOpacity key={index}
                         onPress={() => actionByClick(el.link, el.description)}>

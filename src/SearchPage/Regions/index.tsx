@@ -11,7 +11,7 @@ import { useNavigation } from "@react-navigation/native";
 import { getRootStore } from "../../store";
 
 
-export const SearchRegions = observer(() => {
+export const RegionalCards = observer(() => {
 
 
     const { regionalBlocksStore } = getRootStore()
@@ -19,7 +19,7 @@ export const SearchRegions = observer(() => {
 
     const actionByClick = (el: string, desc: string) => {
         regionalBlocksStore.fetchRegionalBlocks(el);
-        navigation.navigate("RegionCountries", { name: desc })
+        navigation.navigate("RegionalCountries", { name: desc })
     }
 
     return (

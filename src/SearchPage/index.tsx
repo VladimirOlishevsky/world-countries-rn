@@ -18,7 +18,7 @@ import { InputArea } from './InputArea';
 
 // import { SliderFlags } from './SliderFlags';
 // import { sliderFlagsTitle } from './strings';
-import { SearchRegions } from './Regions';
+import { RegionalCards } from './Regions';
 // import { SvgCssUri } from 'react-native-svg';
 // import regionCardsStore from '../store/Continents';
 
@@ -59,7 +59,7 @@ export const SearchScreen = observer(({ navigation }: any): JSX.Element => {
 
                 {/* <Text>This is the home screen</Text> */}
 
-                <SearchRegions />
+                <RegionalCards />
 
 
                 <Button

@@ -6,6 +6,7 @@ import { Home } from '../Home';
 import { observer } from "mobx-react";
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreenNavigation } from './HomeScreenNavigation/index';
+import { SearchScreenNavigation } from './SearchScreenNavigation';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -35,7 +36,7 @@ export const MainNavigation = observer(() => {
                 })}
             >
                 <Tab.Screen name="HomePage" component={HomeScreenNavigation} />
-                <Tab.Screen name="SearchPage" component={SearchScreen} />
+                <Tab.Screen name="SearchPage" component={SearchScreenNavigation} />
                 <Tab.Screen name="InfoPage" component={SearchScreen} />
                 <Tab.Screen name="SettingsPage" component={Home} />
             </Tab.Navigator>

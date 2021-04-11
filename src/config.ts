@@ -21,7 +21,7 @@ const africa = require('../assets/images/regions/africa.png')
 
 
 
-export const regionCards = [
+export const continents = [
     {
         title: 'Europe',
         img: Image.resolveAssetSource(europe).uri,
@@ -53,25 +53,25 @@ export const regionalBlocks = [
         id: 2,
         title: 'Union of South American Nations',
         img: 'https://flagpedia.net/data/org/w580/usan.png',
-        link: 'https://restcountries.eu/rest/v2/regionalbloc/nafta'
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/usan'
     },
     {
         id: 3,
         title: 'African Union',
         img: 'https://flagpedia.net/data/org/w580/au.png',
-        link: 'https://restcountries.eu/rest/v2/regionalbloc/usan'
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/au'
     },
     {
         id: 4,
         title: 'Pacific Community',
         img: 'https://flagpedia.net/data/org/w580/spc.png',
-        link: 'https://restcountries.eu/rest/v2/regionalbloc/al'
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/pa'
     },
     {
         id: 5,
         title: 'Arab League',
         img: 'https://flagpedia.net/data/org/w580/al.png',
-        link: 'https://restcountries.eu/rest/v2/regionalbloc/caricom'
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/al'
     },
     {
         id: 6,
@@ -83,7 +83,7 @@ export const regionalBlocks = [
         id: 7,
         title: 'Southeast Asian Nations',
         img: 'https://flagpedia.net/data/org/w580/asean.png',
-        link: 'https://restcountries.eu/rest/v2/regionalbloc/caricom'
+        link: 'https://restcountries.eu/rest/v2/regionalbloc/saarc'
     },
 ]
 

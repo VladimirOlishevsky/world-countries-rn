@@ -74,10 +74,6 @@
         "react-native-web-swiper": "^2.1.7",
         "react-native-webview": "11.0.0",
         "react-navigation": "^4.4.3",
-        "react-redux": "^7.2.0",
-        "redux": "^4.0.5",
-        "redux-logger": "^3.0.6",
-        "redux-thunk": "^2.3.0",
         "rn-infinite-carousel": "^0.0.18",
         "typescript": "3.5.3"
     },
