@@ -4,6 +4,7 @@ import { observer } from 'mobx-react';
 import { BackButton } from './../../Navigation/BackButton/index';
 import { styles } from './rawStyles';
 import { getRootStore } from '../../store';
+import { Maps } from '../Maps';
 
 
 export const Country = observer(({ route }: any): JSX.Element => {
@@ -15,6 +16,7 @@ export const Country = observer(({ route }: any): JSX.Element => {
             <View style={styles.header}>
                 <BackButton />
             </View>
+            <Maps />
             <ScrollView >
                 {countryStore.errorMessage ? <Text>'sdfsdfsdf'</Text> : 
                 <>
