@@ -41,5 +41,20 @@ export const styles = StyleSheet.create({
     column: {
         display: 'flex', 
         flexDirection: 'column'
+    },
+    flagDescriptionBlock: {
+        alignItems: 'center',
+        marginTop: 20,
+        paddingTop: 20,
+        paddingBottom: 20,
+        borderTopWidth: 1, 
+        borderBottomWidth: 1, 
+        borderTopColor: '#ff9f0a',
+        borderBottomColor: '#ff9f0a'
+    },
+    flagDescriptionText: {
+        textAlign: 'center',
+        fontSize: 20,
+        color: '#fff'
     }
 });

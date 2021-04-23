@@ -5,13 +5,14 @@ import { BackButton } from './../../Navigation/BackButton/index';
 import { styles } from './rawStyles';
 import { getRootStore } from '../../store';
 import { Maps } from '../Maps';
+import { getFlagDescription } from '../../utils';
 
 
 export const Country = observer(({ route }: any): JSX.Element => {
 
     const { countryStore } = getRootStore()
-
     const isCoordinate = Boolean(countryStore.latlng[0] && countryStore.latlng[1])
+    const flagsDescription = getFlagDescription(countryStore.alpha2Code)
 
     return (
         <View style={styles.scrollView}>
@@ -36,11 +37,17 @@ export const Country = observer(({ route }: any): JSX.Element => {
                                 {countryStore.name}
                             </Text>
                         </View>
+
+                        <View style={styles.flagDescriptionBlock}>
+                            <Text style={styles.flagDescriptionText}>
+                                {flagsDescription?.cia_description}
+                            </Text>
+                        </View>
                         {Object.values(countryStore.store2Obj).map((el, index) => (
                             <View key={index} style={styles.strings}>
                                 <Text style={styles.keys} >
                                     {countryStore.getKeyByValue(countryStore.store2Obj, el)}:
-                        </Text>
+                                </Text>
                                 {Array.isArray(el)
                                     ? (
                                         <View style={styles.column}>
@@ -62,6 +69,8 @@ export const Country = observer(({ route }: any): JSX.Element => {
                         )}
                     </>
                 }
+
+
                 {isCoordinate &&
                     <Maps
                         description={countryStore.name}
