@@ -56,5 +56,12 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 20,
         color: '#fff'
+    },
+    mapButton: {
+        backgroundColor: 'transparent',
+        borderColor: '#ff9f0a',
+        borderWidth: 1,
+        color: '#fff',
+        marginTop: 20
     }
 });

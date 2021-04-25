@@ -5,11 +5,17 @@ import { styles } from './rawStyles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export const BackButton = () => {
+interface IProps {
+    page?: string
+}
+
+export const BackButton = ({
+    page
+}: IProps) => {
     const navigation = useNavigation();
     return (
         <TouchableOpacity
-            onPress={() => navigation.goBack()}
+            onPress={() => page ? navigation.navigate(page) : navigation.goBack()}
             style={styles.iconStyle}
         >
             <Icon

@@ -7,6 +7,7 @@ import { observer } from "mobx-react";
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreenNavigation } from './HomeScreenNavigation/index';
 import { SearchScreenNavigation } from './SearchScreenNavigation';
+import { Maps } from '../Home/Maps';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -20,7 +21,7 @@ export const MainNavigation = observer(() => {
                         if (route.name === 'HomePage') {
                             focused ? iconName = require('../../assets/images/homeFocused.png')
                                 : iconName = require('../../assets/images/home.png');
-                        } else if (route.name === 'InfoPage') {
+                        } else if (route.name === 'Maps') {
                             focused ? iconName = require('../../assets/images/vicharanFocused.png')
                                 : iconName = require('../../assets/images/vicharan.png');
                         } else if(route.name === 'SettingsPage') {
@@ -37,8 +38,8 @@ export const MainNavigation = observer(() => {
             >
                 <Tab.Screen name="HomePage" component={HomeScreenNavigation} />
                 <Tab.Screen name="SearchPage" component={SearchScreenNavigation} />
-                <Tab.Screen name="InfoPage" component={SearchScreen} />
-                <Tab.Screen name="SettingsPage" component={Home} />
+                <Tab.Screen name="Maps" component={Maps} />
+                {/* <Tab.Screen name="SettingsPage" component={Home} /> */}
             </Tab.Navigator>
     )
 })

@@ -4,20 +4,20 @@ import { observer } from 'mobx-react';
 import { BackButton } from './../../Navigation/BackButton/index';
 import { styles } from './rawStyles';
 import { getRootStore } from '../../store';
-import { Maps } from '../Maps';
 import { getFlagDescription } from '../../utils';
-
+import { useNavigation } from '@react-navigation/native';
+import { Button } from 'react-native-paper';
+import { button2map } from './constants';
 
 export const Country = observer(({ route }: any): JSX.Element => {
-
+    const navigation = useNavigation();
     const { countryStore } = getRootStore()
-    const isCoordinate = Boolean(countryStore.latlng[0] && countryStore.latlng[1])
     const flagsDescription = getFlagDescription(countryStore.alpha2Code)
 
     return (
         <View style={styles.scrollView}>
             <View style={styles.header}>
-                <BackButton />
+                <BackButton page={route.params.navigate === 'regional' ? 'RegionalCountries' : ''} />
             </View>
 
             <ScrollView >
@@ -40,7 +40,7 @@ export const Country = observer(({ route }: any): JSX.Element => {
 
                         <View style={styles.flagDescriptionBlock}>
                             <Text style={styles.flagDescriptionText}>
-                                {flagsDescription?.cia_description}
+                                {flagsDescription?.cia_description || flagsDescription?.jmpesc_description}
                             </Text>
                         </View>
                         {Object.values(countryStore.store2Obj).map((el, index) => (
@@ -70,14 +70,14 @@ export const Country = observer(({ route }: any): JSX.Element => {
                     </>
                 }
 
-
-                {isCoordinate &&
-                    <Maps
-                        description={countryStore.name}
-                        latitude={countryStore.latlng[0]}
-                        longitude={countryStore.latlng[1]}
-                    />
-                }
+                <Button
+                    mode='outlined'
+                    style={styles.mapButton}
+                    color='#fff'
+                    onPress={() => navigation.navigate('Maps', { name: countryStore.name })}
+                >
+                   {button2map}
+                </Button>
             </ScrollView>
         </View>
     )

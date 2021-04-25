@@ -15,7 +15,7 @@ export const RegionalCountries = observer(({ route }: any): JSX.Element => {
 
     const actionByClick = (code: string) => {
         countryStore.fetchCountryByCode(code);
-        navigation.navigate("Country", { name: code });
+        navigation.navigate("Country", { name: code, navigate: 'regional' });
     }
     return (
 
