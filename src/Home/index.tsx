@@ -1,13 +1,10 @@
 import {
-    Text,
     View,
     ScrollView,
-    Image,
 } from 'react-native';
-import { Divider } from 'react-native-elements';
 import React from 'react';
 import { styles } from './rawStyles';
-import { HOME_TITLES, title } from './config';
+import { HOME_TITLES } from './config';
 import { Button } from 'react-native-paper';
 import { ContinentCards } from './ContinentCards/index';
 import { observer } from 'mobx-react';
@@ -21,16 +18,6 @@ export const Home = observer((): JSX.Element => {
 
     return (
         <ScrollView style={{backgroundColor: '#1c1c1e'}}>
-            {/* <View
-                style={styles.imageContainer}
-            >
-                <Image source={theme2Pic}
-                    style={styles.image}
-                />
-            </View> */}
-            {/* <View style={styles.titleBlock}>
-                <Text style={styles.title}> {title.toUpperCase()}</Text>
-            </View> */}
             <View style={styles.container}>
                 <View
                     style={{ display: 'flex', flexDirection: 'row' }}

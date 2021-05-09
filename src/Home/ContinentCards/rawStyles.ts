@@ -1,18 +1,27 @@
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({
-    card: {
-        paddingTop: 10,
-        paddingBottom: 10
+interface IProps {
+    spacing: number, 
+    size: number,
+    white: string
+}
+
+export const makeStyles = ({
+    spacing, 
+    size, 
+    white
+}: IProps) => StyleSheet.create({
+    container: {
+        marginTop: size * 1.5
     },
     cardTitle: {
         position: 'absolute',
         bottom: 0,
-        fontSize: 24,
+        fontSize: spacing * 3,
         width: '100%',
-        height: 60,
+        height: size * 3,
         backgroundColor: 'rgba(0, 0, 0, 0.63)',
-        color: '#fff',
+        color: white,
         textTransform: 'uppercase',
         textAlignVertical: 'center',
         textAlign: 'center'

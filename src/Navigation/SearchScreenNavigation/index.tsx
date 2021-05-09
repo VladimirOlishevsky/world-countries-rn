@@ -1,9 +1,5 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-// import { Home } from '../../Home';
-// import { ContinentCountries } from '../../Home/ContinentCountries';
-// import { SeparatePage } from '../../sepa';
-// import { Country } from './../../Home/Country/index';
 import { SearchScreen } from '../../SearchPage';
 import { RegionalCountries } from '../../SearchPage/RegionalCountries';
 

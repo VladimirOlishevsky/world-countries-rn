@@ -1,27 +1,55 @@
 import React from 'react';
-import { StyleSheet, Image } from 'react-native';
-// import { BottomNavigation } from './src/Navigation';
 import storeInstance from './src/store/store';
 import { Provider } from "mobx-react";
-import { Provider as PaperProvider } from 'react-native-paper';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { SeparatePage } from './src/sepa';
-import { SearchScreen } from './src/SearchPage';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home } from './src/Home/index';
-//import { HomePage } from './src/Navigation/HomePage/index';
-import { MainNavigation } from './src/Navigation/index';
+import { MainNavigation } from './src/Navigation/BottomNavigation/index';
 
 export const Stack = createStackNavigator();
 export const Tab = createBottomTabNavigator();
 
+declare global {
+    namespace ReactNativePaper {
+    //   interface ThemeFonts {
+    //     superLight: ThemeFont;
+    //   }
+      interface ThemeColors {
+        orange: string,
+        white: string,
+        tunaGrey: string,
+        aestaticBlack: string
+      }
+    //   interface ThemeAnimation {
+    //     customProperty: number;
+    //   }
+      interface Theme {
+        spacing: number,
+        size: number
+      }
+    }
+  }
+
+export const theme = {
+    ...DefaultTheme,
+    roundness: 2,
+    colors: {
+      ...DefaultTheme.colors,
+      orange: '#ff9f0a',
+      white: '#fff',
+      tunaGrey: '#313133',
+      aestaticBlack: '#153044'
+    },
+    spacing: 8,
+    size: 20
+  };
 
 export default class App extends React.Component {
     render() {
         return (
             <Provider value={storeInstance}>
-                <PaperProvider>
+                <PaperProvider theme={theme}>
                     <NavigationContainer>
                         <MainNavigation />
 
@@ -85,16 +113,3 @@ export default class App extends React.Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center"
-    },
-    bottomIcon: {
-        resizeMode: 'contain',
-        width: 30,
-        height: 30
-    }
-});

@@ -9,15 +9,11 @@ export const styles = StyleSheet.create({
         height: height,
     },
     container: {
-        //flex: 1,
         height: height,
         flexDirection: "column",
         paddingTop: 60,
         marginBottom: 150,
-        //justifyContent: 'center',
         padding: 30,
-        // backgroundColor: '#1c1c1e'
-        //backgroundColor: 'rgba(236, 161, 29, 0.4)'
     },
     buttonCountries: {
         flex: 0.5, 
