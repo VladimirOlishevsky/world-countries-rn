@@ -30,23 +30,7 @@ export const SearchScreen = observer(({ navigation }: any): JSX.Element => {
 
         <View style={styles.container}>
             <InputArea />
-
             <ScrollView>
-                {/* {regionCardsStore.countries.map((el, index: number) => {
-                    return (
-                        <TouchableOpacity key={index} onPress={() => console.log('region')} style={{ flexDirection: 'row', marginTop: 10, marginBottom: 10 }}>
-                            <Image
-                                style={{ width: 100, height: 70 }}
-                                source={{
-                                    uri: el.FlagPng
-                                }}
-                            />
-                            <Text >
-                                {el.Name}
-                            </Text>
-                        </TouchableOpacity>
-                    )
-                })} */}
                 {/* <ChipsTitle title={sliderFlagsTitle} /> */}
                 {/* <SliderFlags slides={flags} /> */}
                 {/* <ChipsBlockLayout

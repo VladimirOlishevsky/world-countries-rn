@@ -1,49 +1,16 @@
 import React from 'react';
 import storeInstance from './src/store/store';
 import { Provider } from "mobx-react";
-import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+import { Provider as PaperProvider } from 'react-native-paper';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MainNavigation } from './src/Navigation/BottomNavigation/index';
+import { theme } from './src/theme';
 
 export const Stack = createStackNavigator();
 export const Tab = createBottomTabNavigator();
 
-declare global {
-    namespace ReactNativePaper {
-    //   interface ThemeFonts {
-    //     superLight: ThemeFont;
-    //   }
-      interface ThemeColors {
-        orange: string,
-        white: string,
-        tunaGrey: string,
-        aestaticBlack: string
-      }
-    //   interface ThemeAnimation {
-    //     customProperty: number;
-    //   }
-      interface Theme {
-        spacing: number,
-        size: number
-      }
-    }
-  }
-
-export const theme = {
-    ...DefaultTheme,
-    roundness: 2,
-    colors: {
-      ...DefaultTheme.colors,
-      orange: '#ff9f0a',
-      white: '#fff',
-      tunaGrey: '#313133',
-      aestaticBlack: '#153044'
-    },
-    spacing: 8,
-    size: 20
-  };
 
 export default class App extends React.Component {
     render() {

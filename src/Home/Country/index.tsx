@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { View, Image, Text, ScrollView } from "react-native";
 import { observer } from 'mobx-react';
 import { BackButton } from './../../Navigation/BackButton/index';
-import { styles } from './rawStyles';
+import { makeStyles } from './rawStyles';
 import { getRootStore } from '../../store';
-import { getFlagDescription } from '../../utils';
+import { getFlagDescription } from '../../config/utils';
 import { useNavigation } from '@react-navigation/native';
-import { Button } from 'react-native-paper';
-import { button2map } from './constants';
+import { Button, useTheme } from 'react-native-paper';
+import { button2map, go2search, notFound } from './constants';
+import { notFoundPicture } from '../../config/config';
 
 export const Country = observer(({ route }: any): JSX.Element => {
+
+    const theme = useTheme();
+    const styles = makeStyles(theme)
+
     const navigation = useNavigation();
     const { countryStore } = getRootStore()
     const flagsDescription = getFlagDescription(countryStore.alpha2Code)
@@ -21,8 +26,25 @@ export const Country = observer(({ route }: any): JSX.Element => {
             </View>
 
             <ScrollView >
-                {countryStore.errorMessage ? <Text>'sdfsdfsdf'</Text> :
-                    <>
+                {countryStore.errorMessage ?
+                    <View style={styles.errorBlock}>
+                        <Image
+                            style={styles.image}
+                            source={notFoundPicture}
+                        />
+                        <Text style={styles.countryName}>
+                            {notFound}
+                        </Text>
+                        <Button
+                            mode='outlined'
+                            style={styles.mapButton}
+                            color='#fff'
+                            onPress={() => navigation.navigate("SearchPage")}
+                        >
+                            {go2search}
+                        </Button>
+                    </View> :
+                    <Fragment>
                         <View style={styles.content}>
                             <Image
                                 style={styles.image}
@@ -63,21 +85,19 @@ export const Country = observer(({ route }: any): JSX.Element => {
                                         {el}
                                     </Text>
                                 }
-
                             </View>
                         )
                         )}
-                    </>
+                        <Button
+                            mode='outlined'
+                            style={styles.mapButton}
+                            color='#fff'
+                            onPress={() => navigation.navigate('Maps', { name: countryStore.name })}
+                        >
+                            {button2map}
+                        </Button>
+                    </Fragment>
                 }
-
-                <Button
-                    mode='outlined'
-                    style={styles.mapButton}
-                    color='#fff'
-                    onPress={() => navigation.navigate('Maps', { name: countryStore.name })}
-                >
-                   {button2map}
-                </Button>
             </ScrollView>
         </View>
     )

@@ -1,7 +1,10 @@
 import { StyleSheet, Dimensions } from "react-native";
 const { width, height } = Dimensions.get('screen')
 
-export const styles = StyleSheet.create({
+export const makeStyles = (theme: ReactNativePaper.Theme) => StyleSheet.create({
+    scrollView: {
+        backgroundColor: theme.colors.blackRussian
+    },
     image: {
         flexGrow: 1,
         alignSelf: 'stretch',
@@ -11,32 +14,32 @@ export const styles = StyleSheet.create({
     container: {
         height: height,
         flexDirection: "column",
-        paddingTop: 60,
-        marginBottom: 150,
-        padding: 30,
+        paddingTop: theme.size * 3,
+        marginBottom: theme.size * 3.5,
+        padding: theme.size * 1.5,
     },
     buttonCountries: {
-        flex: 0.5, 
-        borderRadius: 16,
+        flex: 0.5,
+        borderRadius: theme.spacing * 2,
         marginRight: 5,
         color: 'red'
     },
     buttonCapitals: {
-        flex: 0.5, 
-        borderRadius: 16,
+        flex: 0.5,
+        borderRadius: theme.spacing * 2,
         marginLeft: 5
     },
     buttonCountriesLabel: {
-        color: '#fff'
+        color: theme.colors.white
     },
     buttonCapitalsLabel: {
-        color: '#000'
+        color: theme.colors.blackRussian
     },
     buttonSearchLabel: {
-        color: '#ff9f0a'
+        color: theme.colors.orange
     },
     buttonSearch: {
-        marginTop: 30
+        marginTop: theme.size * 1.5
     },
     root: {
         flexGrow: 1,

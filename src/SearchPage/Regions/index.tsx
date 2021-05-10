@@ -3,7 +3,7 @@ import { Image, View, Text } from "react-native"
 import { styles } from './rawStyles';
 import { observer } from 'mobx-react';
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { regionalBlocks } from "../../config";
+import { regionalBlocks } from "../../config/config";
 import { Card, Title } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 // import regionCardsStore from '../../store/Continents';

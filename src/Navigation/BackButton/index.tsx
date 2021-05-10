@@ -14,8 +14,8 @@ export const BackButton = ({
     page
 }: IProps) => {
     const navigation = useNavigation();
-    const { spacing } = useTheme();
-    const styles = makeStyles(spacing)
+    const theme = useTheme();
+    const styles = makeStyles(theme)
 
     return (
         <TouchableOpacity

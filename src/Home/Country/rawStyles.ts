@@ -1,16 +1,16 @@
 import { StyleSheet, Dimensions } from "react-native";
 const { height } = Dimensions.get('screen')
 
-export const styles = StyleSheet.create({
+export const makeStyles = (theme: ReactNativePaper.Theme) => StyleSheet.create({
     scrollView: {
-        backgroundColor: '#1c1c1e',
-        padding: 30,
-        paddingBottom: 150,
+        backgroundColor: theme.colors.blackRussian,
+        padding: theme.size * 1.5,
+        paddingBottom: theme.size * 7.5,
         height: height
     },
     header: {
-        marginTop: 30,
-        marginBottom: 50,
+        marginTop:  theme.size * 1.5,
+        marginBottom:  theme.size * 2.5,
     },
     content: {
         display: 'flex',
@@ -18,24 +18,24 @@ export const styles = StyleSheet.create({
     },
     image: {
         width: '70%',
-        height: 150
+        height: theme.size * 7.5
     },
     countryName: {
-        marginTop: 30,
-        fontSize: 20,
-        color: '#fff'
+        marginTop:  theme.size * 1.5,
+        fontSize:  theme.size,
+        color: theme.colors.white
     },
     keys: {
-        fontSize: 20, 
-        color: '#ff9f0a',
-        marginRight: 10
+        fontSize:  theme.size, 
+        color: theme.colors.orange,
+        marginRight: theme.size * 0.5
     },
     values: {
-        fontSize: 20, 
-        color: '#fff',
+        fontSize: theme.size, 
+        color: theme.colors.white,
     },
     strings: {
-        marginTop: 30, 
+        marginTop: theme.size * 1.5, 
         flexDirection: 'row',
     },
     column: {
@@ -44,24 +44,27 @@ export const styles = StyleSheet.create({
     },
     flagDescriptionBlock: {
         alignItems: 'center',
-        marginTop: 20,
-        paddingTop: 20,
-        paddingBottom: 20,
+        marginTop: theme.size,
+        paddingTop: theme.size,
+        paddingBottom: theme.size,
         borderTopWidth: 1, 
         borderBottomWidth: 1, 
-        borderTopColor: '#ff9f0a',
-        borderBottomColor: '#ff9f0a'
+        borderTopColor: theme.colors.orange,
+        borderBottomColor: theme.colors.orange
     },
     flagDescriptionText: {
         textAlign: 'center',
-        fontSize: 20,
-        color: '#fff'
+        fontSize: theme.size,
+        color: theme.colors.white
     },
     mapButton: {
         backgroundColor: 'transparent',
-        borderColor: '#ff9f0a',
+        borderColor: theme.colors.orange,
         borderWidth: 1,
-        color: '#fff',
-        marginTop: 20
+        color: theme.colors.white,
+        marginTop: theme.size
+    },
+    errorBlock: {
+        alignItems: 'center'
     }
 });

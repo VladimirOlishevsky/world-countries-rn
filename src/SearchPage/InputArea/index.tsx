@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { View } from "react-native"
-import { TextInput, Button } from 'react-native-paper';
+import { Button } from 'react-native-paper';
 import { styles } from './rawStyles';
 import { observer } from 'mobx-react';
-import storeInstance from "../../store/store";
 import { Fumi } from 'react-native-textinput-effects';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
@@ -15,14 +14,10 @@ export const InputArea = observer((): JSX.Element => {
     const [value, setValue] = useState('');
     const navigation = useNavigation();
 
-    const setToStore = (val: string) => {
-        setValue(val);
-        storeInstance.setValueToStore(value)
-    }
-
     const actionByClick = (value: string) => {
         countryStore.fetchCountryByName(value);
         navigation.navigate("Country", { name: value });
+        setValue('')
     }
 
     return (
@@ -36,10 +31,9 @@ export const InputArea = observer((): JSX.Element => {
                 iconColor={'#f95a25'}
                 iconSize={20}
                 inputStyle={{color: '#fff'}}
-                //iconWidth={40}
                 inputPadding={16}
-                onChangeText={(text) => setToStore(text)}
-                // onChange={(el: string) => setToStore(el)}
+                onChangeText={(text) => setValue(text)}
+                value={value}
             />
 
             {/* <TextInput

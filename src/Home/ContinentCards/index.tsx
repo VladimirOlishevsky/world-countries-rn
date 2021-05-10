@@ -4,16 +4,15 @@ import { Card, Title, useTheme } from 'react-native-paper';
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from '@react-navigation/native';
 import { getRootStore } from '../../store';
-import { continents } from '../../config';
+import { continents } from '../../config/config';
 import { makeStyles } from './rawStyles';
 
 export const ContinentCards = (() => {
 
     const { continentsStore } = getRootStore()
     const navigation = useNavigation();
-    const { spacing, size, colors } = useTheme();
-    const white = colors.white
-    const styles = makeStyles({ spacing, size, white })
+    const theme = useTheme();
+    const styles = makeStyles(theme)
 
     const actionByClick = (element: string, description: string) => {
         continentsStore.fetchRegions(element);

@@ -1,4 +1,4 @@
-import { flagsDescription } from "./flag-descriptions"
+import { flagsDescription } from "./flagDescriptions"
 
 export const getFlagDescription = (alpha2code: string) => {
     return flagsDescription.find(el => {

@@ -1,18 +1,18 @@
 import { StyleSheet, Dimensions } from "react-native";
 const { height } = Dimensions.get('screen')
 
-export const styles = StyleSheet.create({
+export const makeStyles = (theme: ReactNativePaper.Theme) => StyleSheet.create({
     scrollView: {
-        backgroundColor: '#1c1c1e',
-        padding: 30,
-        paddingBottom: 150,
+        backgroundColor: theme.colors.blackRussian,
+        padding: theme.size * 1.5,
+        paddingBottom: theme.size * 7.5,
         height: height
     },
     mapContainer: {
         flex: 1,
         width: '100%',
-        borderRadius: 10,
+        borderRadius: theme.size * 0.5,
         overflow: 'hidden',
-        marginTop: 16,
+        marginTop: theme.spacing * 2,
       },
 });
