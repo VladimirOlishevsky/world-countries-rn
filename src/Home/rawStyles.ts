@@ -1,9 +1,10 @@
-import { StyleSheet, Dimensions } from "react-native";
+import { StyleSheet, Dimensions, StatusBar } from "react-native";
 const { width, height } = Dimensions.get('screen')
 
 export const makeStyles = (theme: ReactNativePaper.Theme) => StyleSheet.create({
     scrollView: {
-        backgroundColor: theme.colors.blackRussian
+        backgroundColor: theme.colors.blackRussian,
+        paddingTop: StatusBar.currentHeight,
     },
     image: {
         flexGrow: 1,

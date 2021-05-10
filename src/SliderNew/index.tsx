@@ -1,27 +1,17 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { View, ListRenderItemInfo } from 'react-native';
+import { useTheme } from 'react-native-paper';
 
 import Carousel from 'react-native-snap-carousel';
 import { sliderImage } from '../config/config';
-import { styles, SLIDER_WIDTH, ITEM_WIDTH, ITEM_HEIGHT } from './rawStyles';
-// import { SlideItem } from './SliderItem';
-
-
-const SlideItem = ({ item, index }: any) => {
-    return (
-        <View style={styles.itemContainer}>
-            <Image
-                style={styles.itemContainer}
-                source={{
-                    uri: item.img
-                }}
-            />
-            <Text style={styles.itemLabel}>{item.title}</Text>
-        </View>
-    );
-}
+import { ISlideItem } from '../config/types';
+import { SLIDER_WIDTH, ITEM_WIDTH, ITEM_HEIGHT, makeStyles } from './rawStyles';
+import { SlideItem } from './SliderItem';
 
 export const SliderNew: React.FC = () => {
+
+    const theme = useTheme();
+    const styles = makeStyles(theme)
 
     return (
         <View style={styles.carouselBlock}>
@@ -31,32 +21,8 @@ export const SliderNew: React.FC = () => {
                 containerCustomStyle={styles.carouselContainer}
                 inactiveSlideShift={0}
                 useScrollView={true}
-                data={sliderImage}
-                renderItem={SlideItem} />
+                data={sliderImage as ISlideItem[]}
+                renderItem ={(item: ListRenderItemInfo<ISlideItem>) => <SlideItem {...item}/>} />
         </View>
     );
 };
-
-
-// const styles = StyleSheet.create({
-//     carouselContainer: {
-//         marginTop: 50
-//     },
-//     itemContainer: {
-//         width: ITEM_WIDTH,
-//         height: ITEM_HEIGHT,
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//     },
-//     itemLabel: {
-//         color: 'white',
-//         fontSize: 20,
-//         textAlign: 'center'
-//     },
-//     counter: {
-//         marginTop: 25,
-//         fontSize: 30,
-//         fontWeight: 'bold',
-//         textAlign: 'center'
-//     }
-// });

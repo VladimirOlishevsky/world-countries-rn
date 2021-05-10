@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from "react-native";
+import { StyleSheet, Dimensions,StatusBar } from "react-native";
 const { height } = Dimensions.get('screen')
 
 
@@ -6,12 +6,15 @@ export const makeStyles = (theme: ReactNativePaper.Theme) => StyleSheet.create({
 
     scrollView: {
         backgroundColor: theme.colors.blackRussian,
-        padding: theme.size * 1.5,
-        paddingBottom: theme.size * 5,
+        paddingTop: StatusBar.currentHeight,
+        // marginTop: theme.size * 1.5,
+        paddingBottom: theme.size,
+        // padding: theme.size * 1.5,
+        // paddingBottom: StatusBar.currentHeight,
         height: height
     },
     header: {
-        marginTop: theme.size * 1.5,
+        // marginTop: theme.size * 1.5,
         marginBottom: theme.size,
         flexDirection: 'row', 
         alignItems: 'center', 

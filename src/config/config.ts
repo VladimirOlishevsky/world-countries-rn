@@ -38,6 +38,7 @@ export const sliderImage = [
     {
         title: 'Kyoto, Japan',
         img: japan,
+        iso_2cc: "JP"
     },
     {
         title: 'Montevideo department, Uruguay',
