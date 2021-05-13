@@ -11,7 +11,6 @@ import { button2map, go2search, notFound } from './constants';
 import { notFoundPicture } from '../../config/config';
 
 export const Country = observer(({ route }: any): JSX.Element => {
-
     const theme = useTheme();
     const styles = makeStyles(theme)
 
@@ -22,7 +21,7 @@ export const Country = observer(({ route }: any): JSX.Element => {
     return (
         <View style={styles.scrollView}>
             <View style={styles.header}>
-                <BackButton page={route.params.navigate === 'regional' ? 'RegionalCountries' : ''} />
+                <BackButton page={route.params.navigate === 'regional' ? 'RegionalCountries' : undefined} />
             </View>
 
             <ScrollView >

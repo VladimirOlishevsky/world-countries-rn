@@ -24,7 +24,7 @@ export const BackButton = ({
         >
             <Icon
                 name="chevron-left"
-                size={20}
+                size={theme.size}
                 color="#ff9f0a" />
         </TouchableOpacity>
 

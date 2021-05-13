@@ -75,7 +75,7 @@ export class Country {
         })
     }
     async fetchCountryByCode(alphaCode: string) {
-
+        this.errorMessage = ''
         this.param = true
 
         try {

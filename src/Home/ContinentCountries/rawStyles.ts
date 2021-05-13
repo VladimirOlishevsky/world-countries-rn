@@ -7,11 +7,15 @@ export const makeStyles = (theme: ReactNativePaper.Theme) => StyleSheet.create({
     scrollView: {
         backgroundColor: theme.colors.blackRussian,
         paddingTop: StatusBar.currentHeight,
+        // backgroundColor: theme.colors.blackRussian,
+        padding: theme.size * 1.5,
+        paddingBottom: theme.size * 6.5,
+        height: height
         // marginTop: theme.size * 1.5,
-        paddingBottom: theme.size,
+        // paddingBottom: theme.size,
         // padding: theme.size * 1.5,
         // paddingBottom: StatusBar.currentHeight,
-        height: height
+        // height: height
     },
     header: {
         // marginTop: theme.size * 1.5,

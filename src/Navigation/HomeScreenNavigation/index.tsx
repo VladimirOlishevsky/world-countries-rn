@@ -15,7 +15,16 @@ export const HomeScreenNavigation = () => {
         <Stack.Screen name="HomePage" component={Home} options={{ headerShown: false }}/>
         <Stack.Screen name="ContinentCountries" component={ContinentCountries} options={{ headerShown: false }}/>
         <Stack.Screen name="Country" component={Country} options={{ headerShown: false }}/>
-        <Stack.Screen name="Maps" component={Maps}/>
+        <Stack.Screen name="Maps" component={Maps} options={{
+          title: 'Map',
+          headerStyle: {
+            backgroundColor: '#ff9f0a',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
         <Stack.Screen name="Test" component={SeparatePage} />
       </Stack.Navigator>
     );
