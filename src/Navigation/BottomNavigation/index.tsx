@@ -4,10 +4,16 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { observer } from "mobx-react";
 import { HomeScreenNavigation } from '../HomeScreenNavigation/index';
 import { SearchScreenNavigation } from '../SearchScreenNavigation';
+import { makeStyles } from './rawStyles';
+import { useTheme } from 'react-native-paper';
 
 const Tab = createBottomTabNavigator();
 
 export const MainNavigation = observer(() => {
+
+    const theme = useTheme()
+    const styles = makeStyles(theme);
+    
     return (
         <Tab.Navigator
             screenOptions={({ route }: any) => ({
@@ -33,10 +39,4 @@ export const MainNavigation = observer(() => {
     )
 })
 
-const styles = StyleSheet.create({
-    image: {
-        resizeMode: 'contain',
-        width: 30,
-        height: 30
-    },
-});
+

@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import { View } from "react-native"
-import { Button } from 'react-native-paper';
-import { styles } from './rawStyles';
+import { Button, useTheme } from 'react-native-paper';
+import { makeStyles } from './rawStyles';
 import { observer } from 'mobx-react';
 import { Fumi } from 'react-native-textinput-effects';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
 import { getRootStore } from "../../store";
+import { buttonTitle, inputLabel } from "./constants";
 
 
 export const InputArea = observer((): JSX.Element => {
+    const theme = useTheme()
+    const styles = makeStyles(theme);
     const { countryStore } = getRootStore()
     const [value, setValue] = useState('');
     const navigation = useNavigation();
@@ -25,46 +28,25 @@ export const InputArea = observer((): JSX.Element => {
 
             <Fumi
                 style={styles.inputStyle}
-                label={'Find countries'}
+                label={inputLabel}
                 iconClass={FontAwesomeIcon}
                 iconName={'search'}
                 iconColor={'#f95a25'}
                 iconSize={20}
-                inputStyle={{color: '#fff'}}
+                inputStyle={styles.inputTextStyle}
                 inputPadding={16}
                 onChangeText={(text) => setValue(text)}
                 value={value}
             />
 
-            {/* <TextInput
-                style={styles.inputStyle}
-                onSubmitEditing={() => {
-                    storeInstance.fetchCountries(value)
-                }}
-                underlineColor='transparent'
-                left={
-                    <TextInput.Icon
-                        style={styles.inputIconStyle}
-                        size={25}
-                        color='#ff9f02'
-                        name="magnify"
-                    />}
-                label="Find countries"
-               // theme={{colors: {text: 'green', primary: 'yellow'}}}
-                theme={{
-                    colors: { primary: '#fff', text: '#fff', placeholder: '#fff' }
-                }}
-                value={value}
-                onChangeText={text => setValue(text)}
-            /> */}
             <Button
                 style={styles.button}
-                color='#0f4c81'
+                color={theme.colors.darkCerulean}
                 icon='magnify'
                 mode="contained"
                 onPress={() => value ? actionByClick(value) : console.log('33333')}>
-                Search
-             </Button>
+                {buttonTitle}
+            </Button>
         </View>)
 })
 

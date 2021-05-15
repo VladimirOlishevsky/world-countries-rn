@@ -1,18 +1,17 @@
-import React, { Fragment, useState } from "react";
-import { Image, View, Text } from "react-native"
-import { styles } from './rawStyles';
+import React from "react";
+import { View } from "react-native"
+import { makeStyles } from './rawStyles';
 import { observer } from 'mobx-react';
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { regionalBlocks } from "../../config/config";
-import { Card, Title } from "react-native-paper";
+import { Card, Title, useTheme } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
-// import regionCardsStore from '../../store/Continents';
-// import { regionalBlocksStore } from "../../store/Country";
 import { getRootStore } from "../../store";
 
 
 export const RegionalCards = observer(() => {
-
+    const theme = useTheme()
+    const styles = makeStyles(theme);
 
     const { regionalBlocksStore } = getRootStore()
     const navigation = useNavigation();

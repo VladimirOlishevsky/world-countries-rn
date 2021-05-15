@@ -33,7 +33,9 @@ declare global {
         white: string,
         tunaGrey: string,
         aestaticBlack: string,
-        blackRussian: string
+        blackRussian: string,
+        grey: string,
+        darkCerulean: string
       }
     //   interface ThemeAnimation {
     //     customProperty: number;
@@ -54,7 +56,9 @@ export const theme = {
       white: '#fff',
       tunaGrey: '#313133',
       aestaticBlack: '#153044',
-      blackRussian: '#1c1c1e'
+      blackRussian: '#1c1c1e',
+      grey: '#b3b2b2',
+      darkCerulean: '#0f4c81'
     },
     spacing: 8,
     size: 20

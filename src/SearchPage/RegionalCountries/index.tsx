@@ -3,12 +3,15 @@ import { View, Image, Text, ScrollView } from "react-native"
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { observer } from 'mobx-react';
 import { BackButton } from '../../Navigation/BackButton/index';
-import { styles } from './rawStyles';
+import { makeStyles } from './rawStyles';
 import { useNavigation } from '@react-navigation/native';
 import { getRootStore } from '../../store';
+import { useTheme } from 'react-native-paper';
 
 
 export const RegionalCountries = observer(({ route }: any): JSX.Element => {
+    const theme = useTheme()
+    const styles = makeStyles(theme);
 
     const { countryStore, regionalBlocksStore } = getRootStore()
     const navigation = useNavigation();

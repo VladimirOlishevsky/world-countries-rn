@@ -2,48 +2,48 @@ import { StyleSheet, Dimensions } from "react-native";
 const { height } = Dimensions.get('screen')
 
 
-export const styles = StyleSheet.create({
+export const makeStyles = (theme: ReactNativePaper.Theme) => StyleSheet.create({
 
     scrollView: {
-        backgroundColor: '#1c1c1e',
-        padding: 30,
-        paddingBottom: 100,
+        backgroundColor: theme.colors.blackRussian,
+        padding: theme.size * 1.5,
+        paddingBottom: theme.size * 5,
         height: height
     },
     header: {
-        marginTop: 30,
-        marginBottom: 20,
+        marginTop: theme.size * 1.5,
+        marginBottom: theme.size,
         flexDirection: 'row', 
         alignItems: 'center', 
     },
     view: {
-        backgroundColor: '#1c1c1e',
-        padding: 30,
-        paddingBottom: 150
+        backgroundColor: theme.colors.blackRussian,
+        padding: theme.size * 1.5,
+        paddingBottom: theme.size * 7.5
     },
     headerBlock: {
         flexDirection: 'row', 
         alignItems: 'center', 
-        marginBottom: 20
+        marginBottom: theme.size
     },
     imageWrapper: {
         flexDirection: 'row', 
-        marginTop: 10, 
-        marginBottom: 10,
+        marginTop: theme.size * 0.5,
+        marginBottom: theme.size * 0.5,
         alignItems: 'center'
     },
     image: {
-        width: 100, 
-        height: 70
+        width: theme.size * 5, 
+        height: theme.size * 3.5
     },
     mainTitle: {
-        fontSize: 20,
-        color: '#ff9f0a',
-        marginLeft: 30
+        fontSize: theme.size,
+        color: theme.colors.orange,
+        marginLeft: theme.size * 1.5
     },
     titles: {
-        fontSize: 20,
-        color: '#fff',
-        marginLeft: 20
+        fontSize: theme.size,
+        color: theme.colors.white,
+        marginLeft: theme.size
     }
 });

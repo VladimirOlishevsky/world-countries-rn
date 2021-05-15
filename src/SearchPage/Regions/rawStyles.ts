@@ -1,12 +1,12 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 
 
-export const styles = StyleSheet.create({
+export const makeStyles = (theme: ReactNativePaper.Theme) => StyleSheet.create({
   container: {
-    marginTop: 30
+    marginTop: theme.size * 1.5
   },
   card: {
-    marginTop: 30
+    marginTop: theme.size * 1.5
   },
   titleBlock: {
     display: 'flex', 
@@ -14,6 +14,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   title: {
-    color: '#fff'
+    color: theme.colors.white
   }
 })

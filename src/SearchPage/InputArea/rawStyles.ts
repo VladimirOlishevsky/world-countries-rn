@@ -1,25 +1,28 @@
 import { StyleSheet } from "react-native";
+import { inputLabel } from "./constants";
 
-export const styles = StyleSheet.create({
+export const makeStyles = (theme: ReactNativePaper.Theme) => StyleSheet.create({
   inputStyle: {
     justifyContent: "center",
-    backgroundColor: '#313133',
-    fontSize: 20,
-    borderTopStartRadius: 30,
-    borderTopEndRadius: 30,
-    borderBottomStartRadius: 30,
-    borderBottomEndRadius: 30,
-    //overflow: 'hidden',
+    backgroundColor: theme.colors.tunaGrey,
+    fontSize: theme.size,
+    borderTopStartRadius: theme.size * 1.5,
+    borderTopEndRadius: theme.size * 1.5,
+    borderBottomStartRadius: theme.size * 1.5,
+    borderBottomEndRadius: theme.size * 1.5,
   },
   inputIconStyle: {
-    marginTop: 10,
-    color: '#b3b2b2'
+    marginTop: theme.size * 0.5,
+    color: theme.colors.grey
   },
   inputContainer: {
-    paddingTop: 60,
-    paddingBottom: 50,
+    paddingTop: theme.size * 3,
+    paddingBottom: theme.size * 2.5,
   },
   button: {
-     marginTop: 20 
+     marginTop: theme.size
+  },
+  inputTextStyle: {
+    color: theme.colors.white
   }
 })
