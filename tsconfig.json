@@ -1,23 +1,52 @@
-// Defaults from https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/
-// Added "jsx": "react-native".
-// Added ["App.tsx", "custom_types"] to "include".
-    {
-        "compilerOptions": {
-          // Target latest version of ECMAScript.
-          "target": "esnext",
-          // Search under node_modules for non-relative imports.
-          "moduleResolution": "node",
-          // Output react-native code.
-          "jsx": "react-native",
-          // Don't emit; allow Babel to transform files.
-          "noEmit": true,
-          // Enable strictest settings like strictNullChecks & noImplicitAny.
-          "strict": true,
-          // Disallow features that require cross-file information for emit.
-          "isolatedModules": true,
-          // Import non-ES modules as default imports.
-          "esModuleInterop": true,
-          "experimentalDecorators": true,
-        },
-        "include": ["src", "App.tsx", "custom_types"]
-      }
+{
+  "ts-node": {
+    "transpileOnly": true,
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "lib": ["dom", "ES2015", "ES2017"],
+    "baseUrl": "src",
+    "jsx": "react"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "custom_typings/**/*"],
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Recommended"
+}
+
+
+// // Defaults from https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/
+// // Added "jsx": "react-native".
+// // Added ["App.tsx", "custom_types"] to "include".
+//     {
+//         "compilerOptions": {
+//           // Target latest version of ECMAScript.
+//           "target": "esnext",
+//           // Search under node_modules for non-relative imports.
+//           "moduleResolution": "node",
+//           // Output react-native code.
+//           "jsx": "react-native",
+//           // Don't emit; allow Babel to transform files.
+//           "noEmit": true,
+//           // Enable strictest settings like strictNullChecks & noImplicitAny.
+//           "strict": true,
+//           // Disallow features that require cross-file information for emit.
+//           "isolatedModules": true,
+//           // Import non-ES modules as default imports.
+//           "esModuleInterop": true,
+//           "experimentalDecorators": true,
+//         },
+//         "include": ["src", "App.tsx", "custom_types"]
+//       }

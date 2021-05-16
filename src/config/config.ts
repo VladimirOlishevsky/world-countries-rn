@@ -5,7 +5,7 @@ const imageSrc = Image.resolveAssetSource(europe).uri; // need change all img to
 const asia = require('../../assets/images/regions/asia.png')
 const africa = require('../../assets/images/regions/africa.png');
 
-export const notFoundPicture = require('../../assets/images/no-results.png')
+export const notFoundPicture = Image.resolveAssetSource(require('../../assets/images/no-results.png')).uri
 
 const nepal = Image.resolveAssetSource(require('../../assets/images/slider/Ama_Dablam_mountain_Nepal.png')).uri; 
 const brazil = Image.resolveAssetSource(require('../../assets/images/slider/Cristo_iluminado_Brazil.png')).uri; 
