@@ -27,24 +27,8 @@ export const Country = observer(({ route, navigation }: any): JSX.Element => {
             </View>
 
             <ScrollView >
-                {countryStore.errorMessage ?
-                    <View style={styles.errorBlock}>
-                        <Image
-                            style={styles.image}
-                            source={{ uri :notFoundPicture }}
-                        />
-                        <Text style={styles.countryName}>
-                            {notFound}
-                        </Text>
-                        <Button
-                            mode='outlined'
-                            style={styles.mapButton}
-                            color='#fff'
-                            onPress={() => navigation.navigate("SearchPage")}
-                        >
-                            {go2search}
-                        </Button>
-                    </View> :
+                {countryStore.name ?
+                    
                     <Fragment>
                         <View style={styles.content}>
                             <Image
@@ -98,6 +82,24 @@ export const Country = observer(({ route, navigation }: any): JSX.Element => {
                             {button2map}
                         </Button>
                     </Fragment>
+                    :
+                    <View style={styles.errorBlock}>
+                        <Image
+                            style={styles.image}
+                            source={{ uri :notFoundPicture }}
+                        />
+                        <Text style={styles.countryName}>
+                            {notFound}
+                        </Text>
+                        <Button
+                            mode='outlined'
+                            style={styles.mapButton}
+                            color='#fff'
+                            onPress={() => navigation.navigate("SearchPage")}
+                        >
+                            {go2search}
+                        </Button>
+                    </View>
                 }
             </ScrollView>
         </View>

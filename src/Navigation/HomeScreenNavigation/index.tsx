@@ -7,7 +7,6 @@ import { Country } from './../../Home/Country/index';
 import { Maps } from '../../Home/Maps';
 import { useTheme } from 'react-native-paper';
 
-
 const Stack = createStackNavigator();
 
 export const HomeScreenNavigation = () => {
