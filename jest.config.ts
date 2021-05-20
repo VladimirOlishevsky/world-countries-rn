@@ -37,14 +37,14 @@ module.exports = {
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test|snap).[jt]s?(x)',],
   reporters: ['default', 'jest-junit'],
   modulePathIgnorePatterns: ['__stories__'],
-  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!**/node_modules/**', '!src/**/*.d.ts', '!**/__stories__/**', '!**/__fixtures__/**'],
-  coverageReporters: ['text', ['lcov', { 'src': '../../' }], 'cobertura'],
-  coverageThreshold: {
-    global: {
-      statements: 95,
-      branches: 88,
-      functions: 90,
-      lines: 95,
-    }
-  }
+  // collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!**/node_modules/**', '!src/**/*.d.ts', '!**/__stories__/**', '!**/__fixtures__/**'],
+  // coverageReporters: ['text', ['lcov', { 'src': '../../' }], 'cobertura'],
+  // coverageThreshold: {
+  //   global: {
+  //     statements: 95,
+  //     branches: 88,
+  //     functions: 90,
+  //     lines: 95,
+  //   }
+  // }
 };
