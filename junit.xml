@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="0" failures="0" errors="0" time="6.13">
+<testsuites name="jest tests" tests="1" failures="0" errors="0" time="6.644">
+  <testsuite name="Screen 1" errors="0" failures="0" skipped="0" timestamp="2021-05-20T18:04:03" time="5.469" tests="1">
+    <testcase classname="Screen 1 navigates on button press" name="Screen 1 navigates on button press" time="0.418">
+    </testcase>
+  </testsuite>
 </testsuites>

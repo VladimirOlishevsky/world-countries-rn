@@ -3,15 +3,18 @@ import { useNavigation } from '@react-navigation/native';
 import { makeStyles } from './rawStyles';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+// import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useTheme } from 'react-native-paper';
+import { TouchableOpacity } from 'react-native';
 
 interface IProps {
-    page?: string
+    page?: string,
+    testId?: string
 }
 
 export const BackButton = ({
-    page
+    page,
+    testId
 }: IProps) => {
     const navigation = useNavigation();
     const theme = useTheme();
@@ -19,6 +22,7 @@ export const BackButton = ({
 
     return (
         <TouchableOpacity
+            testID={testId}
             onPress={() => page ? navigation.navigate(page) : navigation.goBack()}
             style={styles.iconStyle}
         >

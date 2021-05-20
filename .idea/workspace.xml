@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="381826ce-106c-4914-ba07-61748d2b7097" name="Default Changelist" comment="add chips, modify catalogs" />
+    <list default="true" id="381826ce-106c-4914-ba07-61748d2b7097" name="Default Changelist" comment="add chips, modify catalogs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/junit.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,13 +25,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../diary-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../work/diary-app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="D:\JS Projects\test differents\africa-rn\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\JS Projects\world-countries-rn\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -67,6 +71,7 @@
       <updated>1607782047816</updated>
       <workItem from="1607782049124" duration="11270000" />
       <workItem from="1608058263548" duration="62000" />
+      <workItem from="1621525836374" duration="1217000" />
     </task>
     <task id="LOCAL-00001" summary="add chips, modify catalogs">
       <created>1607793132474</created>

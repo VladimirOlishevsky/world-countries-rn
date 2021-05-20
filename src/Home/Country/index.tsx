@@ -23,7 +23,7 @@ export const Country = observer(({ route, navigation }: any): JSX.Element => {
     return (
         <View style={styles.scrollView}>
             <View style={styles.header}>
-                <BackButton page={route.params.navigate === 'regional' ? 'RegionalCountries' : undefined} />
+                <BackButton testId={'backButton'} page={navigation.navigate === 'regional' ? 'RegionalCountries' : undefined} />
             </View>
 
             <ScrollView >

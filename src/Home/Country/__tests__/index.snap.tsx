@@ -1,56 +1,30 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { create, act } from 'react-test-renderer';
 import { Country } from '..';
+import { render, fireEvent } from '@testing-library/react-native';
+import { RegionalCountries } from '../../../SearchPage/RegionalCountries';
 
-jest.mock('react-native-vector-icons/FontAwesome', () => 'Icon')
-jest.mock('react-native-gesture-handler', () => {});
-jest.mock('@react-navigation/stack', () => { return {BaseButton: ()=>'whatever'} });
-
-// jest.mock("NativeModules", () => ({
-//   UIManager: {
-//     RCTView: () => ({
-//       directEventTypes: {}
-//     })
-//   },
-//   KeyboardObserver: {},
-//   RNGestureHandlerModule: {
-//     attachGestureHandler: jest.fn(),
-//     createGestureHandler: jest.fn(),
-//     dropGestureHandler: jest.fn(),
-//     updateGestureHandler: jest.fn(),
-//     State: {},
-//     Directions: {}
-//   }
-// }))
-
-
-
-const Stack = createStackNavigator();
-const MockedNavigator = ({ component, params = {} }: any) => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="MockedScreen"
-          component={component}
-          initialParams={params}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
-
-
-describe("App", () => {
-  it('Country test', async () => {
-    let tree;
-   await act(async () => {
-      tree = create(
-        <MockedNavigator component={Country} />
-      )
-    })
-    expect(tree).toMatchSnapshot();
+describe('Screen 1', () => {
+  it('Country component render', () => {
+    const push = jest.fn();
+    const country = render(<Country navigation={{ push }} />);
+    expect(country).toBeTruthy()
+    // debug()
   });
-})
+  // it('navigates on button press', () => {
+
+  //   const navigate = jest.fn();
+  //   const mockedParams = {
+  //     route: {
+  //       params: { currentBid: 'whatever-id', name: 'Lebanon' },
+  //     },
+  //     // navigation: '',
+  //     navigation: navigate
+  //   };
+  //   // const push = jest.fn();
+
+  //   const { getByTestId  } = render(<Country navigation={{ navigate }} />);
+  //   // debug()
+  //   fireEvent.press(getByTestId ('backButton'));
+  //   expect(navigate).toHaveBeenCalledWith('RegionalCountries');
+  // });
+});
