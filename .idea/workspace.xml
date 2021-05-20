@@ -36,6 +36,27 @@
       <recent name="D:\JS Projects\test differents\africa-rn\src\MainPage\ChipsBlockLayout\ChipsContent" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="App.Country test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Home/Country/__tests__/index.snap.tsx" />
+      <test-names>
+        <test-name value="App" />
+        <test-name value="Country test" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.App.Country test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
