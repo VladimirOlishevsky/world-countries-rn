@@ -1,5 +1,6 @@
 import { action, makeObservable, observable, runInAction } from "mobx"
-import { Country, ICountry } from "../Country"
+import { ICountry } from "store/types"
+import { Country } from "../Country"
 
 export class RegionalBlocks { 
     countries: Country[] = []

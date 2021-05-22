@@ -1,21 +1,13 @@
-import { observable, makeObservable, action, runInAction } from 'mobx';
-import { RegionName } from './RegionItem/index';
-
-
-export interface IRegionName {
-    Name: string,
-    FlagPng: string
-    Alpha2Code: string
-}
+import { action, runInAction, makeAutoObservable } from 'mobx';
+import { IRegionName } from 'store/types';
+import { Region } from './Region/index';
 
 export class Continents {
 
     countries: IRegionName[] = [];
 
     constructor() {
-        makeObservable(this, {
-            countries: observable,
-            setItem: action,
+        makeAutoObservable(this, {
             workerAfterFetch: action,
             fetchRegions: action
         })
@@ -26,28 +18,16 @@ export class Continents {
         try {
             const response = await fetch(props)
             const data = await response.json();
-            const filteredData = this.workerAfterFetch(data.Response)
+            const adaptData = this.workerAfterFetch(data.Response)
             runInAction(() => {
-                this.countries = filteredData;
+                this.countries = adaptData;
             });
         } catch (error) {
-            runInAction(() => {
-                console.log(error)
-            })
+            console.log(error)
         }
     }
 
     workerAfterFetch(data: IRegionName[]) {
-      return data.map(el => this.setItem(el))
-    }
-
-    setItem(data: IRegionName) {
-        const region = new RegionName();
-        region.setCountry(data) 
-        return region
+      return data.map(el => new Region(el))
     }
 }
-
-// const regionCardsStore = new RegionsStore()
-
-// export default regionCardsStore 

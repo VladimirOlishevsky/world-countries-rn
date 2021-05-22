@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackButton BackButton render 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "height": NaN,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": NaN,
+    }
+  }
+>
+  <Icon
+    color="#ff9f0a"
+    name="chevron-left"
+  />
+</View>
+`;

@@ -1,7 +1,7 @@
 import React from 'react';
-import { View } from "react-native"
+import { View, TouchableOpacity } from "react-native"
 import { Card, Title, useTheme } from 'react-native-paper';
-import { TouchableOpacity } from "react-native-gesture-handler";
+// import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from '@react-navigation/native';
 import { getRootStore } from '../../store';
 import { continents } from '../../config/config';
@@ -22,7 +22,9 @@ export const ContinentCards = (() => {
         <View style={styles.container}>
             {continents.map((el, index) => {
                 return (
-                    <TouchableOpacity key={index}
+                    <TouchableOpacity
+                        testID='fetchContinents'
+                        key={index}
                         onPress={() => actionByClick(el.link, el.description)}>
                         <Card
                             style={styles.container}
