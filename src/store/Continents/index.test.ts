@@ -1,31 +1,24 @@
 import { Continents } from ".";
+import { mockData } from "./mock";
 
+jest.mock('./index')
 
-const getReturnValueNext = { data: [{ id: 1 }] };
-const getReturnValueWaiting = { data: [{ id: 2 }] };
-const getReturnValueMySkills = { data: [{ id: 3 }] };
-const getReturnValueNoticeForOrganizer = { data: [{ id: 4 }] };
-const getReturnValueNoticeForSchool = { data: [{ id: 5 }] };
+// jest.mock('./index', () => {
+//   // Works and lets you check for constructor calls:
+//   return {
+//     Continents: jest.fn().mockImplementation(() => {
+//       return {fetchRegions: async () => await mockData};
+//     }),
+//   };
+// });
 
-const mockGetNext = jest.fn(() => getReturnValueNext);
-const mockGetWaiting = jest.fn(() => getReturnValueWaiting);
-const mockGetMySkills = jest.fn(() => getReturnValueMySkills);
-const mockGetNotificationForOrganizer = jest.fn(() => getReturnValueNoticeForOrganizer);
-const mockGetNotificationForSchool = jest.fn(() => getReturnValueNoticeForSchool);
+// const weekTestData = []
+const continents = new Continents()
+it('method fetchRegions', async () => {
+  
+  continents.fetchRegions = jest.fn().mockResolvedValue(mockData);
+  const data = await continents.fetchRegions('http://countryapi.gear.host/v1/Country/getCountries?pRegion=europe&pSubRegion=western%20europe');
+  expect(data).toBe(mockData)
+});
 
-jest.mock('mobx', () => ({
-  makeAutoObservable: jest.fn(),
-  action: { bound: 'action.bound' },
-}));
-
-describe('111', () => { // TODO - update
-  test('method fetchEventsNext "try" branch', async () => {
-    const store = new Continents();
-     store.fetchRegions('http://countryapi.gear.host/v1/Country/getCountries?pRegion=europe&pSubRegion=western%20europe')
-    .then(async () => {
-    await expect(store.countries.length).toBeGreaterThan(0);  
-    });
-    // expect(store.countries.length).toBeGreaterThan(0);
-  });
-})
 
