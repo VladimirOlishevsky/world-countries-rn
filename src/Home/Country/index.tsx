@@ -5,18 +5,15 @@ import { BackButton } from './../../Navigation/BackButton/index';
 import { makeStyles } from './rawStyles';
 import { getRootStore } from '../../store';
 import { getFlagDescription } from '../../config/utils';
-import { useNavigation } from '@react-navigation/native';
 import { Button, useTheme } from 'react-native-paper';
 import { button2map, go2search, notFound } from './constants';
 import { notFoundPicture } from '../../config/config';
-import { Languages } from 'store/Country/Languages';
-import { Currencies } from 'store/Country/Currencies';
+import { ICurrencies, ILanguages } from 'store/types';
 
 export const Country = observer(({ route, navigation }: any): JSX.Element => {
     const theme = useTheme();
     const styles = makeStyles(theme)
 
-    // const navigation = useNavigation();
     const { countryStore } = getRootStore()
     const flagsDescription = getFlagDescription(countryStore.alpha2Code)
 
@@ -50,7 +47,7 @@ export const Country = observer(({ route, navigation }: any): JSX.Element => {
                                 {flagsDescription && flagsDescription.cia_description || flagsDescription && flagsDescription.jmpesc_description}
                             </Text>
                         </View>
-                        {Object.values(countryStore.store2Obj).map((el: string | number | Currencies[] | Languages[], index) => (
+                        {Object.values(countryStore.store2Obj).map((el: string | number | ICurrencies[] | ILanguages[], index) => (
                             <View key={index} style={styles.strings}>
                                 <Text style={styles.keys} >
                                     {countryStore.getKeyByValue(countryStore.store2Obj, el)}:
@@ -58,7 +55,7 @@ export const Country = observer(({ route, navigation }: any): JSX.Element => {
                                 {Array.isArray(el)
                                     ? (
                                         <View style={styles.column}>
-                                            {(el as (Currencies | Languages)[]).map((el: (Currencies | Languages)) => (
+                                            {(el as (ICurrencies | ILanguages)[]).map((el: (ICurrencies | ILanguages)) => (
                                                 <Text key={el.name} style={styles.values}>
                                                     {el.name}
                                                 </Text>

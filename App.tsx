@@ -1,5 +1,5 @@
 import React from 'react';
-import storeInstance from './src/store/store';
+// import storeInstance from './src/store/store';
 import { Provider } from "mobx-react";
 import { Provider as PaperProvider } from 'react-native-paper';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -15,7 +15,7 @@ export const Tab = createBottomTabNavigator();
 export default class App extends React.Component {
     render() {
         return (
-            <Provider value={storeInstance}>
+            // <Provider value={storeInstance}>
                 <PaperProvider theme={theme}>
                     <NavigationContainer>
                         <MainNavigation />
@@ -76,7 +76,7 @@ export default class App extends React.Component {
                         {/* </Stack.Navigator> */}
                     </NavigationContainer>
                 </PaperProvider>
-            </Provider>
+            // </Provider>
         );
     }
 }

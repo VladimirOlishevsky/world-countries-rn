@@ -1,24 +1,40 @@
 import { Continents } from ".";
 import { mockData } from "./mock";
+import fetch, { enableFetchMocks } from 'jest-fetch-mock';
 
-jest.mock('./index')
+enableFetchMocks()
 
-// jest.mock('./index', () => {
-//   // Works and lets you check for constructor calls:
-//   return {
-//     Continents: jest.fn().mockImplementation(() => {
-//       return {fetchRegions: async () => await mockData};
-//     }),
-//   };
-// });
+describe('Continents', () => {
+  it('try-catch and workerAfterFetch', async () => {
 
-// const weekTestData = []
-const continents = new Continents()
-it('method fetchRegions', async () => {
-  
-  continents.fetchRegions = jest.fn().mockResolvedValue(mockData);
-  const data = await continents.fetchRegions('http://countryapi.gear.host/v1/Country/getCountries?pRegion=europe&pSubRegion=western%20europe');
-  expect(data).toBe(mockData)
-});
+    fetchMock.mockResponseOnce(JSON.stringify(mockData));
+    fetch.mockReject(() => Promise.reject("API is down"));
+    const continents = new Continents();
 
+    const spy = jest.spyOn(continents, 'workerAfterFetch');
+    const isAdaptAfterFetching = continents.workerAfterFetch(mockData.Response);
 
+    expect(spy).toHaveBeenCalled();
+    expect(isAdaptAfterFetching).toBe(isAdaptAfterFetching);
+    spy.mockRestore();
+
+    try {
+      await continents.fetchRegions('http://countryapi.gear.host/v1/Country/getCountries?pRegion=europe&pSubRegion=western%20europe')
+      expect(fetch).toHaveBeenCalledTimes(1);
+    } catch (error) {
+      console.log(error)
+    }
+  })
+  it('error', async () => {
+
+    fetch.mockReject(() => Promise.reject("API is down"));
+    const continents = new Continents();
+    try {
+      await continents.fetchRegions('http://countryapi.gear.host/v1/Cou')
+    } catch (error) {
+      expect(fetch).toHaveBeenCalledWith(
+        "http://countryapi.gear.host/v1/Cou"
+      );
+    }
+  })
+})

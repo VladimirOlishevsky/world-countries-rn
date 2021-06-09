@@ -21,6 +21,8 @@ export const SlideItem: ListRenderItem<ISlideItem> = ({ item }) => {
         navigation.navigate("Country", { name: code });
     }
 
+    console.log(item)
+
     return (
         <TouchableOpacity
             style={styles.carouselBlock}

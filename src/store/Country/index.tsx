@@ -46,9 +46,10 @@ export class Country {
         try {
             const response = await fetch(`https://restcountries.eu/rest/v2/name/${props}?fullText=true`)
             const data = await response.json();
+            console.log(data)
             runInAction(() => {
                 if (data.message) {
-                    this.errorMessage = data.message
+                    this.name = ''
                     return
                 }
                 this.fromApi(data[0])

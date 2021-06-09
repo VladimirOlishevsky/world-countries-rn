@@ -5,7 +5,7 @@ import {
     ScrollView,
 } from 'react-native';
 import { observer } from "mobx-react";
-import storeInstance from '../store/store';
+// import storeInstance from '../store/store';
 import { makeStyles } from './rawStyles';
 import { Button, useTheme } from 'react-native-paper';
 import { InputArea } from './InputArea';
@@ -21,19 +21,11 @@ export const SearchScreen = observer(({ navigation }: any): JSX.Element => {
         <View style={styles.container}>
             <InputArea />
             <ScrollView>
-                {/* <ChipsTitle title={sliderFlagsTitle} /> */}
-                {/* <ChipsBlockLayout
-                    title={<ChipsTitle title='Most Popular' />}
-                    chips={<ChipsContent />}
-                />
-                <Text>557788871🍕</Text>
-                <Text>{storeInstance.countriesInfo}</Text> */}
-
                 <RegionalCards />
 
                 <Text>This is the home screen</Text>
                 <Button
-                    onPress={() => navigation.navigate("Test", { names:  storeInstance.value })}
+                    // onPress={() => navigation.navigate("Test", { names:  storeInstance.value })}
                 >Go to About Screen</Button>
             </ScrollView>
 

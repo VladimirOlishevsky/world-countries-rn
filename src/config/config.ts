@@ -1,6 +1,6 @@
 import { Image } from "react-native";
 
-const europe = require('../../assets/images/regions/europe.png');
+const europe = require('./../../assets/images/slider/Kyoto_Japan.png');
 const imageSrc = Image.resolveAssetSource(europe).uri; // need change all img to this type
 const asia = require('../../assets/images/regions/asia.png')
 const africa = require('../../assets/images/regions/africa.png');

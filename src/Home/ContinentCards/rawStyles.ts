@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const makeStyles = (theme: ReactNativePaper.Theme) => StyleSheet.create({
     container: {
-        marginTop: theme.size * 1.5
+        marginTop: theme.size * 1.5,
     },
     cardTitle: {
         position: 'absolute',

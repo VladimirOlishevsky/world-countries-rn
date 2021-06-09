@@ -29,7 +29,7 @@ export const ContinentCards = (() => {
                         <Card
                             style={styles.container}
                         >
-                            <Card.Cover source={{ uri: el.img }} />
+                            <Card.Cover style={{width: '70%', height: 140}} source={{ uri :el.img }} />
                             <Title style={styles.cardTitle}>
                                 {el.title}
                             </Title>
