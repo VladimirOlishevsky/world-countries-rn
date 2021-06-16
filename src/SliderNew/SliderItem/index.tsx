@@ -20,9 +20,6 @@ export const SlideItem: ListRenderItem<ISlideItem> = ({ item }) => {
         countryStore.fetchCountryByCode(code);
         navigation.navigate("Country", { name: code });
     }
-
-    console.log(item)
-
     return (
         <TouchableOpacity
             style={styles.carouselBlock}

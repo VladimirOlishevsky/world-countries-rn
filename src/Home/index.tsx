@@ -22,7 +22,7 @@ export const Home = observer((): JSX.Element => {
     const navigation = useNavigation();
 
     return (
-        <SafeAreaView>
+        // <SafeAreaView>
             <View style={styles.scrollView}>
                 <ScrollView>
                     <View
@@ -60,7 +60,7 @@ export const Home = observer((): JSX.Element => {
                     <ContinentCards />
                 </ScrollView>
             </View>
-        </SafeAreaView>
+        // </SafeAreaView>
     )
 })
 

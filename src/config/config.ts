@@ -1,9 +1,9 @@
 import { Image } from "react-native";
 
-const europe = require('./../../assets/images/slider/Kyoto_Japan.png');
-const imageSrc = Image.resolveAssetSource(europe).uri; // need change all img to this type
-const asia = require('../../assets/images/regions/asia.png')
-const africa = require('../../assets/images/regions/africa.png');
+export const europe = Image.resolveAssetSource(require('../../assets/images/europe.png')).uri;
+// const imageSrc = Image.resolveAssetSource(europe).uri; // need change all img to this type
+export const asia = Image.resolveAssetSource(require('../../assets/images/asia.png')).uri
+export const africa = Image.resolveAssetSource(require('../../assets/images/africa.png')).uri;
 
 export const notFoundPicture = Image.resolveAssetSource(require('../../assets/images/no-results.png')).uri
 
@@ -70,19 +70,19 @@ export const sliderImage = [
 export const continents = [
     {
         title: 'Europe',
-        img: Image.resolveAssetSource(europe).uri,
+        img: kenya,
         link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=europe&pSubRegion=western%20europe',
         description: 'Popular European Countries'
     },
     {
         title: 'Asia',
-        img: Image.resolveAssetSource(asia).uri,
+        img: kenya,
         link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=asia&pSubRegion=eastern%20asia',
         description: 'Popular Asian Countries'
     },
     {
         title: 'Africa',
-        img: Image.resolveAssetSource(africa).uri,
+        img: kenya,
         link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=africa&pSubRegion=middle%20africa',
         description: 'Popular African Countries'
     },

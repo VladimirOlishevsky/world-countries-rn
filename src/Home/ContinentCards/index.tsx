@@ -4,7 +4,7 @@ import { Card, Title, useTheme } from 'react-native-paper';
 // import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from '@react-navigation/native';
 import { getRootStore } from '../../store';
-import { continents } from '../../config/config';
+import { continents, notFoundPicture } from '../../config/config';
 import { makeStyles } from './rawStyles';
 
 export const ContinentCards = (() => {
@@ -23,13 +23,13 @@ export const ContinentCards = (() => {
             {continents.map((el, index) => {
                 return (
                     <TouchableOpacity
-                        testID='fetchContinents'
+                        // testID='fetchContinents'
                         key={index}
                         onPress={() => actionByClick(el.link, el.description)}>
                         <Card
                             style={styles.container}
                         >
-                            <Card.Cover style={{width: '70%', height: 140}} source={{ uri :el.img }} />
+                            <Card.Cover source={{ uri: el.img }} />
                             <Title style={styles.cardTitle}>
                                 {el.title}
                             </Title>
