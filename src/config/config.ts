@@ -1,21 +1,21 @@
 import { Image } from "react-native";
 
-export const europe = Image.resolveAssetSource(require('../../assets/images/europe.png')).uri;
+export const europe = Image.resolveAssetSource(require('../../static/images/europe.png')).uri;
 // const imageSrc = Image.resolveAssetSource(europe).uri; // need change all img to this type
-export const asia = Image.resolveAssetSource(require('../../assets/images/asia.png')).uri
-export const africa = Image.resolveAssetSource(require('../../assets/images/africa.png')).uri;
+export const asia = Image.resolveAssetSource(require('../../static/images/asia.png')).uri
+export const africa = Image.resolveAssetSource(require('../../static/images/africa.png')).uri;
 
-export const notFoundPicture = Image.resolveAssetSource(require('../../assets/images/no-results.png')).uri
+export const notFoundPicture = Image.resolveAssetSource(require('../../static/images/no-results.png')).uri
 
-const nepal = Image.resolveAssetSource(require('../../assets/images/slider/Ama_Dablam_mountain_Nepal.png')).uri; 
-const brazil = Image.resolveAssetSource(require('../../assets/images/slider/Cristo_iluminado_Brazil.png')).uri; 
-const japan = Image.resolveAssetSource(require('../../assets/images/slider/Kyoto_Japan.png')).uri; 
-const uruguay = Image.resolveAssetSource(require('../../assets/images/slider/Montevideo_department_Uruguay.png')).uri; 
-const russia = Image.resolveAssetSource(require('../../assets/images/slider/Moscow_Kremlin_Russia.png')).uri; 
-const rwanda = Image.resolveAssetSource(require('../../assets/images/slider/Nyungwe_park_Rwanda.png')).uri; 
-const usa = Image.resolveAssetSource(require('../../assets/images/slider/New_York_USA.png')).uri; 
-const india = Image.resolveAssetSource(require('../../assets/images/slider/Taj_Mahal_India.png')).uri; 
-const kenya = Image.resolveAssetSource(require('../../assets/images/slider/Sunset_in_Kenya_Kenya.png')).uri; 
+const nepal = Image.resolveAssetSource(require('../../static/images/slider/Ama_Dablam_mountain_Nepal.png')).uri; 
+const brazil = Image.resolveAssetSource(require('../../static/images/slider/Cristo_iluminado_Brazil.png')).uri; 
+const japan = Image.resolveAssetSource(require('../../static/images/slider/Kyoto_Japan.png')).uri; 
+const uruguay = Image.resolveAssetSource(require('../../static/images/slider/Montevideo_department_Uruguay.png')).uri; 
+const russia = Image.resolveAssetSource(require('../../static/images/slider/Moscow_Kremlin_Russia.png')).uri; 
+const rwanda = Image.resolveAssetSource(require('../../static/images/slider/Nyungwe_park_Rwanda.png')).uri; 
+const usa = Image.resolveAssetSource(require('../../static/images/slider/New_York_USA.png')).uri; 
+const india = Image.resolveAssetSource(require('../../static/images/slider/Taj_Mahal_India.png')).uri; 
+const kenya = Image.resolveAssetSource(require('../../static/images/slider/Sunset_in_Kenya_Kenya.png')).uri; 
 
 
 
@@ -137,18 +137,18 @@ export const regionalBlocks = [
 // export const slides = [
 //     {
 //         title: 'Rhino Refugee Camp, Arua, Uganda',
-//         img: require('../assets/images/1.jpg'),
+//         img: require('../static/images/1.jpg'),
 //     },
 //     {
 //         title: 'Bargny, Senegal',
-//         img: require('../assets/images/2.jpg'),
+//         img: require('../static/images/2.jpg'),
 //     },
 //     {
 //         title: 'Rhinoceros',
-//         img: require('../assets/images/3.jpg'),
+//         img: require('../static/images/3.jpg'),
 //     },
 //     {
 //         title: 'Namibia',
-//         img: require('../assets/images/4.jpg'),
+//         img: require('../static/images/4.jpg'),
 //     }
 // ]

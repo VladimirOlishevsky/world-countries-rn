@@ -20,12 +20,12 @@ export const MainNavigation = observer(() => {
                 tabBarIcon: ({ focused, color, size }: any) => {
                     let iconName;
                     if (route.name === 'HomePage') {
-                        focused ? iconName = require('../../../assets/images/vicharanFocused.png')
-                            : iconName = require('../../../assets/images/vicharan.png');
+                        focused ? iconName = require('../../../static/images/vicharanFocused.png')
+                            : iconName = require('../../../static/images/vicharan.png');
                     }
                     else if (route.name === 'SearchPage') {
-                        focused ? iconName = require('../../../assets/images/kathaFocused.png')
-                            : iconName = require('../../../assets/images/katha.png');
+                        focused ? iconName = require('../../../static/images/kathaFocused.png')
+                            : iconName = require('../../../static/images/katha.png');
                     }
                     return <Image source={iconName}
                         style={styles.image}

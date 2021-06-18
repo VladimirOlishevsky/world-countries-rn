@@ -29,7 +29,7 @@ export const ContinentCards = (() => {
                         <Card
                             style={styles.container}
                         >
-                            <Card.Cover source={{ uri: el.img }} />
+                            <Card.Cover key={new Date().getTime()} source={{ uri: `${el.img}?${Date.now()}` }} />
                             <Title style={styles.cardTitle}>
                                 {el.title}
                             </Title>

@@ -28,8 +28,9 @@ export const SlideItem: ListRenderItem<ISlideItem> = ({ item }) => {
             <View>
                 <Image
                     style={styles.itemContainer}
+                    key={new Date().getTime()}
                     source={{
-                        uri: item.img
+                        uri:  `${item.img}?${new Date().getTime()}`
                     }}
                 />
                 <Text style={styles.itemLabel}>{item.title}</Text>
