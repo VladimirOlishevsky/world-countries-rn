@@ -1,10 +1,9 @@
 import React from 'react';
 import { View, TouchableOpacity } from "react-native"
 import { Card, Title, useTheme } from 'react-native-paper';
-// import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from '@react-navigation/native';
 import { getRootStore } from '../../store';
-import { continents, notFoundPicture } from '../../config/config';
+import { continents } from '../../config/config';
 import { makeStyles } from './rawStyles';
 
 export const ContinentCards = (() => {

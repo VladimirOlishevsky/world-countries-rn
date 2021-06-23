@@ -5,13 +5,12 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useTheme } from 'react-native-paper';
 import { ISlideItem } from '../../config/types';
 import { getRootStore } from '../../store';
-import { makeStyles } from '../rawStyles';
+import { makeStyles } from './rawStyles';
 
 export const SlideItem: ListRenderItem<ISlideItem> = ({ item }) => {
 
     const theme = useTheme();
     const styles = makeStyles(theme)
-
 
     const { countryStore } = getRootStore();
     const navigation = useNavigation();
@@ -20,17 +19,16 @@ export const SlideItem: ListRenderItem<ISlideItem> = ({ item }) => {
         countryStore.fetchCountryByCode(code);
         navigation.navigate("Country", { name: code });
     }
+
     return (
         <TouchableOpacity
-            style={styles.carouselBlock}
             onPress={() => actionByClick(item.iso_2cc)}
         >
             <View>
                 <Image
                     style={styles.itemContainer}
-                    key={new Date().getTime()}
                     source={{
-                        uri:  `${item.img}?${new Date().getTime()}`
+                        uri:  item.img
                     }}
                 />
                 <Text style={styles.itemLabel}>{item.title}</Text>

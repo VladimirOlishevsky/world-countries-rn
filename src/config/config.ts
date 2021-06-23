@@ -43,7 +43,7 @@ export const sliderImage = [
     {
         title: 'Montevideo department, Uruguay',
         img: uruguay,
-        iso_2cc: "JP"
+        iso_2cc: "UY"
     },
     {
         title: 'Moscow, Kremlin, Russia',
@@ -58,7 +58,7 @@ export const sliderImage = [
     {
         title: 'Taj Mahal, India',
         img: india,
-        iso_2cc: "IO"
+        iso_2cc: "IN"
     },
      {
         title: 'New York, USA',
@@ -70,19 +70,19 @@ export const sliderImage = [
 export const continents = [
     {
         title: 'Europe',
-        img: kenya,
+        img: europe,
         link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=europe&pSubRegion=western%20europe',
         description: 'Popular European Countries'
     },
     {
         title: 'Asia',
-        img: kenya,
+        img: asia,
         link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=asia&pSubRegion=eastern%20asia',
         description: 'Popular Asian Countries'
     },
     {
         title: 'Africa',
-        img: kenya,
+        img: africa,
         link: 'http://countryapi.gear.host/v1/Country/getCountries?pRegion=africa&pSubRegion=middle%20africa',
         description: 'Popular African Countries'
     },

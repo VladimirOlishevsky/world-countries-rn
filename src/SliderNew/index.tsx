@@ -5,7 +5,8 @@ import { useTheme } from 'react-native-paper';
 import Carousel from 'react-native-snap-carousel';
 import { sliderImage } from '../config/config';
 import { ISlideItem } from '../config/types';
-import { SLIDER_WIDTH, ITEM_WIDTH, ITEM_HEIGHT, makeStyles } from './rawStyles';
+import { SLIDER_WIDTH, ITEM_WIDTH } from './constants';
+import { makeStyles } from './rawStyles';
 import { SlideItem } from './SliderItem';
 
 export const SliderNew: React.FC = () => {
