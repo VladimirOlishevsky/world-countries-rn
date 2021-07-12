@@ -19,5 +19,4 @@ export class Region {
         this.FlagPng = data.FlagPng;
         this.Alpha2Code = data.Alpha2Code
     }
-
 }

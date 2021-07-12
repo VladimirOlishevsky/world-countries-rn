@@ -10,6 +10,8 @@ import { button2map, go2search, notFound } from './constants';
 import { notFoundPicture } from '../../config/config';
 import { ICurrencies, ILanguages } from 'store/types';
 
+const getKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>
+
 export const Country = observer(({ route, navigation }: any): JSX.Element => {
     const theme = useTheme();
     const styles = makeStyles(theme)
@@ -25,7 +27,7 @@ export const Country = observer(({ route, navigation }: any): JSX.Element => {
 
             <ScrollView >
                 {countryStore.name ?
-                    
+
                     <Fragment>
                         <View style={styles.content}>
                             <Image
@@ -44,32 +46,30 @@ export const Country = observer(({ route, navigation }: any): JSX.Element => {
 
                         <View style={styles.flagDescriptionBlock}>
                             <Text style={styles.flagDescriptionText}>
-                                {flagsDescription && flagsDescription.cia_description || flagsDescription && flagsDescription.jmpesc_description}
+                                {flagsDescription && (flagsDescription.cia_description || flagsDescription.jmpesc_description)}
                             </Text>
                         </View>
-                        {Object.values(countryStore.store2Obj).map((el: string | number | ICurrencies[] | ILanguages[], index) => (
-                            <View key={index} style={styles.strings}>
+                        {getKeys(countryStore.store2Obj).map(el => (
+                            <View key={el} style={styles.strings}>
                                 <Text style={styles.keys} >
-                                    {countryStore.getKeyByValue(countryStore.store2Obj, el)}:
-                                </Text>
-                                {Array.isArray(el)
-                                    ? (
-                                        <View style={styles.column}>
-                                            {(el as (ICurrencies | ILanguages)[]).map((el: (ICurrencies | ILanguages)) => (
-                                                <Text key={el.name} style={styles.values}>
-                                                    {el.name}
-                                                </Text>
-                                            ))}
-                                        </View>
-                                    )
+                                    {el}:
+                             </Text>
+                                {Array.isArray(countryStore.store2Obj[el])
+                                    ?
+                                    <View style={styles.column}>
+                                        {(countryStore.store2Obj[el] as (ICurrencies | ILanguages)[]).map((el) => (
+                                            <Text key={el.name} style={styles.values}>
+                                                {el.name}
+                                            </Text>
+                                        ))}
+                                    </View>
                                     :
                                     <Text key={el} style={styles.values}>
-                                        {el}
+                                        {countryStore.store2Obj[el]}
                                     </Text>
                                 }
                             </View>
-                        )
-                        )}
+                        ))}
                         <Button
                             mode='outlined'
                             style={styles.mapButton}
@@ -83,7 +83,7 @@ export const Country = observer(({ route, navigation }: any): JSX.Element => {
                     <View style={styles.errorBlock}>
                         <Image
                             style={styles.image}
-                            source={{ uri :notFoundPicture }}
+                            source={{ uri: notFoundPicture }}
                         />
                         <Text style={styles.countryName}>
                             {notFound}

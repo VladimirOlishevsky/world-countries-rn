@@ -1,6 +1,32 @@
 import { action, runInAction, makeAutoObservable } from 'mobx';
 import { ICountry, ICurrencies, ILanguages } from '../types';
 
+type IObjectKeys = {
+    [key: string]: string | number |  ICurrencies[] | ILanguages[];
+  }
+
+export interface ICountryStore2Obj extends IObjectKeys { 
+    Capital: string,
+    Region: string,
+    Subregion: string,
+    Population: number,
+    Currencies: ICurrencies[],
+    Languages: ILanguages[],
+    Domain: string,
+    PhoneCode: string,
+}
+
+export enum Bbb { 
+    Capital = 'Capital',
+    Region = 'Region',
+    Subregion = 'Subregion',
+    Population = 'Population',
+    Currencies = 'Currencies',
+    Languages = 'Languages',
+    Domain = 'Domain',
+    PhoneCode = 'PhoneCode',
+}
+
 export class Country {
 
     name = ''
@@ -16,18 +42,18 @@ export class Country {
     topLevelDomain: string[] = []
     callingCodes: string[] = []
 
-    errorMessage = ''
+    // errorMessage = ''
 
     constructor() {
         makeAutoObservable(this, {
             fromApi: action,
             fetchCountryByCode: action,
             fetchCountryByName: action,
-            getKeyByValue: action,
+            // getKeyByValue: action,
         });
     }
     async fetchCountryByCode(alphaCode: string) {
-        this.errorMessage = ''
+        // this.errorMessage = ''
         try {
             const response = await fetch(`https://restcountries.eu/rest/v2/alpha/${alphaCode}`)
             const data = await response.json();
@@ -42,11 +68,10 @@ export class Country {
     }
 
     async fetchCountryByName(props: string) {
-        this.errorMessage = ''
+        // this.errorMessage = ''
         try {
             const response = await fetch(`https://restcountries.eu/rest/v2/name/${props}?fullText=true`)
             const data = await response.json();
-            console.log(data)
             runInAction(() => {
                 if (data.message) {
                     this.name = ''
@@ -61,11 +86,7 @@ export class Country {
         }
     }
 
-    getKeyByValue(object: any, value: any) {
-        return Object.keys(object).find(key => object[key] === value);
-    }
-
-    get store2Obj() {
+    get store2Obj(): ICountryStore2Obj {
         return {
             Capital: this.capital,
             Region: this.region,

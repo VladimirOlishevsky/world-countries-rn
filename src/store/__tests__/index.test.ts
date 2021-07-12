@@ -14,6 +14,8 @@ describe("Store tests", () => {
     const { continentsStore } = getRootStore()
     const name = new Region(mockRegion);
     continentsStore.countries.push(name);
+
+    console.log(continentsStore.countries[0].Name)
     expect(continentsStore.countries.length).toBe(1)
   })
 })
