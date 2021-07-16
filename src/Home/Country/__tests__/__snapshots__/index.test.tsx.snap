@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screen 1 Country component render 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "height": 1334,
+      "padding": NaN,
+      "paddingBottom": NaN,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginBottom": NaN,
+        "marginTop": NaN,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": NaN,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": NaN,
+        }
+      }
+      testID="backButton"
+    >
+      <Icon
+        color="#ff9f0a"
+        name="chevron-left"
+      />
+    </View>
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": undefined,
+            }
+          }
+          style={
+            Object {
+              "height": NaN,
+              "width": "70%",
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginTop": NaN,
+            }
+          }
+        >
+          Country not found
+        </Text>
+        <View
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderColor": undefined,
+              "borderRadius": 4,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "color": undefined,
+              "elevation": 0,
+              "marginTop": undefined,
+              "minWidth": 64,
+            }
+          }
+        >
+          <View
+            accessibilityRole="button"
+            accessibilityState={
+              Object {
+                "disabled": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "overflow": "hidden",
+                },
+                Object {
+                  "borderRadius": 4,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              <Text
+                numberOfLines={1}
+                selectable={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    Object {
+                      "textAlign": "left",
+                    },
+                    Array [
+                      Object {
+                        "letterSpacing": 1,
+                        "marginHorizontal": 16,
+                        "marginVertical": 9,
+                        "textAlign": "center",
+                      },
+                      undefined,
+                      Object {
+                        "textTransform": "uppercase",
+                      },
+                      Object {
+                        "color": "#fff",
+                        "fontFamily": "System",
+                        "fontWeight": "500",
+                      },
+                      Object {
+                        "fontFamily": "System",
+                        "fontWeight": "500",
+                      },
+                      undefined,
+                    ],
+                  ]
+                }
+              >
+                go to search
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

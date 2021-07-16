@@ -19,7 +19,7 @@ const mockData = [
 ]
 
 describe('Continents', () => {
-  it('fetchRegions and try-catch', async () => {
+  it('call method fetchRegions and try-catch', async () => {
 
     fetchMock.mockResponseOnce(JSON.stringify(mockData));
     const continents = new Continents();
@@ -38,7 +38,7 @@ describe('Continents', () => {
       console.log(error)
     }
   })
-  it('error', async () => {
+  it('call method fetchRegions error', async () => {
 
     fetch.mockReject(() => Promise.reject("API is down"));
     const continents = new Continents();
@@ -50,7 +50,7 @@ describe('Continents', () => {
       );
     }
   })
-  it('workerAfterFetch', async () => {
+  it('call method workerAfterFetch', async () => {
 
     const continents = new Continents();
 
