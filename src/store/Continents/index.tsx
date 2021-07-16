@@ -1,6 +1,6 @@
 import { action, runInAction, makeAutoObservable } from 'mobx';
 import { IRegionName } from 'store/types';
-import { Region } from './Region/index';
+import { Region } from '../Region/index';
 
 export class Continents {
 

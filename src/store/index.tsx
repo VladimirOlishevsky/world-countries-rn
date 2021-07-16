@@ -13,12 +13,6 @@ class RootStore {
     this.regionalBlocksStore = new RegionalBlocks();
     this.continentsStore = new Continents();
   }
-
-  reset() {
-    this.countryStore = new Country();
-    this.regionalBlocksStore = new RegionalBlocks();
-    this.continentsStore = new Continents();
-  }
 }
 
 const rootStore = new RootStore();

@@ -1,6 +1,6 @@
 import { Country } from "..";
 import fetch, { enableFetchMocks } from 'jest-fetch-mock';
-import { mockData, mockErrorData, mockStore2Obj } from './mock'
+import { mockData, mockErrorData, mockStore2Obj } from '../mock'
 
 enableFetchMocks();
 
@@ -88,12 +88,12 @@ describe('Country store2Obj', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  it('call method fromApi', async () => {
+  it('call method fromApi', () => {
     const mockCountryStore = new Country();
     mockCountryStore.fromApi(mockData);
     expect(mockCountryStore.name).toStrictEqual(mockData.name);
   })
-  it('call method store2Obj', async () => {
+  it('call method store2Obj', () => {
     const mockCountryStore = new Country();
     mockCountryStore.fromApi(mockData);
     expect(mockCountryStore.store2Obj).toStrictEqual(mockStore2Obj);

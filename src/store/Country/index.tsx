@@ -16,16 +16,6 @@ export interface ICountryStore2Obj extends IObjectKeys {
     PhoneCode: string,
 }
 
-export enum Bbb { 
-    Capital = 'Capital',
-    Region = 'Region',
-    Subregion = 'Subregion',
-    Population = 'Population',
-    Currencies = 'Currencies',
-    Languages = 'Languages',
-    Domain = 'Domain',
-    PhoneCode = 'PhoneCode',
-}
 
 export class Country {
 

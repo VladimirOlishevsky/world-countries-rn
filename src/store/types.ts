@@ -13,8 +13,6 @@ export interface ICountry {
     callingCodes: string[]
 }
 
-type CountryCard = Omit<ICountry, "latlng" | "flag">;
-
 export interface ICurrencies {
     name: string,
     symbol: string

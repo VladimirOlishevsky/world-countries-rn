@@ -1,5 +1,5 @@
 import { Continents } from "..";
-import { Region } from '../Region'
+import { Region } from '../../Region'
 import fetch, { enableFetchMocks } from 'jest-fetch-mock';
 
 enableFetchMocks();
