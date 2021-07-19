@@ -1,57 +1,37 @@
 import React from "react";
-import { create } from "react-test-renderer";
-import { render, fireEvent } from '@testing-library/react-native';
+import { render } from '@testing-library/react-native';
 import { ContinentCards } from "..";
-import fetch, { enableFetchMocks } from 'jest-fetch-mock';
-import { Continents } from "store/Continents";
-import { Region } from "store/Region";
-
+import { enableFetchMocks } from 'jest-fetch-mock';
 
 enableFetchMocks();
 
-const mockData = [
-  {
-    Name: 'England',
-    FlagPng: '111',
-    Alpha2Code: '22'
+const mockFetchRegion = jest.fn();
+const mockStore = {
+  continentsStore: {
+    fetchRegions: mockFetchRegion,
   },
-  {
-    Name: 'Spain',
-    FlagPng: '111',
-    Alpha2Code: '22'
-  },
-]
+};
 
-jest.mock('..', () => (
-  { ContinentCards: 'ContinentCards' }));
+jest.mock('store/index', () => ({
+  getRootStore: () => mockStore,
+}));
 
-jest.mock('config/config', () => (
-  { continents: 'continents' }));
-  
-const mockSetOpenModalConfirm = jest.fn();
 
 describe('ContinentCards', () => {
-  it('render ContinentCards', () => {
+  it('render component ContinentCards', () => {
     const tree = render(<ContinentCards />).toJSON();
     expect(tree).toMatchSnapshot();
   });
-  // it('ContinentCards 11', async () => {
+  it('component ContinentCards action fetchRegions', async () => {
 
-  //   // fetchMock.mockResponseOnce(JSON.stringify(mockData));
-  //   const tree = render(<ContinentCards />);
+    const { getByTestId } = render(<ContinentCards />);
 
-  //   const page = tree.getByTestId('Europe');
+    const page = getByTestId('Europe').props as {
+      onClick: () => void
+    };;
 
-  //   // fireEvent.press(page)
-  //   // expect(fetch).toHaveBeenCalledTimes(1);
-
-  //   const buttonBaseProps = page.props as {
-  //     onClick: () => void
-  //   };
-
-  //   expect(mockSetOpenModalConfirm).not.toBeCalled();
-  //   buttonBaseProps.onClick();
-  //   // fireEvent.press(page)
-  //   expect(mockSetOpenModalConfirm).toBeCalledWith(true);
-  // });
+    expect(mockFetchRegion).not.toBeCalled();
+    page.onClick()
+    expect(mockFetchRegion).toBeCalledTimes(1);
+  });
 });

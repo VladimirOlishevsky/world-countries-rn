@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Image, Text, ScrollView } from "react-native"
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { View, Image, Text, ScrollView, TouchableOpacity } from "react-native"
+// import { TouchableOpacity } from "react-native-gesture-handler";
 import { observer } from 'mobx-react';
 import { BackButton } from '../../Navigation/BackButton/index';
 import { useNavigation } from '@react-navigation/native';
@@ -14,7 +14,7 @@ export const ContinentCountries = observer(({ route }: any): JSX.Element => {
     const theme = useTheme();
     const styles = makeStyles(theme)
 
-    const { countryStore,continentsStore } = getRootStore();
+    const { countryStore, continentsStore } = getRootStore();
     const navigation = useNavigation();
 
     const actionByClick = (code: string) => {
