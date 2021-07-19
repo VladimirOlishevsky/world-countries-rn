@@ -22,13 +22,13 @@ export const ContinentCards = (() => {
             {continents.map((el, index) => {
                 return (
                     <TouchableOpacity
-                        // testID='fetchContinents'
+                        testID={el.title}
                         key={index}
                         onPress={() => actionByClick(el.link, el.description)}>
                         <Card
                             style={styles.container}
                         >
-                            <Card.Cover key={new Date().getTime()} source={{ uri: `${el.img}?${Date.now()}` }} />
+                            <Card.Cover key={new Date().getTime()} source={{ uri: el.img }} />
                             <Title style={styles.cardTitle}>
                                 {el.title}
                             </Title>

@@ -15,7 +15,6 @@ const mockData = [
     FlagPng: '111',
     Alpha2Code: '22'
   },
-
 ]
 
 describe('Continents', () => {
