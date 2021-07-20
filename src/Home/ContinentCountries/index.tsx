@@ -34,6 +34,8 @@ export const ContinentCountries = observer(({ route }: any): JSX.Element => {
                 {continentsStore.countries.map((el, index: number) => {
                     return (
                         <TouchableOpacity
+                            testID={'continent-countries'}
+                            // testId="button"
                             key={index}
                             onPress={() => actionByClick(el.Alpha2Code)}
                             style={styles.imageWrapper}>

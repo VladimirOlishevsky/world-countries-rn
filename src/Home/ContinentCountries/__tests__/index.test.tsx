@@ -5,10 +5,12 @@ import { enableFetchMocks } from 'jest-fetch-mock';
 
 enableFetchMocks();
 
-const mockFetchRegion = jest.fn();
+const mockFetchCountryByCode = jest.fn();
 const mockStore = {
+  countryStore: {
+    fetchCountryByCode: mockFetchCountryByCode,
+  },
   continentsStore: {
-    fetchRegions: mockFetchRegion,
     countries: [
       {
         Name: 'South',
@@ -22,34 +24,34 @@ const mockStore = {
       }
     ]
   },
-
 };
 
 jest.mock('store/index', () => ({
   getRootStore: () => mockStore,
 }));
 
+const mockRoute = {
+  params: {
+    name: 'Some country'
+  }
+}
 
 describe('ContinentCountries', () => {
-  it('render component ContinentCountries', async () => {
-    const route = {
-      params: {
-        name: 'Some country'
-      }
-    }
-    const component = await render(<ContinentCountries route={route} />);
-    expect(component).toMatchSnapshot();
+  it('render page ContinentCountries', async () => {
+
+    const page = render(<ContinentCountries route={mockRoute} />);
+    expect(page).toMatchSnapshot();
+
   });
-  //   it('component ContinentCards action fetchRegions', async () => {
+  it('press onclick ContinentCountries', async () => {
+    const { getAllByTestId } = render(<ContinentCountries route={mockRoute} />);
 
-  //     const { getByTestId } = render(<ContinentCards />);
+    const component = getAllByTestId('continent-countries')[0].props as {
+      onClick: () => void
+    };
 
-  //     const page = getByTestId('Europe').props as {
-  //       onClick: () => void
-  //     };;
-
-  //     expect(mockFetchProfileType).not.toBeCalled();
-  //     page.onClick()
-  //     expect(mockFetchProfileType).toBeCalledTimes(1);
-  //   });
+    expect(mockFetchCountryByCode).not.toBeCalled();
+    component.onClick()
+    expect(mockFetchCountryByCode).toBeCalledTimes(1);
+  })
 });

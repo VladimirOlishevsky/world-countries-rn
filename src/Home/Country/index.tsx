@@ -12,6 +12,13 @@ import { ICurrencies, ILanguages } from 'store/types';
 
 const getKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>
 
+// type RootStackParamList = {
+//     SearchPage: undefined;
+//     Maps: { name: string };
+// };
+
+// export type ICountryProps = StackScreenProps<RootStackParamList>;
+
 export const Country = observer(({ route, navigation }: any): JSX.Element => {
     const theme = useTheme();
     const styles = makeStyles(theme)

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContinentCountries render component ContinentCountries 1`] = `
+exports[`ContinentCountries render page ContinentCountries 1`] = `
 <View
   style={
     Object {
@@ -79,6 +79,7 @@ exports[`ContinentCountries render component ContinentCountries 1`] = `
             "opacity": 1,
           }
         }
+        testID="continent-countries"
       >
         <Image
           source={
@@ -124,6 +125,7 @@ exports[`ContinentCountries render component ContinentCountries 1`] = `
             "opacity": 1,
           }
         }
+        testID="continent-countries"
       >
         <Image
           source={
