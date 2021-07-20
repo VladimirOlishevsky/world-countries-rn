@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Image, Text, ScrollView, TouchableOpacity } from "react-native"
-// import { TouchableOpacity } from "react-native-gesture-handler";
 import { observer } from 'mobx-react';
 import { BackButton } from '../../Navigation/BackButton/index';
 import { useNavigation } from '@react-navigation/native';
@@ -35,7 +34,6 @@ export const ContinentCountries = observer(({ route }: any): JSX.Element => {
                     return (
                         <TouchableOpacity
                             testID={'continent-countries'}
-                            // testId="button"
                             key={index}
                             onPress={() => actionByClick(el.Alpha2Code)}
                             style={styles.imageWrapper}>
