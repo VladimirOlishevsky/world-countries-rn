@@ -5,8 +5,8 @@ import { Provider as PaperProvider } from 'react-native-paper';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MainNavigation } from './src/Navigation/BottomNavigation/index';
 import { theme } from './src/theme';
+import { MainNavigation } from './src/components/blocks/Navigation/';
 
 export const Stack = createStackNavigator();
 export const Tab = createBottomTabNavigator();
