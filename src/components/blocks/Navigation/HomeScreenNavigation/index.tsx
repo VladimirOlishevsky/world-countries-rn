@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Home } from '../../Home';
 import { ContinentCountries } from '../../Home/ContinentCountries';
 import { SeparatePage } from '../../../../sepa';
-import { Country } from '../../Home/Country/index';
+import { CountryComponent } from '../../Home/Country/index';
 import { Maps } from '../../Home/Maps';
 import { useTheme } from 'react-native-paper';
 
@@ -17,7 +17,7 @@ export const HomeScreenNavigation = () => {
     <Stack.Navigator >
       <Stack.Screen name="HomePage" component={Home} options={{ headerShown: false }} />
       <Stack.Screen name="ContinentCountries" component={ContinentCountries} options={{ headerShown: false }} />
-      <Stack.Screen name="Country" component={Country} options={{ headerShown: false }} />
+      <Stack.Screen name="Country" component={CountryComponent} options={{ headerShown: false }} />
       <Stack.Screen name="Maps" component={Maps} options={{
         title: 'Map',
         headerStyle: {

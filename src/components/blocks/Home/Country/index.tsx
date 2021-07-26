@@ -24,7 +24,7 @@ type RootStackParamList = {
 };
 
 
-export const Country = observer(({ route }: RootStackParamList): JSX.Element => {
+export const CountryComponent = observer(({ route }: RootStackParamList): JSX.Element => {
     const theme = useTheme();
     const styles = makeStyles(theme)
 
@@ -32,6 +32,8 @@ export const Country = observer(({ route }: RootStackParamList): JSX.Element => 
     const flagsDescription = getFlagDescription(countryStore.alpha2Code)
 
     const navigation = useNavigation()
+
+    console.log(countryStore.store2Obj)
 
     return (
         <View style={styles.scrollView}>
@@ -63,7 +65,7 @@ export const Country = observer(({ route }: RootStackParamList): JSX.Element => 
                                 {flagsDescription && (flagsDescription.cia_description || flagsDescription.jmpesc_description)}
                             </Text>
                         </View>
-                        {getKeys(countryStore.store2Obj).map(el => (
+                        {countryStore.store2Obj && getKeys(countryStore.store2Obj).map(el => (
                             <View key={el} style={styles.strings}>
                                 <Text style={styles.keys} >
                                     {el}:

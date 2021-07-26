@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Country Country component render 1`] = `
+exports[`CountryComponent CountryComponent component render 1`] = `
 <View
   style={
     Object {
@@ -52,13 +52,14 @@ exports[`Country Country component render 1`] = `
         style={
           Object {
             "alignItems": "center",
+            "display": "flex",
           }
         }
       >
         <Image
           source={
             Object {
-              "uri": undefined,
+              "uri": "https://flagcdn.com/w640/222.png",
             }
           }
           style={
@@ -77,103 +78,127 @@ exports[`Country Country component render 1`] = `
             }
           }
         >
-          Country not found
+          England
         </Text>
-        <View
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomColor": undefined,
+            "borderBottomWidth": 1,
+            "borderTopColor": undefined,
+            "borderTopWidth": 1,
+            "marginTop": undefined,
+            "paddingBottom": undefined,
+            "paddingTop": undefined,
+          }
+        }
+      >
+        <Text
           style={
             Object {
-              "backgroundColor": "transparent",
-              "borderColor": undefined,
-              "borderRadius": 4,
-              "borderStyle": "solid",
-              "borderWidth": 1,
               "color": undefined,
-              "elevation": 0,
-              "marginTop": undefined,
-              "minWidth": 64,
+              "fontSize": undefined,
+              "textAlign": "center",
             }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "borderColor": undefined,
+            "borderRadius": 4,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "color": undefined,
+            "elevation": 0,
+            "marginTop": undefined,
+            "minWidth": 64,
+          }
+        }
+      >
+        <View
+          accessibilityRole="button"
+          accessibilityState={
+            Object {
+              "disabled": undefined,
+            }
+          }
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "borderRadius": 4,
+              },
+            ]
           }
         >
           <View
-            accessibilityRole="button"
-            accessibilityState={
-              Object {
-                "disabled": undefined,
-              }
-            }
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
               Array [
                 Object {
-                  "overflow": "hidden",
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
                 },
-                Object {
-                  "borderRadius": 4,
-                },
+                undefined,
               ]
             }
           >
-            <View
+            <Text
+              numberOfLines={1}
+              selectable={false}
               style={
                 Array [
                   Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "justifyContent": "center",
+                    "color": "#000000",
+                    "fontFamily": "System",
+                    "fontWeight": "400",
                   },
-                  undefined,
+                  Object {
+                    "textAlign": "left",
+                  },
+                  Array [
+                    Object {
+                      "letterSpacing": 1,
+                      "marginHorizontal": 16,
+                      "marginVertical": 9,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                    Object {
+                      "textTransform": "uppercase",
+                    },
+                    Object {
+                      "color": "#fff",
+                      "fontFamily": "System",
+                      "fontWeight": "500",
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "500",
+                    },
+                    undefined,
+                  ],
                 ]
               }
             >
-              <Text
-                numberOfLines={1}
-                selectable={false}
-                style={
-                  Array [
-                    Object {
-                      "color": "#000000",
-                      "fontFamily": "System",
-                      "fontWeight": "400",
-                    },
-                    Object {
-                      "textAlign": "left",
-                    },
-                    Array [
-                      Object {
-                        "letterSpacing": 1,
-                        "marginHorizontal": 16,
-                        "marginVertical": 9,
-                        "textAlign": "center",
-                      },
-                      undefined,
-                      Object {
-                        "textTransform": "uppercase",
-                      },
-                      Object {
-                        "color": "#fff",
-                        "fontFamily": "System",
-                        "fontWeight": "500",
-                      },
-                      Object {
-                        "fontFamily": "System",
-                        "fontWeight": "500",
-                      },
-                      undefined,
-                    ],
-                  ]
-                }
-              >
-                go to search
-              </Text>
-            </View>
+              go to map
+            </Text>
           </View>
         </View>
       </View>

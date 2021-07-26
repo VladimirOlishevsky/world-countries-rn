@@ -1,4 +1,4 @@
-import { action, runInAction, makeAutoObservable } from 'mobx';
+import { action, runInAction, makeAutoObservable, computed } from 'mobx';
 import { ICountry, ICurrencies, ILanguages } from '../types';
 
 type IObjectKeys = {
@@ -39,6 +39,7 @@ export class Country {
             fromApi: action,
             fetchCountryByCode: action,
             fetchCountryByName: action,
+            store2Obj: computed,
             // getKeyByValue: action,
         });
     }
