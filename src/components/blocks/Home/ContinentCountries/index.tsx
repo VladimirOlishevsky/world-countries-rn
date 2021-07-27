@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, Text, ScrollView, TouchableOpacity } from "react-native"
 import { observer } from 'mobx-react';
-import { BackButton } from '../../Navigation/BackButton/index';
+import { BackButton } from '../../../elements/BackButton/index';
 import { useNavigation } from '@react-navigation/native';
 import { getRootStore } from '../../../../store';
 import { useTheme } from 'react-native-paper';

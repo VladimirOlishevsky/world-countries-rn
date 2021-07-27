@@ -40,6 +40,7 @@ exports[`ContinentCountries render page ContinentCountries 1`] = `
           "width": NaN,
         }
       }
+      testID="go back"
     >
       <Icon
         color="#ff9f0a"

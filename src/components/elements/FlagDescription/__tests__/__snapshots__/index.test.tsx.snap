@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlagDescription render flagsDescription.cia_description 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "borderBottomColor": undefined,
+      "borderBottomWidth": 1,
+      "borderTopColor": undefined,
+      "borderTopWidth": 1,
+      "marginTop": undefined,
+      "paddingBottom": undefined,
+      "paddingTop": undefined,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": undefined,
+        "fontSize": undefined,
+        "textAlign": "center",
+      }
+    }
+  >
+    three equal vertical bands of black (hoist side), red, and green, with the national emblem in white centered on the red band and slightly overlapping the other two bands; the center of the emblem features a mosque with pulpit and flags on either side, below the mosque are numerals for the solar year 1298 (1919 in the Gregorian calendar, the year of Afghan independence from the UK); this central image is circled by a border consisting of sheaves of wheat on the left and right, in the upper-center is an Arabic inscription of the Shahada (Muslim creed) below which are rays of the rising sun over the Takbir (Arabic expression meaning &quot;God is great&quot;), and at bottom center is a scroll bearing the name Afghanistan; black signifies the past, red is for the blood shed for independence, and green can represent either hope for the future, agricultural prosperity, or Islam. Note
+  </Text>
+</View>
+`;
+
+exports[`FlagDescription render flagsDescription.jmpesc_description 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "borderBottomColor": undefined,
+      "borderBottomWidth": 1,
+      "borderTopColor": undefined,
+      "borderTopWidth": 1,
+      "marginTop": undefined,
+      "paddingBottom": undefined,
+      "paddingTop": undefined,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": undefined,
+        "fontSize": undefined,
+        "textAlign": "center",
+      }
+    }
+  >
+    the Swedish flag defaced by a red cross symbolising Finland. Today, blue and wh are considered the Finnish colors, but in the early days of Finnish nationalism, red and yellow from the Finnish coat of arms were also an option
+  </Text>
+</View>
+`;

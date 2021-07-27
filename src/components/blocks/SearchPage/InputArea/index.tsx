@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { ComponentClass, useState } from "react";
 import { View } from "react-native"
 import { Button, useTheme } from 'react-native-paper';
 import { makeStyles } from './rawStyles';
 import { observer } from 'mobx-react';
 import { Fumi } from 'react-native-textinput-effects';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
 import { getRootStore } from "../../../../store";
 import { buttonTitle, inputLabel } from "./constants";
@@ -29,7 +29,8 @@ export const InputArea = observer((): JSX.Element => {
             <Fumi
                 style={styles.inputStyle}
                 label={inputLabel}
-                iconClass={FontAwesomeIcon}
+                // iconClass={() => aaa()}
+                iconClass={Icon}
                 iconName={'search'}
                 iconColor={'#f95a25'}
                 iconSize={20}

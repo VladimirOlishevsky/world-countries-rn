@@ -1,15 +1,14 @@
 import React, { Fragment } from 'react';
 import { View, Image, Text, ScrollView } from "react-native";
 import { observer } from 'mobx-react';
-import { BackButton } from '../../Navigation/BackButton/index';
+import { BackButton } from '../../../elements/BackButton/index';
 import { makeStyles } from './rawStyles';
 import { getRootStore } from '../../../../store';
-import { getFlagDescription } from '../../../../config/utils';
-import { Button, useTheme } from 'react-native-paper';
-import { button2map } from './constants';
+import { useTheme } from 'react-native-paper';
 import { ICurrencies, ILanguages } from 'store/types';
-import { useNavigation } from '@react-navigation/native';
 import { NotFound } from '../../../elements/NotFound';
+import { FlagDescription } from 'components/elements/FlagDescription';
+import { ButtonGoToMap } from 'components/elements/ButtonGoToMap';
 
 const getKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>
 
@@ -29,21 +28,16 @@ export const CountryComponent = observer(({ route }: RootStackParamList): JSX.El
     const styles = makeStyles(theme)
 
     const { countryStore } = getRootStore()
-    const flagsDescription = getFlagDescription(countryStore.alpha2Code)
-
-    const navigation = useNavigation()
-
-    console.log(countryStore.store2Obj)
 
     return (
         <View style={styles.scrollView}>
             <View style={styles.header}>
-                <BackButton testId={'backButton'} page={route?.params.navigate === 'regional' ? 'RegionalCountries' : undefined} />
+                <BackButton
+                    page={route?.params.navigate === 'regional' ? 'RegionalCountries' : undefined} />
             </View>
 
             <ScrollView >
                 {countryStore.name ?
-
                     <Fragment>
                         <View style={styles.content}>
                             <Image
@@ -59,17 +53,12 @@ export const CountryComponent = observer(({ route }: RootStackParamList): JSX.El
                                 {countryStore.name}
                             </Text>
                         </View>
-
-                        <View style={styles.flagDescriptionBlock}>
-                            <Text style={styles.flagDescriptionText}>
-                                {flagsDescription && (flagsDescription.cia_description || flagsDescription.jmpesc_description)}
-                            </Text>
-                        </View>
+                        <FlagDescription alpha2Code={countryStore.alpha2Code} />
                         {countryStore.store2Obj && getKeys(countryStore.store2Obj).map(el => (
                             <View key={el} style={styles.strings}>
                                 <Text style={styles.keys} >
                                     {el}:
-                             </Text>
+                                </Text>
                                 {Array.isArray(countryStore.store2Obj[el])
                                     ?
                                     <View style={styles.column}>
@@ -86,14 +75,7 @@ export const CountryComponent = observer(({ route }: RootStackParamList): JSX.El
                                 }
                             </View>
                         ))}
-                        <Button
-                            mode='outlined'
-                            style={styles.mapButton}
-                            color='#fff'
-                            onPress={() => navigation.navigate('Maps', { name: countryStore.name })}
-                        >
-                            {button2map}
-                        </Button>
+                        <ButtonGoToMap countryName={countryStore.name} />
                     </Fragment>
                     :
                     <NotFound />

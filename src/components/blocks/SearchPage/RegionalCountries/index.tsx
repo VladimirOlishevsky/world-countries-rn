@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Image, Text, ScrollView } from "react-native"
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { observer } from 'mobx-react';
-import { BackButton } from '../../Navigation/BackButton/index';
+import { BackButton } from '../../../elements/BackButton/index';
 import { makeStyles } from './rawStyles';
 import { useNavigation } from '@react-navigation/native';
 import { getRootStore } from '../../../../store';
