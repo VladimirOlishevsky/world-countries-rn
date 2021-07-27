@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CountryComponent CountryComponent component render 1`] = `
+exports[`CountryComponent countryStore.alpha2Code empty 1`] = `
 <View
   style={
     Object {
@@ -38,7 +38,662 @@ exports[`CountryComponent CountryComponent component render 1`] = `
           "width": NaN,
         }
       }
-      testID="backButton"
+      testID="go back"
+    >
+      <Icon
+        color="#ff9f0a"
+        name="chevron-left"
+      />
+    </View>
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://flagcdn.com/w640/england.png",
+            }
+          }
+          style={
+            Object {
+              "height": NaN,
+              "width": "70%",
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginTop": NaN,
+            }
+          }
+        >
+          England
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomColor": undefined,
+            "borderBottomWidth": 1,
+            "borderTopColor": undefined,
+            "borderTopWidth": 1,
+            "marginTop": undefined,
+            "paddingBottom": undefined,
+            "paddingTop": undefined,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "textAlign": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Capital
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          London
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Region
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          Britain
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Subregion
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          North
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Population
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          1200
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Currencies
+          :
+        </Text>
+        <View
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "column",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontSize": undefined,
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Languages
+          :
+        </Text>
+        <View
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "column",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontSize": undefined,
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Domain
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          en
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          PhoneCode
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          22
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "borderColor": undefined,
+            "borderRadius": 4,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "color": undefined,
+            "elevation": 0,
+            "marginTop": undefined,
+            "minWidth": 64,
+          }
+        }
+      >
+        <View
+          accessibilityRole="button"
+          accessibilityState={
+            Object {
+              "disabled": undefined,
+            }
+          }
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "borderRadius": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                },
+                undefined,
+              ]
+            }
+          >
+            <Text
+              numberOfLines={1}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "System",
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "textAlign": "left",
+                  },
+                  Array [
+                    Object {
+                      "letterSpacing": 1,
+                      "marginHorizontal": 16,
+                      "marginVertical": 9,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                    Object {
+                      "textTransform": "uppercase",
+                    },
+                    Object {
+                      "color": "#fff",
+                      "fontFamily": "System",
+                      "fontWeight": "500",
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "500",
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              go to map
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`CountryComponent countryStore.name empty  1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "height": 1334,
+      "padding": NaN,
+      "paddingBottom": NaN,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginBottom": NaN,
+        "marginTop": NaN,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": NaN,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": NaN,
+        }
+      }
+      testID="go back"
+    >
+      <Icon
+        color="#ff9f0a"
+        name="chevron-left"
+      />
+    </View>
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": undefined,
+            }
+          }
+          style={
+            Object {
+              "height": NaN,
+              "width": "70%",
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginTop": NaN,
+            }
+          }
+        >
+          Country not found
+        </Text>
+        <View
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderColor": undefined,
+              "borderRadius": 4,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "color": undefined,
+              "elevation": 0,
+              "marginTop": undefined,
+              "minWidth": 64,
+            }
+          }
+        >
+          <View
+            accessibilityRole="button"
+            accessibilityState={
+              Object {
+                "disabled": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "overflow": "hidden",
+                },
+                Object {
+                  "borderRadius": 4,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              <Text
+                numberOfLines={1}
+                selectable={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000000",
+                      "fontFamily": "System",
+                      "fontWeight": "400",
+                    },
+                    Object {
+                      "textAlign": "left",
+                    },
+                    Array [
+                      Object {
+                        "letterSpacing": 1,
+                        "marginHorizontal": 16,
+                        "marginVertical": 9,
+                        "textAlign": "center",
+                      },
+                      undefined,
+                      Object {
+                        "textTransform": "uppercase",
+                      },
+                      Object {
+                        "color": "#fff",
+                        "fontFamily": "System",
+                        "fontWeight": "500",
+                      },
+                      Object {
+                        "fontFamily": "System",
+                        "fontWeight": "500",
+                      },
+                      undefined,
+                    ],
+                  ]
+                }
+              >
+                go to search
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`CountryComponent render 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "height": 1334,
+      "padding": NaN,
+      "paddingBottom": NaN,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginBottom": NaN,
+        "marginTop": NaN,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": NaN,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": NaN,
+        }
+      }
+      testID="go back"
     >
       <Icon
         color="#ff9f0a"
@@ -104,6 +759,745 @@ exports[`CountryComponent CountryComponent component render 1`] = `
             }
           }
         />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Capital
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          London
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Region
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          Britain
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Subregion
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          North
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Population
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          1200
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Currencies
+          :
+        </Text>
+        <View
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "column",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontSize": undefined,
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Languages
+          :
+        </Text>
+        <View
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "column",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontSize": undefined,
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Domain
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          en
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          PhoneCode
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          22
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "borderColor": undefined,
+            "borderRadius": 4,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "color": undefined,
+            "elevation": 0,
+            "marginTop": undefined,
+            "minWidth": 64,
+          }
+        }
+      >
+        <View
+          accessibilityRole="button"
+          accessibilityState={
+            Object {
+              "disabled": undefined,
+            }
+          }
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "borderRadius": 4,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                },
+                undefined,
+              ]
+            }
+          >
+            <Text
+              numberOfLines={1}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "System",
+                    "fontWeight": "400",
+                  },
+                  Object {
+                    "textAlign": "left",
+                  },
+                  Array [
+                    Object {
+                      "letterSpacing": 1,
+                      "marginHorizontal": 16,
+                      "marginVertical": 9,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                    Object {
+                      "textTransform": "uppercase",
+                    },
+                    Object {
+                      "color": "#fff",
+                      "fontFamily": "System",
+                      "fontWeight": "500",
+                    },
+                    Object {
+                      "fontFamily": "System",
+                      "fontWeight": "500",
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              go to map
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`CountryComponent route.params.navigate empty  1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "height": 1334,
+      "padding": NaN,
+      "paddingBottom": NaN,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginBottom": NaN,
+        "marginTop": NaN,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": NaN,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": NaN,
+        }
+      }
+      testID="go back"
+    >
+      <Icon
+        color="#ff9f0a"
+        name="chevron-left"
+      />
+    </View>
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://flagcdn.com/w640/222.png",
+            }
+          }
+          style={
+            Object {
+              "height": NaN,
+              "width": "70%",
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginTop": NaN,
+            }
+          }
+        >
+          England
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomColor": undefined,
+            "borderBottomWidth": 1,
+            "borderTopColor": undefined,
+            "borderTopWidth": 1,
+            "marginTop": undefined,
+            "paddingBottom": undefined,
+            "paddingTop": undefined,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "textAlign": "center",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Capital
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          London
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Region
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          Britain
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Subregion
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          North
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Population
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          1200
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Currencies
+          :
+        </Text>
+        <View
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "column",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontSize": undefined,
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Languages
+          :
+        </Text>
+        <View
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "column",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": undefined,
+                "fontSize": undefined,
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          Domain
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          en
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginTop": NaN,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+              "marginRight": NaN,
+            }
+          }
+        >
+          PhoneCode
+          :
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": undefined,
+            }
+          }
+        >
+          22
+        </Text>
       </View>
       <View
         style={

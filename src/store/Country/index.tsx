@@ -40,7 +40,6 @@ export class Country {
             fetchCountryByCode: action,
             fetchCountryByName: action,
             store2Obj: computed,
-            // getKeyByValue: action,
         });
     }
     async fetchCountryByCode(alphaCode: string) {

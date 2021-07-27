@@ -1,13 +1,19 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Text, View, Image, ListRenderItem } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import { ISlideItem } from '../../../../config/types';
 import { getRootStore } from '../../../../store';
 import { makeStyles } from './rawStyles';
 
-export const SlideItem: ListRenderItem<ISlideItem> = ({ item }) => {
+
+interface ISlideItemProps {
+    item: ISlideItem,
+    index: number
+}
+
+
+export const SlideItem = ({ item }: ISlideItemProps) => {
 
     const theme = useTheme();
     const styles = makeStyles(theme)
@@ -22,6 +28,7 @@ export const SlideItem: ListRenderItem<ISlideItem> = ({ item }) => {
 
     return (
         <TouchableOpacity
+            testID={'slideItem'}
             onPress={() => actionByClick(item.iso_2cc)}
         >
             <View>

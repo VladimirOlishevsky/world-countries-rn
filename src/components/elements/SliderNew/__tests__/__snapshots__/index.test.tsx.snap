@@ -1,0 +1,690 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SliderNew render 1`] = `
+<View
+  style={
+    Object {
+      "height": 300,
+      "justifyContent": "center",
+    }
+  }
+>
+  <RCTScrollView
+    activeAnimationOptions={null}
+    activeAnimationType="timing"
+    activeSlideAlignment="center"
+    activeSlideOffset={20}
+    apparitionDelay={0}
+    automaticallyAdjustContentInsets={false}
+    autoplay={false}
+    autoplayDelay={1000}
+    autoplayInterval={3000}
+    callbackOffsetMargin={5}
+    containerCustomStyle={
+      Object {
+        "marginTop": NaN,
+      }
+    }
+    contentContainerCustomStyle={Object {}}
+    contentContainerStyle={
+      Array [
+        Object {
+          "paddingLeft": 112.5,
+          "paddingRight": 112.5,
+        },
+        Object {},
+      ]
+    }
+    data={
+      Array [
+        Object {
+          "img": undefined,
+          "iso_2cc": "KE",
+          "title": "Sunset in Kenya, Kenya",
+        },
+        Object {
+          "img": undefined,
+          "iso_2cc": "NP",
+          "title": "Ama Dablam mountain, Nepal",
+        },
+        Object {
+          "img": undefined,
+          "iso_2cc": "BR",
+          "title": "Cristo iluminado, Brazil",
+        },
+        Object {
+          "img": undefined,
+          "iso_2cc": "JP",
+          "title": "Kyoto, Japan",
+        },
+        Object {
+          "img": undefined,
+          "iso_2cc": "UY",
+          "title": "Montevideo department, Uruguay",
+        },
+        Object {
+          "img": undefined,
+          "iso_2cc": "RU",
+          "title": "Moscow, Kremlin, Russia",
+        },
+        Object {
+          "img": undefined,
+          "iso_2cc": "RW",
+          "title": "Nyungwe park, Rwanda",
+        },
+        Object {
+          "img": undefined,
+          "iso_2cc": "IN",
+          "title": "Taj Mahal, India",
+        },
+        Object {
+          "img": undefined,
+          "iso_2cc": "US",
+          "title": "New York, USA",
+        },
+      ]
+    }
+    decelerationRate="fast"
+    directionalLockEnabled={true}
+    enableMomentum={false}
+    enableSnap={true}
+    firstItem={0}
+    forwardedRef={[Function]}
+    hasParallaxImages={false}
+    horizontal={true}
+    inactiveSlideOpacity={0.7}
+    inactiveSlideScale={0.9}
+    inactiveSlideShift={0}
+    inverted={false}
+    itemWidth={525}
+    layout="default"
+    lockScrollTimeoutDuration={1000}
+    lockScrollWhileSnapping={false}
+    loop={false}
+    loopClonesPerSide={3}
+    onLayout={[Function]}
+    onResponderRelease={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    overScrollMode="never"
+    pinchGestureEnabled={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEnabled={true}
+    scrollEventThrottle={1}
+    scrollsToTop={false}
+    shouldOptimizeUpdates={true}
+    showsHorizontalScrollIndicator={false}
+    showsVerticalScrollIndicator={false}
+    slideStyle={Object {}}
+    sliderWidth={750}
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginTop": NaN,
+        "opacity": 0,
+        "width": 750,
+      }
+    }
+    swipeThreshold={20}
+    useScrollView={true}
+    vertical={false}
+  >
+    <View>
+      <View
+        pointerEvents="box-none"
+        style={
+          Object {
+            "opacity": 1,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+            ],
+            "width": 525,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="slideItem"
+        >
+          <View>
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 368,
+                  "justifyContent": "center",
+                  "width": 525,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": undefined,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Sunset in Kenya, Kenya
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        pointerEvents="box-none"
+        style={
+          Object {
+            "opacity": 0.7,
+            "transform": Array [
+              Object {
+                "scale": 0.9,
+              },
+            ],
+            "width": 525,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="slideItem"
+        >
+          <View>
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 368,
+                  "justifyContent": "center",
+                  "width": 525,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": undefined,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Ama Dablam mountain, Nepal
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        pointerEvents="box-none"
+        style={
+          Object {
+            "opacity": 0.7,
+            "transform": Array [
+              Object {
+                "scale": 0.9,
+              },
+            ],
+            "width": 525,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="slideItem"
+        >
+          <View>
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 368,
+                  "justifyContent": "center",
+                  "width": 525,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": undefined,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Cristo iluminado, Brazil
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        pointerEvents="box-none"
+        style={
+          Object {
+            "opacity": 0.7,
+            "transform": Array [
+              Object {
+                "scale": 0.9,
+              },
+            ],
+            "width": 525,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="slideItem"
+        >
+          <View>
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 368,
+                  "justifyContent": "center",
+                  "width": 525,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": undefined,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Kyoto, Japan
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        pointerEvents="box-none"
+        style={
+          Object {
+            "opacity": 0.7,
+            "transform": Array [
+              Object {
+                "scale": 0.9,
+              },
+            ],
+            "width": 525,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="slideItem"
+        >
+          <View>
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 368,
+                  "justifyContent": "center",
+                  "width": 525,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": undefined,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Montevideo department, Uruguay
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        pointerEvents="box-none"
+        style={
+          Object {
+            "opacity": 0.7,
+            "transform": Array [
+              Object {
+                "scale": 0.9,
+              },
+            ],
+            "width": 525,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="slideItem"
+        >
+          <View>
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 368,
+                  "justifyContent": "center",
+                  "width": 525,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": undefined,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Moscow, Kremlin, Russia
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        pointerEvents="box-none"
+        style={
+          Object {
+            "opacity": 0.7,
+            "transform": Array [
+              Object {
+                "scale": 0.9,
+              },
+            ],
+            "width": 525,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="slideItem"
+        >
+          <View>
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 368,
+                  "justifyContent": "center",
+                  "width": 525,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": undefined,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Nyungwe park, Rwanda
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        pointerEvents="box-none"
+        style={
+          Object {
+            "opacity": 0.7,
+            "transform": Array [
+              Object {
+                "scale": 0.9,
+              },
+            ],
+            "width": 525,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="slideItem"
+        >
+          <View>
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 368,
+                  "justifyContent": "center",
+                  "width": 525,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": undefined,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Taj Mahal, India
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        pointerEvents="box-none"
+        style={
+          Object {
+            "opacity": 0.7,
+            "transform": Array [
+              Object {
+                "scale": 0.9,
+              },
+            ],
+            "width": 525,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="slideItem"
+        >
+          <View>
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 368,
+                  "justifyContent": "center",
+                  "width": 525,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": undefined,
+                  "textAlign": "center",
+                }
+              }
+            >
+              New York, USA
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

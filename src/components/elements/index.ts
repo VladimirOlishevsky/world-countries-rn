@@ -1,1 +1,5 @@
+export * from './BackButton'
+export * from './ButtonGoToMap'
+export * from './FlagDescription'
+export * from './NotFound'
 export * from './SliderNew'

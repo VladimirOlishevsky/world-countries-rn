@@ -7,7 +7,7 @@ import { go2search, notFound } from './constants';
 import { makeStyles } from './rawStyles';
 
 
-export const NotFound: React.FC = () => {
+export const NotFound = (): JSX.Element => {
 
     const theme = useTheme();
     const styles = makeStyles(theme);

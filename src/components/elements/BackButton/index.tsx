@@ -9,12 +9,10 @@ import { TouchableOpacity } from 'react-native';
 
 interface IProps {
     page?: string,
-    testId?: string
 }
 
 export const BackButton = ({
     page,
-    testId
 }: IProps) => {
     const navigation = useNavigation();
     const theme = useTheme();
@@ -22,7 +20,7 @@ export const BackButton = ({
 
     return (
         <TouchableOpacity
-            testID={testId}
+            testID={'go back'}
             onPress={() => page ? navigation.navigate(page) : navigation.goBack()}
             style={styles.iconStyle}
         >
@@ -31,6 +29,5 @@ export const BackButton = ({
                 size={theme.size}
                 color="#ff9f0a" />
         </TouchableOpacity>
-
     );
 }

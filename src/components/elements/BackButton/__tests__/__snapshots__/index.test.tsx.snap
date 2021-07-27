@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BackButton BackButton render 1`] = `
+exports[`BackButton render 1`] = `
 <View
   accessible={true}
   focusable={true}
@@ -20,6 +20,7 @@ exports[`BackButton BackButton render 1`] = `
       "width": NaN,
     }
   }
+  testID="go back"
 >
   <Icon
     color="#ff9f0a"

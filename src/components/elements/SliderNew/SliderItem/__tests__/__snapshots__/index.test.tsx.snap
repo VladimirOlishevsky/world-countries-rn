@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SlideItem render 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID="slideItem"
+>
+  <View>
+    <Image
+      source={
+        Object {
+          "uri": "la la la",
+        }
+      }
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 368,
+          "justifyContent": "center",
+          "width": 525,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": undefined,
+          "textAlign": "center",
+        }
+      }
+    >
+      Bali, Indonesia
+    </Text>
+  </View>
+</View>
+`;
