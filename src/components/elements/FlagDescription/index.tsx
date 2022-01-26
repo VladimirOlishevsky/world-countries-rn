@@ -3,7 +3,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import { makeStyles } from './rawStyles';
-import { getFlagDescription } from 'config/utils';
+import { getFlagDescription } from '../../../config/utils';
 
 interface IFlagDescription {
     alpha2Code: string

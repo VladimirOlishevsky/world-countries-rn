@@ -7,8 +7,8 @@ import { getRootStore } from '../../../../store';
 import { useTheme } from 'react-native-paper';
 import { ICurrencies, ILanguages } from 'store/types';
 import { NotFound } from '../../../elements/NotFound';
-import { FlagDescription } from 'components/elements/FlagDescription';
-import { ButtonGoToMap } from 'components/elements/ButtonGoToMap';
+import { FlagDescription } from '../../../elements/FlagDescription';
+import { ButtonGoToMap } from '../../../elements/ButtonGoToMap';
 
 const getKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>
 
